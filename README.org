@@ -1,0 +1,71 @@
+#+title: Notes about the course
+
+Back-end development by Meta, on Coursera.
+
+* Schedule
+|---------------+---------+-----------+----------+--------+----------+--------|
+| Monday        | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+|---------------+---------+-----------+----------+--------+----------+--------|
+| 8h-8h45m      | x       | x         |          |        | x        |        |
+| 9h-9h45m      | x       | x         |          |        | x        |        |
+| 10h-10h45m    | x       |           |          |        | x        |        |
+|---------------+---------+-----------+----------+--------+----------+--------|
+| 13h-13h45m    | x       | x         | x        | x      |          | x      |
+| 14h-14h45m    | x       | x         | x        | x      |          | x      |
+| 15h-15h45m    |         |           | x        | x      |          | x      |
+|---------------+---------+-----------+----------+--------+----------+--------|
+| 17h30m-18h15m |         |           | x        | x      |          |        |
+| 18h30m-19h15m | x       | x         | x        | x      |          |        |
+| 19h30m-20h15m | x       | x         | x        | x      |          |        |
+|---------------+---------+-----------+----------+--------+----------+--------|
+
+* Week 1
+** Capstone project overview
+*** TODO Create Django web server, with multilple API endpoints.
+DEADLINE: <2022-08-08 Mon> SCHEDULED: <2022-08-03 Wed>
+*** TODO Connect it to a MySQL database.
+DEADLINE: <2022-08-15 Mon> SCHEDULED: <2022-08-03 Wed>
+*** TODO Create a templace system driven by Django views.
+DEADLINE: <2022-08-22 Mon> SCHEDULED: <2022-08-03 Wed>
+
+** How the web works
+*** Fullstack
+Both front and back development. Mostly, on connecting the two.
+
+- Planning.
+- Architecture.
+- Design.
+- Development.
+- Deployment.
+- Maintenance.
+
+*** Front-end
+Design patterns of elements on a page.
+
+*** Back-end
+- Back-end language.
+- Database.
+- APIs.
+- Web servers
+** Grace Egbo - a day in the life of a backend dev.
+The day breaks out in sections.
+*** Code review
+*** Possible quick fixes
+*** Meeting about ideias and needs
+*** Coding
+*** Soft skills/People skills
+- Communicate.
+- Listen to perspectives.
+- Remote world makes that even more necessary.
+** How the internet works
+*** Definition: =Network=
+Two or more computers connected through wired or wireless connection.
+**** Multiples devices in a network - Network Switches
+- Complexity is brough down by using =Network switches=.
+*** Definition: =Interconnected network=
+When multiple =Networks= connect through =Netowork Switches=.
+E.g., the =Internet=.
+
+#+ATTR_HTML: :width 1000px
+#+CAPTION: Client-server connection through the Intertnet
+[[file:img/internet-scheme.png][file:~/gdrive/PP/Meta/img/internet-scheme.png]]
