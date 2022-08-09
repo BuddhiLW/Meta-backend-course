@@ -69,3 +69,257 @@ E.g., the =Internet=.
 #+ATTR_HTML: :width 1000px
 #+CAPTION: Client-server connection through the Intertnet
 [[file:img/internet-scheme.png][file:~/gdrive/PP/Meta/img/internet-scheme.png]]
+** Servers
+- Data centers: multitude of servers on a physical space.
+- =Server purpose= /data center/ will have different machinery, depending on the application objetive.
+*** Webservers
+- Website hosting.
+- Database.
+- Control panel.
+- CMS software.
+- Email.
+
+#+ATTR_HTML: :width 1000px
+#+CAPTION: "What is a web server and how does it work?", by Meta
+[[file:img/web-server.png][file:~/gdrive/PP/Meta/img/web-server.png]]
+
+**** Web request
+=Request-response cycle=:
+#+begin_quote
+It's the job of the web server to send you back those website content, upon requesting, by typing the URL of the website.
+#+end_quote
+
+Designed to respond to thousands of requests of clients per second.
+** What are websites and webpages?
+*** Webpage
+Display content, like text, images, videos etc, on the web browser.
+*** Website
+It's a collection of web pages linked together.
+*** HTML, CSS and JavaScript
+**** HTML
+=Hyperlink Text Markup Language=
+Tells how to structure elements in a page.
+**** CSS
+Cascade Styling Sheets.
+**** JavaScript
+Programming language build into the browser.
+Tools for =interactivity=, =data-processing= and =control-and-action=.
+**** Page rendering process
+#+begin_quote
+While interpreting each line of HTML, the browser creates a building-block that
+switches the visual representation you see on screen.
+#+end_quote
+
+A response from the webserver must be a complete web page, in other to fulfill
+the request, to show the page, in the browser.
+**** Web browsers
+Software application used to browse the world-wide-web.
+
+It works by sending a request to a web server, and then receives a response
+containing the content to be displayed on your device.
+***** URL
+=Uniform Resource Locator=, contains the protocol (HTTP/HTTPS), the domain name,
+and the file-path.
+***** HTTP
+- HyperText Transfer Protocol.
+- Request-response cycle.
+** TCP - Transmission Control Protocol
+- Transmits messages with high precision.
+- Barley no data loss.
+- Almost always on the right addresses.
+- Slower than UDP.
+** UDP - User Datagram Protocol
+- Corrupt package issue solved (barely no data loss).
+- Easily out of order data-packages.
+- Possibly a lot of loss of information.
+** HTTP - HyperText Transfer Protocol
+- Standard for the web communication.
+- Transfers data:
+  - Web pages,
+  - Images,
+  - Files.
+- Request-response based communication between client and server.
+** Makeup of a HTTP request
+It must contain a
+- Method,
+- Path,
+- Version,
+- Headers.
+*** Method
+#+begin_quote
+Describes the kind of action that the client wants to perform.
+#+end_quote
+
+Most common are:
+- GET;
+- POST;
+- PUT;
+- DELETE;
+
+**** Get
+Retrieves information.
+**** Post
+Sends information.
+**** Put
+Update data on webserver. That is, data1 is swapped for data2.
+**** Delete
+Removes the resource.
+*** Path
+#+begin_quote
+The path is a representation of where the resource is located on the webserver.
+#+end_quote
+*** Version
+#+begin_quote
+Rules of what constitutes and how request and response happen.
+#+end_quote
+
+*** Headers
+#+begin_quote
+Headers contains additional information about the request and the client that is making the request.
+#+end_quote
+** Makeup of a HTTP response
+It's similar to HTTP requests.
+
+After the =header=, the =message body= contains data that is the response:
+- Text.
+- HTML Markup.
+- Images.
+- Files.
+- etc.
+*** Header
+- HTTP response status (200, 404, 400, etc.).
+- Status message (OK, Not Found, Server Not Responding, etc.).
+**** Informational
+Responses ranging 100-199.
+
+- Provisional.
+- Interim response.
+- Most common: 100 CONTINUE.
+
+**** Successful
+Responses ranging 200-299.
+
+If successfully processed (200 OK),
+- GET: Found/included.
+- POST: Successfully transmitted.
+- PUT: Successfully transmitted.
+- DELETE: Deleted.
+**** Redirection
+Responses ranging 300-399.
+
+- 301 MOVED PERMANENTLY.
+- 302 FOUND.
+
+**** Client error
+Responses ranging 400-499.
+- 400 BAD DATA (transmitted to the server);
+- 401 MUST LOGIN (before making the request);
+- 403 REFUSE TO PROCESS (but valid request);
+- 404 NOT FOUND (requested data);
+
+**** Server error
+Responses ranging 500-599.
+- 500 INTERNAL SERVER ERROR (server failed to process request);
+** Examples about HTTP
+*** *Request Line*
+#+begin_quote
+Every HTTP request begins with the request line.
+
+This consists of the HTTP method, the requested resource and the HTTP protocol
+version.
+
+=GET /home.html HTTP/1.1=
+
+In this example, =GET= is the HTTP method, =/home.html= is the resource
+requested and HTTP 1.1 is the protocol used.
+#+end_quote
+*** HTTP Method
+** IDEs
+=Integrated Development Environment= offers:
+- Syntax highlight;
+- Keyword documentation;
+- Auto-complete suggestions;
+- Navigation ease;
+- Unified Environment for development;
+** Extra resources
+HTTP Overview (Mozilla)
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+Introduction to Networking by Dr.Charles R Severance
+
+https://www.amazon.com/Introduction-Networking-How-Internet-Works/dp/1511654945/
+
+Chrome Developer Tools Overview (Google)
+
+https://developer.chrome.com/docs/devtools/overview/
+
+Firefox Developer Tools User Docs  (Mozilla)
+
+https://firefox-source-docs.mozilla.org/devtools-user/index.html
+
+Getting Started with Visual Studio Code  (Microsoft)
+
+https://code.visualstudio.com/docs
+
+* Week 2
+** HTML
+*** Table
+*** Forms
+*** Input tags
+- Text;
+- Password;
+- Checkbox;
+- Radio;
+- Textarea;
+- Select;
+** DOM
+=Document Object Model=
+Server -> Web browser receives webpage -> Transforms in a DOM scheme.
+** CSS
+How to display HTML elements.
+
+- Selector (which element to act upon);
+- Key-values:
+  - Property;
+  - Property-value;
+** Extra Resources
+*** HTML and DOM
+Learn more​
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+HTML Elements Reference (Mozilla)
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+The Form Element (Mozilla)
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+
+What is the Document Object Model? (W3C)
+
+https://www.w3.org/TR/WD-DOM/introduction.html
+
+ARIA in HTML (W3C via Github)
+
+https://w3c.github.io/html-aria/
+
+ARIA Authoring Practices  (W3C)
+
+https://www.w3.org/TR/wai-aria-practices-1.2/
+* Week 3
+** Working with libraries
+Libraries can depend on other libraries forming a tree of dependencies.
+
+- Bundlers unify all code in one file, or few of them.
+- Finally, add the final bundled file into your HTML.
+
+** Responsive Design
+- Flexible grids;
+- Fluid images;
+- Media queries.
+*** Flexible grids
+- Gutter: space between contents;
+- Margin: space between content and screen;
+- Sizes based on percentages;
+*** Fluid images
