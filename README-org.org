@@ -1,6 +1,6 @@
 #+title: Notes about the course
 
-Back-end development by Meta, on Coursera.
+Back-end development by [[https://www.coursera.org/professional-certificates/meta-back-end-developer][Meta, on Coursera]].
 
 * Schedule
 |---------------+---------+-----------+----------+--------+----------+--------|
@@ -315,11 +315,71 @@ Libraries can depend on other libraries forming a tree of dependencies.
 - Finally, add the final bundled file into your HTML.
 
 ** Responsive Design
+A =responsive grid= happens when we combine:
 - Flexible grids;
 - Fluid images;
 - Media queries.
+
+
 *** Flexible grids
 - Gutter: space between contents;
 - Margin: space between content and screen;
-- Sizes based on percentages;
+- Sizes based on percentages.
+
 *** Fluid images
+- Max-width: 100%;
+  - Shrink based on container-element size;
+- Fit on page;
+- Never grow larger than original size.
+
+*** Media queries
+Controls:
+- Display size;
+- Orientation;
+- Aspect ratio.
+** Types of Grids
+- Fixed grid;
+- Fluid grid;
+- Hybrid grid;
+
+*** Fixed Grid
+- Fixed width-columns;
+- Flexible-margins;
+
+*** Fluid grid
+- Fluid width-columns;
+- Fixed-gutters;
+- Fixed-margins;
+
+Columns either grow or shrink to adapt to the available space.
+
+*** Hybrid grid
+- Fluid and fixed width components;
+- Different rules, depending on device;
+- Optimize experience.
+** Bootstrap
+
+*** Responsive design with class infix
+Convention for =class infix= made for =responsive design=, by *Bootstrap*.
+#+ATTR_HTML: :width 800px
+[[file:img/bootstrap.png][file:./img/bootstrap.png]]
+
+*** Class modifiers
+It's like the conjugation of verbs, so you have different meaning, with the same functionality. E.i., buttons of alert that can mean "just pay attention", or "*DANGER!*" etc.
+** Extra resources
+*** Bootstrap
+Bootstrap Official Website
+
+https://getbootstrap.com/
+
+Bootstrap 5 Foundations by Daniel Foreman
+
+https://www.amazon.com/Bootstrap-Foundations-Mr-Daniel-Foreman/dp/B0948GRS8W/
+
+Responsive Web Design with HTML5 and CSS  by Ben Frain
+
+https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563/
+
+Bootstrap Themes
+
+https://themes.getbootstrap.com/
