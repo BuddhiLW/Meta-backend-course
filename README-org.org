@@ -19,17 +19,18 @@ Back-end development by [[https://www.coursera.org/professional-certificates/met
 | 19h30m-20h15m | x       | x         | x        | x      |          |        |
 |---------------+---------+-----------+----------+--------+----------+--------|
 
-* Week 1
-** Capstone project overview
-*** TODO Create Django web server, with multilple API endpoints.
+* Introduction to Back-end Development
+** Week 1
+*** Capstone project overview
+**** TODO Create Django web server, with multilple API endpoints.
 DEADLINE: <2022-08-08 Mon> SCHEDULED: <2022-08-03 Wed>
-*** TODO Connect it to a MySQL database.
+**** TODO Connect it to a MySQL database.
 DEADLINE: <2022-08-15 Mon> SCHEDULED: <2022-08-03 Wed>
-*** TODO Create a templace system driven by Django views.
+**** TODO Create a templace system driven by Django views.
 DEADLINE: <2022-08-22 Mon> SCHEDULED: <2022-08-03 Wed>
 
-** How the web works
-*** Fullstack
+*** How the web works
+**** Fullstack
 Both front and back development. Mostly, on connecting the two.
 
 - Planning.
@@ -39,40 +40,40 @@ Both front and back development. Mostly, on connecting the two.
 - Deployment.
 - Maintenance.
 
-*** Front-end
+**** Front-end
 Design patterns of elements on a page.
 
-*** Back-end
+**** Back-end
 - Back-end language.
 - Database.
 - APIs.
 - Web servers
-** Grace Egbo - a day in the life of a backend dev.
+*** Grace Egbo - a day in the life of a backend dev.
 The day breaks out in sections.
-*** Code review
-*** Possible quick fixes
-*** Meeting about ideias and needs
-*** Coding
-*** Soft skills/People skills
+**** Code review
+**** Possible quick fixes
+**** Meeting about ideias and needs
+**** Coding
+**** Soft skills/People skills
 - Communicate.
 - Listen to perspectives.
 - Remote world makes that even more necessary.
-** How the internet works
-*** Definition: =Network=
+*** How the internet works
+**** Definition: =Network=
 Two or more computers connected through wired or wireless connection.
-**** Multiples devices in a network - Network Switches
+***** Multiples devices in a network - Network Switches
 - Complexity is brough down by using =Network switches=.
-*** Definition: =Interconnected network=
+**** Definition: =Interconnected network=
 When multiple =Networks= connect through =Netowork Switches=.
 E.g., the =Internet=.
 
 #+ATTR_HTML: :width 1000px
 #+CAPTION: Client-server connection through the Intertnet
-[[file:img/internet-scheme.png][file:~/gdrive/PP/Meta/img/internet-scheme.png]]
-** Servers
+[[file:img/internet-scheme.png][file:./img/internet-scheme.png]]
+*** Servers
 - Data centers: multitude of servers on a physical space.
 - =Server purpose= /data center/ will have different machinery, depending on the application objetive.
-*** Webservers
+**** Webservers
 - Website hosting.
 - Database.
 - Control panel.
@@ -81,30 +82,30 @@ E.g., the =Internet=.
 
 #+ATTR_HTML: :width 1000px
 #+CAPTION: "What is a web server and how does it work?", by Meta
-[[file:img/web-server.png][file:~/gdrive/PP/Meta/img/web-server.png]]
+[[file:img/web-server.png][file:./img/web-server.png]]
 
-**** Web request
+***** Web request
 =Request-response cycle=:
 #+begin_quote
 It's the job of the web server to send you back those website content, upon requesting, by typing the URL of the website.
 #+end_quote
 
 Designed to respond to thousands of requests of clients per second.
-** What are websites and webpages?
-*** Webpage
+*** What are websites and webpages?
+**** Webpage
 Display content, like text, images, videos etc, on the web browser.
-*** Website
+**** Website
 It's a collection of web pages linked together.
-*** HTML, CSS and JavaScript
-**** HTML
+**** HTML, CSS and JavaScript
+***** HTML
 =Hyperlink Text Markup Language=
 Tells how to structure elements in a page.
-**** CSS
+***** CSS
 Cascade Styling Sheets.
-**** JavaScript
+***** JavaScript
 Programming language build into the browser.
 Tools for =interactivity=, =data-processing= and =control-and-action=.
-**** Page rendering process
+***** Page rendering process
 #+begin_quote
 While interpreting each line of HTML, the browser creates a building-block that
 switches the visual representation you see on screen.
@@ -112,40 +113,40 @@ switches the visual representation you see on screen.
 
 A response from the webserver must be a complete web page, in other to fulfill
 the request, to show the page, in the browser.
-**** Web browsers
+***** Web browsers
 Software application used to browse the world-wide-web.
 
 It works by sending a request to a web server, and then receives a response
 containing the content to be displayed on your device.
-***** URL
+****** URL
 =Uniform Resource Locator=, contains the protocol (HTTP/HTTPS), the domain name,
 and the file-path.
-***** HTTP
+****** HTTP
 - HyperText Transfer Protocol.
 - Request-response cycle.
-** TCP - Transmission Control Protocol
+*** TCP - Transmission Control Protocol
 - Transmits messages with high precision.
 - Barley no data loss.
 - Almost always on the right addresses.
 - Slower than UDP.
-** UDP - User Datagram Protocol
+*** UDP - User Datagram Protocol
 - Corrupt package issue solved (barely no data loss).
 - Easily out of order data-packages.
 - Possibly a lot of loss of information.
-** HTTP - HyperText Transfer Protocol
+*** HTTP - HyperText Transfer Protocol
 - Standard for the web communication.
 - Transfers data:
   - Web pages,
   - Images,
   - Files.
 - Request-response based communication between client and server.
-** Makeup of a HTTP request
+*** Makeup of a HTTP request
 It must contain a
 - Method,
 - Path,
 - Version,
 - Headers.
-*** Method
+**** Method
 #+begin_quote
 Describes the kind of action that the client wants to perform.
 #+end_quote
@@ -156,28 +157,28 @@ Most common are:
 - PUT;
 - DELETE;
 
-**** Get
+***** Get
 Retrieves information.
-**** Post
+***** Post
 Sends information.
-**** Put
+***** Put
 Update data on webserver. That is, data1 is swapped for data2.
-**** Delete
+***** Delete
 Removes the resource.
-*** Path
+**** Path
 #+begin_quote
 The path is a representation of where the resource is located on the webserver.
 #+end_quote
-*** Version
+**** Version
 #+begin_quote
 Rules of what constitutes and how request and response happen.
 #+end_quote
 
-*** Headers
+**** Headers
 #+begin_quote
 Headers contains additional information about the request and the client that is making the request.
 #+end_quote
-** Makeup of a HTTP response
+*** Makeup of a HTTP response
 It's similar to HTTP requests.
 
 After the =header=, the =message body= contains data that is the response:
@@ -186,17 +187,17 @@ After the =header=, the =message body= contains data that is the response:
 - Images.
 - Files.
 - etc.
-*** Header
+**** Header
 - HTTP response status (200, 404, 400, etc.).
 - Status message (OK, Not Found, Server Not Responding, etc.).
-**** Informational
+***** Informational
 Responses ranging 100-199.
 
 - Provisional.
 - Interim response.
 - Most common: 100 CONTINUE.
 
-**** Successful
+***** Successful
 Responses ranging 200-299.
 
 If successfully processed (200 OK),
@@ -204,24 +205,24 @@ If successfully processed (200 OK),
 - POST: Successfully transmitted.
 - PUT: Successfully transmitted.
 - DELETE: Deleted.
-**** Redirection
+***** Redirection
 Responses ranging 300-399.
 
 - 301 MOVED PERMANENTLY.
 - 302 FOUND.
 
-**** Client error
+***** Client error
 Responses ranging 400-499.
 - 400 BAD DATA (transmitted to the server);
 - 401 MUST LOGIN (before making the request);
 - 403 REFUSE TO PROCESS (but valid request);
 - 404 NOT FOUND (requested data);
 
-**** Server error
+***** Server error
 Responses ranging 500-599.
 - 500 INTERNAL SERVER ERROR (server failed to process request);
-** Examples about HTTP
-*** *Request Line*
+*** Examples about HTTP
+**** *Request Line*
 #+begin_quote
 Every HTTP request begins with the request line.
 
@@ -233,15 +234,15 @@ version.
 In this example, =GET= is the HTTP method, =/home.html= is the resource
 requested and HTTP 1.1 is the protocol used.
 #+end_quote
-*** HTTP Method
-** IDEs
+**** HTTP Method
+*** IDEs
 =Integrated Development Environment= offers:
 - Syntax highlight;
 - Keyword documentation;
 - Auto-complete suggestions;
 - Navigation ease;
 - Unified Environment for development;
-** Extra resources
+*** Extra resources
 HTTP Overview (Mozilla)
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
@@ -262,29 +263,29 @@ Getting Started with Visual Studio Code  (Microsoft)
 
 https://code.visualstudio.com/docs
 
-* Week 2
-** HTML
-*** Table
-*** Forms
-*** Input tags
+** Week 2
+*** HTML
+**** Table
+**** Forms
+**** Input tags
 - Text;
 - Password;
 - Checkbox;
 - Radio;
 - Textarea;
 - Select;
-** DOM
+*** DOM
 =Document Object Model=
 Server -> Web browser receives webpage -> Transforms in a DOM scheme.
-** CSS
+*** CSS
 How to display HTML elements.
 
 - Selector (which element to act upon);
 - Key-values:
   - Property;
   - Property-value;
-** Extra Resources
-*** HTML and DOM
+*** Extra Resources
+**** HTML and DOM
 Learn more​
 Here is a list of resources that may be helpful as you continue your learning journey.
 
@@ -307,67 +308,92 @@ https://w3c.github.io/html-aria/
 ARIA Authoring Practices  (W3C)
 
 https://www.w3.org/TR/wai-aria-practices-1.2/
-* Week 3
-** Working with libraries
+** Week 3
+*** Working with libraries
 Libraries can depend on other libraries forming a tree of dependencies.
 
 - Bundlers unify all code in one file, or few of them.
 - Finally, add the final bundled file into your HTML.
 
-** Responsive Design
+*** Responsive Design
 A =responsive grid= happens when we combine:
 - Flexible grids;
 - Fluid images;
 - Media queries.
 
 
-*** Flexible grids
+**** Flexible grids
 - Gutter: space between contents;
 - Margin: space between content and screen;
 - Sizes based on percentages.
 
-*** Fluid images
+**** Fluid images
 - Max-width: 100%;
   - Shrink based on container-element size;
 - Fit on page;
 - Never grow larger than original size.
 
-*** Media queries
+**** Media queries
 Controls:
 - Display size;
 - Orientation;
 - Aspect ratio.
-** Types of Grids
+*** Types of Grids
 - Fixed grid;
 - Fluid grid;
 - Hybrid grid;
 
-*** Fixed Grid
+**** Fixed Grid
 - Fixed width-columns;
 - Flexible-margins;
 
-*** Fluid grid
+**** Fluid grid
 - Fluid width-columns;
 - Fixed-gutters;
 - Fixed-margins;
 
 Columns either grow or shrink to adapt to the available space.
 
-*** Hybrid grid
+**** Hybrid grid
 - Fluid and fixed width components;
 - Different rules, depending on device;
 - Optimize experience.
-** Bootstrap
+*** Bootstrap
 
-*** Responsive design with class infix
+**** Responsive design with class infix
 Convention for =class infix= made for =responsive design=, by *Bootstrap*.
 #+ATTR_HTML: :width 800px
 [[file:img/bootstrap.png][file:./img/bootstrap.png]]
 
-*** Class modifiers
+**** Class modifiers
 It's like the conjugation of verbs, so you have different meaning, with the same functionality. E.i., buttons of alert that can mean "just pay attention", or "*DANGER!*" etc.
-** Extra resources
-*** Bootstrap
+*** Static vs Dinamic websites
+**** Static part of a website
+- Images;
+- Videos;
+- Text.
+**** Dinamic part of a website
+Static content that is generated, depending on the response of an =application server=.
+
+To speed up the process and don't overload the website, =cache= is used to store dynamically generated content.
+
+#+ATTR_HTML: :width 700px
+[[file:img/cache.png][file:./img/cache.png]]
+
+*** SPA and Multi-Page Application
+**** Multi-page Application
+- Loads all content at each update
+- Application server return the entire webpage
+ 
+**** SPA
+SPA can use both =bundling= and =lazy-load= to display dynamic content.
+***** Bundling
+When a new component or data is requested the hole section is returned and rendered.
+***** Lazy-loading
+When a new piece of a component or data is requested, only the fraction of data and component concerned for the request is loaded. 
+*** *React*
+*** Extra resources
+**** Bootstrap
 Bootstrap Official Website
 
 https://getbootstrap.com/
@@ -383,3 +409,213 @@ https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563/
 Bootstrap Themes
 
 https://themes.getbootstrap.com/
+**** React
+Learn more​
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+React Official Website
+https://reactjs.org/
+
+Choosing between Traditional Web Apps and Single Page Apps (Microsoft)
+
+https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/choose-between-traditional-web-and-single-page-apps
+
+React Source Code (Github)
+
+https://github.com/facebook/react
+
+Introduction to React.js  
+
+The original video recorded at Facebook in 2013.
+
+https://youtu.be/XxVg_s8xAms
+
+* Programming in Phyton
+** Objectives
+Get started with the Python programming language and associated foundational concepts.
+
+*Learning Objectives:*
+ - Recognize common applications of the Python programming language.
+ - Explain foundational software engineering concepts.
+ - Use operators to program a simple output in Python.
+ - Use control flow and loops to solve a problem
+** Week1-Notes
+*** Course content
+#+begin_quote
+Course content  
+During this course, you’ll cover everything you need to begin with Python development. The content of the four modules is listed below.
+
+*Module 1 - Getting started with Python*
+In this module, you will get an introduction to the course and you’ll cover a brief summary of the history of programming. You will also learn the basics of how programming works and discover typical uses for Python in real-life. There are also some tips on how to take this course successfully.
+
+Before embarking on any coding you’ll first establish if your current computer system is set up correctly and identify any required operating system dependencies. Then you’ll explore different ways that you can run programs through Python.
+
+Next, you’ll study Python syntax using comments, variables, data types and user input and output. You’ll proceed to expand your Python skills by using math and logical operators so you can control the flow of your code and perform operations such as addition, subtraction, division, and multiplication.
+
+Python has multiple ways to do code loops or looping. You will examine looping constructs to iterate your code over multiple sequences.
+
+*Module 2 - Basic programming with Python*
+In module 2, you'll receive an introduction to Python functions, including how to declare a function, and how to pass data to a function or return data from a function. You will also explore data structures, scope, and the concepts of lists and how they can be used in Python. You will also discover tuples, sets, dictionaries and kwargs, gaining an understanding of how their main uses.
+
+Errors and exceptions are two very important aspects of learning Python as a new developer. In module 2, you will start with errors and exceptions, and explore what happens when something goes wrong with your code. Exception handling and Python file handling are covered, as are how to create files in Python and various methods of inserting content into a new file.
+
+*Module 3 - Programming paradigms*
+In the third module, you will cover programming paradigms, and look at the features and concepts behind procedural programming, functional programming and object oriented programming.
+
+A key feature of procedural programming is algorithms, you will explore how they can be used to solve problems, how algorithmic complexity is calculated and learn about Big-O notation.
+
+Next you will learn about pure functions and recursion in functional programming, as well as the difference between maps and filters.
+
+Finally, you will explore object-oriented programming and its four main concepts. ​ You will explore the relationship between classes and instances in Python by creating classes, instantiating them, and accessing their variables and methods. You’ll learn about abstract classes and methods and how to implement them. The rules of method resolution and inheritance with child and parent classes are also explained. Being able to read files is essential when working with stored data in Python and you’ll discover several built-in functions to make this easier. 
+
+*Module 4  - Modules, packages, libraries and tools*
+In module 4, you learned that Python is a powerful language that allows you to build amazing things. But it can gain even more functionality with the use of modules, libraries and tools. You will learn about Modules and that they are the building blocks for adding functionality to your code, so you don’t need to continually redo everything.
+
+You will also explore some of the commonly used Python libraries in data analysis and data science, and how they can apply to the areas of machine learning and artificial intelligence.
+
+Finally, you’ll find out why testing is an essential component of Quality Assurance and explore the type of testing you should use. You will learn about test automation packages and the importance of automated testing and you’ll write some tests using PyTest. Finally, you will explore the evolution of Test-driven development (or TDD), and focus on how to apply a test-driven development methodology.
+
+*Module 5 - Graded assessment*
+Here you'll learn about the graded assessment. After you complete the individual items in this module, you'll test your knowledge and skills by completing an end of course graded assessment.
+#+end_quote
+
+*** Input
+#+begin_src python :session localhost :results both
+ipt = input("Please input something")
+print(inp)
+#+end_src
+
+*** Format
+#+begin_src python :session localhost :results output
+a=1
+b="abb"
+print("{0} is different from {1}" .format(a, b))
+#+end_src
+
+#+RESULTS:
+: 1 is different from abb
+*** Match
+#+begin_src python :session localhost :results output
+http = 200
+match http:
+    case 200:
+        print("ok!")
+    _:
+        print("anything else!")
+#+end_src
+
+#+RESULTS:
+
+#+begin_src python :session localhost :results output
+a = isinstance(str, "aa")
+
+print(a)  
+#+end_src
+** Week2-Notes
+*** *args, **kwargs
+**** Args
+#+begin_src python :session localhost :results output
+def s(*args):
+    return sum(args)
+
+print(s(3,4,5,6))
+#+end_src
+
+#+RESULTS:
+: 18
+
+#+begin_src python :session localhost :results output
+def s(*args):
+    return sum(*args)
+
+print(s([3,4,5,6]))
+#+end_src
+
+#+RESULTS:
+: 18
+
+
+**** Kwargs
+#+begin_src python :session localhost :results both
+def s(**kwargs):
+    return sum()
+
+print(s(3,4,5,6))
+#+end_src
+
+*** Additional Resources
+**** First
+Python allows you to do quite a lot with very little code. Compared to other languages such as Java or C#, Python has a much easier learning curve. It lends itself well to the "write less, do more philosophy". Python developers are also in high demand and learning how to program in Python makes for a good career choice.
+
+You can access the links below to learn more about programming in Python.
+
+Check out the Python website to find out more about built-in functions:
+Python
+
+Check out W3 Schools to learn more about coding and web development:
+W3Schools
+
+Check out HackerRank to practice your new acquired Python skills:
+HackerRank
+
+**** Data Structures
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+Learn more about Python data structures (Python documentation) on the Python website:
+Python.org - Data structures
+
+Explore common Python data structures at the Real Python website:
+Real Python - Data structures
+*** Open, close files
+**** Open files
+***** options
+- =r=: read (text)
+- =rb=: read (binary)
+- =r+=: read and write
+- =w=: write (overwrite file)
+- =a=: append data
+***** =with open=
+No need to use the =close= function.
+#+begin_src python :session localhost :results both
+with open('testing.txt', 'r') as file:
+#+end_src
+
+**** Close files
+- No arguments.
+**** Examples
+***** Open and read
+#+begin_src python :session localhost :results both :tangle ./Exercises/Python-mod2/files.py
+file = open('test.txt', mode='r')
+
+data = file.readline()
+
+print(data)
+
+file.close()
+
+# alternative
+with open('test.txt', mode='r') as file:
+    data = file.readline()
+    print(data)
+#+end_src
+
+#+RESULTS:
+
+#+begin_src text :tangle ./Exercises/Python-mod2/test.txt
+Hello there!
+#+end_src
+***** Create file and populate it
+
+#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod2/files.py
+try:
+    with open('sample/newfile.txt', 'w') as file:
+        file.writelines(["Hello", "\nThere", "\nThird line!"])
+
+    with open('sample/newfile.txt', 'a') as file:
+        file.writelines(["\nHello", "\nThere", "\nThird line!"])
+except FileNotFoundError as e:
+    print("Error: ", e)
+#+end_src
+
+#+RESULTS:
+: Error:  [Errno 2] No such file or directory: 'sample/newfile.txt'
