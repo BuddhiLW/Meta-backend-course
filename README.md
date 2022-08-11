@@ -1,80 +1,59 @@
-
 # Table of Contents
 
-1.  [Schedule](#org93adff8)
-2.  [Week 1](#org8d2f8f8)
-    1.  [Capstone project overview](#org627dbce)
-        1.  [Create Django web server, with multilple API endpoints.](#org6c6a733)
-        2.  [Connect it to a MySQL database.](#org3cc51e2)
-        3.  [Create a templace system driven by Django views.](#org1aec221)
-    2.  [How the web works](#org685f97c)
-        1.  [Fullstack](#org737c599)
-        2.  [Front-end](#org4e71ed9)
-        3.  [Back-end](#orga8231a4)
-    3.  [Grace Egbo - a day in the life of a backend dev.](#org32cb198)
-        1.  [Code review](#org946c47a)
-        2.  [Possible quick fixes](#orgcb549a1)
-        3.  [Meeting about ideias and needs](#org26383e7)
-        4.  [Coding](#orgfe83181)
-        5.  [Soft skills/People skills](#orgd91cb06)
-    4.  [How the internet works](#orgeec2d1e)
-        1.  [Definition: `Network`](#orgcb17c03)
-        2.  [Definition: `Interconnected network`](#org9ab04d1)
-    5.  [Servers](#orge33fb8e)
-        1.  [Webservers](#org98f6807)
-    6.  [What are websites and webpages?](#orgf5cedaa)
-        1.  [Webpage](#org0e12c13)
-        2.  [Website](#orge2929d9)
-        3.  [HTML, CSS and JavaScript](#orgc8af6e2)
-    7.  [TCP - Transmission Control Protocol](#org7b5f06d)
-    8.  [UDP - User Datagram Protocol](#orga4f06eb)
-    9.  [HTTP - HyperText Transfer Protocol](#org3d7c40d)
-    10. [Makeup of a HTTP request](#orga3bab9a)
-        1.  [Method](#orgba2cc2e)
-        2.  [Path](#orgaf81edf)
-        3.  [Version](#orga8af3dd)
-        4.  [Headers](#orgce7f953)
-    11. [Makeup of a HTTP response](#org8301a89)
-        1.  [Header](#org52f0825)
-    12. [Examples about HTTP](#org474c2db)
-        1.  [**Request Line**](#orgc6343c7)
-        2.  [HTTP Method](#org011a85e)
-    13. [IDEs](#orgb6c6518)
-    14. [Extra resources](#org5fff99f)
-3.  [Week 2](#orgf6464f6)
-    1.  [HTML](#orga3b5ce3)
-        1.  [Table](#org153d20a)
-        2.  [Forms](#org29a31a0)
-        3.  [Input tags](#orgae92c8b)
-    2.  [DOM](#org9c135b5)
-    3.  [CSS](#org61d3288)
-    4.  [Extra Resources](#org70c3961)
-        1.  [HTML and DOM](#org4db6831)
-4.  [Week 3](#orgb2f300d)
-    1.  [Working with libraries](#org0e639bc)
-    2.  [Responsive Design](#org01885f9)
-        1.  [Flexible grids](#orge6c744c)
-        2.  [Fluid images](#org0f9706c)
-        3.  [Media queries](#org12903f8)
-    3.  [Types of Grids](#org5bafec4)
-        1.  [Fixed Grid](#orgaed5997)
-        2.  [Fluid grid](#org323e8b6)
-        3.  [Hybrid grid](#orga16349c)
-    4.  [Bootstrap](#orgece7f76)
-        1.  [Responsive design with class infix](#org1c546f5)
-        2.  [Class modifiers](#orgbac1f7b)
-    5.  [Extra resources](#org0c99473)
-        1.  [Bootstrap](#org56d0e0a)
+1.  [Schedule](#org924e558)
+2.  [Introduction to Back-end Development](#org76eaf6d)
+    1.  [Week 1](#org666f273)
+        1.  [Capstone project overview](#org95f597b)
+        2.  [How the web works](#org53682f1)
+        3.  [Grace Egbo - a day in the life of a backend dev.](#org3e4df8e)
+        4.  [How the internet works](#orgb0b3740)
+        5.  [Servers](#org6ad14a5)
+        6.  [What are websites and webpages?](#org1c1cc02)
+        7.  [TCP - Transmission Control Protocol](#org829557e)
+        8.  [UDP - User Datagram Protocol](#org98221a5)
+        9.  [HTTP - HyperText Transfer Protocol](#orgf40ef67)
+        10. [Makeup of a HTTP request](#orga8c6ca7)
+        11. [Makeup of a HTTP response](#orgaa4dfea)
+        12. [Examples about HTTP](#org2100b72)
+        13. [IDEs](#orgb6a1fc2)
+        14. [Extra resources](#org4945bb2)
+    2.  [Week 2](#orga258c78)
+        1.  [HTML](#org14cca89)
+        2.  [DOM](#org07ccffd)
+        3.  [CSS](#org7e615b9)
+        4.  [Extra Resources](#org0bd1139)
+    3.  [Week 3](#org701efa1)
+        1.  [Working with libraries](#org557f674)
+        2.  [Responsive Design](#org242c506)
+        3.  [Types of Grids](#org29b29f4)
+        4.  [Bootstrap](#orgc124153)
+        5.  [Static vs Dinamic websites](#orgff52fa4)
+        6.  [SPA and Multi-Page Application](#org7a4b6fd)
+        7.  [**React**](#orgb9bb416)
+        8.  [Extra resources](#orgf0ce11c)
+3.  [Programming in Phyton](#org4d85277)
+    1.  [Objectives](#org1dee631)
+    2.  [Week1-Notes - Introduction to Python](#org80760c5)
+        1.  [Course content](#orgc240aca)
+        2.  [Input](#orgffac01c)
+        3.  [Format](#org5c72f09)
+        4.  [Match](#org43ed2aa)
+    3.  [Week2-Notes - Python Data structures](#orge41dd98)
+        1.  [\*args, \*\*kwargs](#org5317099)
+        2.  [Additional Resources](#org5369b91)
+        3.  [Open, close files](#orgc337ef5)
+        4.  [Read files](#orgf60533c)
+        5.  [Extra Resources](#org91a80ad)
+    4.  [Week3-Notes - Procedural Programming](#orgcc6894a)
+        1.  [What is procedural programming?](#orgd859845)
 
 Back-end development by [Meta, on Coursera](https://www.coursera.org/professional-certificates/meta-back-end-developer).
 
-
-<a id="org93adff8"></a>
+<a id="org924e558"></a>
 
 # Schedule
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
 
 <colgroup>
 <col  class="org-left" />
@@ -114,7 +93,6 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 <td class="org-left">&#xa0;</td>
 </tr>
 
-
 <tr>
 <td class="org-left">9h-9h45m</td>
 <td class="org-left">x</td>
@@ -124,7 +102,6 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 <td class="org-left">x</td>
 <td class="org-left">&#xa0;</td>
 </tr>
-
 
 <tr>
 <td class="org-left">10h-10h45m</td>
@@ -148,7 +125,6 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 <td class="org-left">x</td>
 </tr>
 
-
 <tr>
 <td class="org-left">14h-14h45m</td>
 <td class="org-left">x</td>
@@ -158,7 +134,6 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 <td class="org-left">&#xa0;</td>
 <td class="org-left">x</td>
 </tr>
-
 
 <tr>
 <td class="org-left">15h-15h45m</td>
@@ -182,7 +157,6 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 <td class="org-left">&#xa0;</td>
 </tr>
 
-
 <tr>
 <td class="org-left">18h30m-19h15m</td>
 <td class="org-left">x</td>
@@ -192,7 +166,6 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 </tr>
-
 
 <tr>
 <td class="org-left">19h30m-20h15m</td>
@@ -206,421 +179,338 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 </tbody>
 </table>
 
+<a id="org76eaf6d"></a>
 
-<a id="org8d2f8f8"></a>
+# Introduction to Back-end Development
 
-# Week 1
+<a id="org666f273"></a>
 
+## Week 1
 
-<a id="org627dbce"></a>
+<a id="org95f597b"></a>
 
-## Capstone project overview
+### Capstone project overview
 
+1.  TODO Create Django web server, with multilple API endpoints.
 
-<a id="org6c6a733"></a>
+2.  TODO Connect it to a MySQL database.
 
-### TODO Create Django web server, with multilple API endpoints.
+3.  TODO Create a templace system driven by Django views.
 
+<a id="org53682f1"></a>
 
-<a id="org3cc51e2"></a>
+### How the web works
 
-### TODO Connect it to a MySQL database.
+1.  Fullstack
 
+    Both front and back development. Mostly, on connecting the two.
 
-<a id="org1aec221"></a>
+    - Planning.
+    - Architecture.
+    - Design.
+    - Development.
+    - Deployment.
+    - Maintenance.
 
-### TODO Create a templace system driven by Django views.
+2.  Front-end
 
+    Design patterns of elements on a page.
 
-<a id="org685f97c"></a>
+3.  Back-end
 
-## How the web works
+    - Back-end language.
+    - Database.
+    - APIs.
+    - Web servers
 
+<a id="org3e4df8e"></a>
 
-<a id="org737c599"></a>
-
-### Fullstack
-
-Both front and back development. Mostly, on connecting the two.
-
--   Planning.
--   Architecture.
--   Design.
--   Development.
--   Deployment.
--   Maintenance.
-
-
-<a id="org4e71ed9"></a>
-
-### Front-end
-
-Design patterns of elements on a page.
-
-
-<a id="orga8231a4"></a>
-
-### Back-end
-
--   Back-end language.
--   Database.
--   APIs.
--   Web servers
-
-
-<a id="org32cb198"></a>
-
-## Grace Egbo - a day in the life of a backend dev.
+### Grace Egbo - a day in the life of a backend dev.
 
 The day breaks out in sections.
 
+1.  Code review
 
-<a id="org946c47a"></a>
+2.  Possible quick fixes
 
-### Code review
+3.  Meeting about ideias and needs
 
+4.  Coding
 
-<a id="orgcb549a1"></a>
+5.  Soft skills/People skills
 
-### Possible quick fixes
+    - Communicate.
+    - Listen to perspectives.
+    - Remote world makes that even more necessary.
 
+<a id="orgb0b3740"></a>
 
-<a id="org26383e7"></a>
+### How the internet works
 
-### Meeting about ideias and needs
+1.  Definition: `Network`
 
+    Two or more computers connected through wired or wireless connection.
 
-<a id="orgfe83181"></a>
+    1.  Multiples devices in a network - Network Switches
 
-### Coding
+        - Complexity is brough down by using `Network switches`.
 
+2.  Definition: `Interconnected network`
 
-<a id="orgd91cb06"></a>
+    When multiple `Networks` connect through `Netowork Switches`.
+    E.g., the `Internet`.
 
-### Soft skills/People skills
+    [![img](./img/internet-scheme.png "Client-server connection through the Intertnet")](img/internet-scheme.png)
 
--   Communicate.
--   Listen to perspectives.
--   Remote world makes that even more necessary.
+<a id="org6ad14a5"></a>
 
+### Servers
 
-<a id="orgeec2d1e"></a>
+- Data centers: multitude of servers on a physical space.
+- `Server purpose` _data center_ will have different machinery, depending on the application objetive.
 
-## How the internet works
+1.  Webservers
 
+    - Website hosting.
+    - Database.
+    - Control panel.
+    - CMS software.
+    - Email.
 
-<a id="orgcb17c03"></a>
+    [![img](./img/web-server.png "“What is a web server and how does it work?”, by Meta")](img/web-server.png)
 
-### Definition: `Network`
+    1.  Web request
 
-Two or more computers connected through wired or wireless connection.
+        `Request-response cycle`:
 
-1.  Multiples devices in a network - Network Switches
+        > It&rsquo;s the job of the web server to send you back those website content, upon requesting, by typing the URL of the website.
 
-    -   Complexity is brough down by using `Network switches`.
+        Designed to respond to thousands of requests of clients per second.
 
+<a id="org1c1cc02"></a>
 
-<a id="org9ab04d1"></a>
+### What are websites and webpages?
 
-### Definition: `Interconnected network`
+1.  Webpage
 
-When multiple `Networks` connect through `Netowork Switches`.
-E.g., the `Internet`.
+    Display content, like text, images, videos etc, on the web browser.
 
-[![img](/home/buddhilw/gdrive/PP/Meta/img/internet-scheme.png "Client-server connection through the Intertnet")](img/internet-scheme.png)
+2.  Website
 
+    It&rsquo;s a collection of web pages linked together.
 
-<a id="orge33fb8e"></a>
+3.  HTML, CSS and JavaScript
 
-## Servers
+    1.  HTML
 
--   Data centers: multitude of servers on a physical space.
--   `Server purpose` *data center* will have different machinery, depending on the application objetive.
+        `Hyperlink Text Markup Language`
+        Tells how to structure elements in a page.
 
+    2.  CSS
 
-<a id="org98f6807"></a>
+        Cascade Styling Sheets.
 
-### Webservers
+    3.  JavaScript
 
--   Website hosting.
--   Database.
--   Control panel.
--   CMS software.
--   Email.
+        Programming language build into the browser.
+        Tools for `interactivity`, `data-processing` and `control-and-action`.
 
-[![img](/home/buddhilw/gdrive/PP/Meta/img/web-server.png "&ldquo;What is a web server and how does it work?&rdquo;, by Meta")](img/web-server.png)
+    4.  Page rendering process
 
-1.  Web request
+        > While interpreting each line of HTML, the browser creates a building-block that
+        > switches the visual representation you see on screen.
 
-    `Request-response cycle`:
-    
-    > It&rsquo;s the job of the web server to send you back those website content, upon requesting, by typing the URL of the website.
-    
-    Designed to respond to thousands of requests of clients per second.
+        A response from the webserver must be a complete web page, in other to fulfill
+        the request, to show the page, in the browser.
 
+    5.  Web browsers
 
-<a id="orgf5cedaa"></a>
+        Software application used to browse the world-wide-web.
 
-## What are websites and webpages?
+        It works by sending a request to a web server, and then receives a response
+        containing the content to be displayed on your device.
 
+        1.  URL
 
-<a id="org0e12c13"></a>
+            `Uniform Resource Locator`, contains the protocol (HTTP/HTTPS), the domain name,
+            and the file-path.
 
-### Webpage
+        2.  HTTP
 
-Display content, like text, images, videos etc, on the web browser.
+            - HyperText Transfer Protocol.
+            - Request-response cycle.
 
+<a id="org829557e"></a>
 
-<a id="orge2929d9"></a>
+### TCP - Transmission Control Protocol
 
-### Website
+- Transmits messages with high precision.
+- Barley no data loss.
+- Almost always on the right addresses.
+- Slower than UDP.
 
-It&rsquo;s a collection of web pages linked together.
+<a id="org98221a5"></a>
 
+### UDP - User Datagram Protocol
 
-<a id="orgc8af6e2"></a>
+- Corrupt package issue solved (barely no data loss).
+- Easily out of order data-packages.
+- Possibly a lot of loss of information.
 
-### HTML, CSS and JavaScript
+<a id="orgf40ef67"></a>
 
-1.  HTML
+### HTTP - HyperText Transfer Protocol
 
-    `Hyperlink Text Markup Language`
-    Tells how to structure elements in a page.
+- Standard for the web communication.
+- Transfers data:
+  - Web pages,
+  - Images,
+  - Files.
+- Request-response based communication between client and server.
 
-2.  CSS
+<a id="orga8c6ca7"></a>
 
-    Cascade Styling Sheets.
-
-3.  JavaScript
-
-    Programming language build into the browser.
-    Tools for `interactivity`, `data-processing` and `control-and-action`.
-
-4.  Page rendering process
-
-    > While interpreting each line of HTML, the browser creates a building-block that
-    > switches the visual representation you see on screen.
-    
-    A response from the webserver must be a complete web page, in other to fulfill
-    the request, to show the page, in the browser.
-
-5.  Web browsers
-
-    Software application used to browse the world-wide-web.
-    
-    It works by sending a request to a web server, and then receives a response
-    containing the content to be displayed on your device.
-    
-    1.  URL
-    
-        `Uniform Resource Locator`, contains the protocol (HTTP/HTTPS), the domain name,
-        and the file-path.
-    
-    2.  HTTP
-    
-        -   HyperText Transfer Protocol.
-        -   Request-response cycle.
-
-
-<a id="org7b5f06d"></a>
-
-## TCP - Transmission Control Protocol
-
--   Transmits messages with high precision.
--   Barley no data loss.
--   Almost always on the right addresses.
--   Slower than UDP.
-
-
-<a id="orga4f06eb"></a>
-
-## UDP - User Datagram Protocol
-
--   Corrupt package issue solved (barely no data loss).
--   Easily out of order data-packages.
--   Possibly a lot of loss of information.
-
-
-<a id="org3d7c40d"></a>
-
-## HTTP - HyperText Transfer Protocol
-
--   Standard for the web communication.
--   Transfers data:
-    -   Web pages,
-    -   Images,
-    -   Files.
--   Request-response based communication between client and server.
-
-
-<a id="orga3bab9a"></a>
-
-## Makeup of a HTTP request
+### Makeup of a HTTP request
 
 It must contain a
 
--   Method,
--   Path,
--   Version,
--   Headers.
+- Method,
+- Path,
+- Version,
+- Headers.
 
+1.  Method
 
-<a id="orgba2cc2e"></a>
+    > Describes the kind of action that the client wants to perform.
 
-### Method
+    Most common are:
 
-> Describes the kind of action that the client wants to perform.
+    - GET;
+    - POST;
+    - PUT;
+    - DELETE;
 
-Most common are:
+    1.  Get
 
--   GET;
--   POST;
--   PUT;
--   DELETE;
+        Retrieves information.
 
-1.  Get
+    2.  Post
 
-    Retrieves information.
+        Sends information.
 
-2.  Post
+    3.  Put
 
-    Sends information.
+        Update data on webserver. That is, data1 is swapped for data2.
 
-3.  Put
+    4.  Delete
 
-    Update data on webserver. That is, data1 is swapped for data2.
+        Removes the resource.
 
-4.  Delete
+2.  Path
 
-    Removes the resource.
+    > The path is a representation of where the resource is located on the webserver.
 
+3.  Version
 
-<a id="orgaf81edf"></a>
+    > Rules of what constitutes and how request and response happen.
 
-### Path
+4.  Headers
 
-> The path is a representation of where the resource is located on the webserver.
+    > Headers contains additional information about the request and the client that is making the request.
 
+<a id="orgaa4dfea"></a>
 
-<a id="orga8af3dd"></a>
-
-### Version
-
-> Rules of what constitutes and how request and response happen.
-
-
-<a id="orgce7f953"></a>
-
-### Headers
-
-> Headers contains additional information about the request and the client that is making the request.
-
-
-<a id="org8301a89"></a>
-
-## Makeup of a HTTP response
+### Makeup of a HTTP response
 
 It&rsquo;s similar to HTTP requests.
 
 After the `header`, the `message body` contains data that is the response:
 
--   Text.
--   HTML Markup.
--   Images.
--   Files.
--   etc.
+- Text.
+- HTML Markup.
+- Images.
+- Files.
+- etc.
 
+1.  Header
 
-<a id="org52f0825"></a>
+    - HTTP response status (200, 404, 400, etc.).
+    - Status message (OK, Not Found, Server Not Responding, etc.).
 
-### Header
+    1.  Informational
 
--   HTTP response status (200, 404, 400, etc.).
--   Status message (OK, Not Found, Server Not Responding, etc.).
+        Responses ranging 100-199.
 
-1.  Informational
+        - Provisional.
+        - Interim response.
+        - Most common: 100 CONTINUE.
 
-    Responses ranging 100-199.
-    
-    -   Provisional.
-    -   Interim response.
-    -   Most common: 100 CONTINUE.
+    2.  Successful
 
-2.  Successful
+        Responses ranging 200-299.
 
-    Responses ranging 200-299.
-    
-    If successfully processed (200 OK),
-    
-    -   GET: Found/included.
-    -   POST: Successfully transmitted.
-    -   PUT: Successfully transmitted.
-    -   DELETE: Deleted.
+        If successfully processed (200 OK),
 
-3.  Redirection
+        - GET: Found/included.
+        - POST: Successfully transmitted.
+        - PUT: Successfully transmitted.
+        - DELETE: Deleted.
 
-    Responses ranging 300-399.
-    
-    -   301 MOVED PERMANENTLY.
-    -   302 FOUND.
+    3.  Redirection
 
-4.  Client error
+        Responses ranging 300-399.
 
-    Responses ranging 400-499.
-    
-    -   400 BAD DATA (transmitted to the server);
-    -   401 MUST LOGIN (before making the request);
-    -   403 REFUSE TO PROCESS (but valid request);
-    -   404 NOT FOUND (requested data);
+        - 301 MOVED PERMANENTLY.
+        - 302 FOUND.
 
-5.  Server error
+    4.  Client error
 
-    Responses ranging 500-599.
-    
-    -   500 INTERNAL SERVER ERROR (server failed to process request);
+        Responses ranging 400-499.
 
+        - 400 BAD DATA (transmitted to the server);
+        - 401 MUST LOGIN (before making the request);
+        - 403 REFUSE TO PROCESS (but valid request);
+        - 404 NOT FOUND (requested data);
 
-<a id="org474c2db"></a>
+    5.  Server error
 
-## Examples about HTTP
+        Responses ranging 500-599.
 
+        - 500 INTERNAL SERVER ERROR (server failed to process request);
 
-<a id="orgc6343c7"></a>
+<a id="org2100b72"></a>
 
-### **Request Line**
+### Examples about HTTP
 
-> Every HTTP request begins with the request line.
-> 
-> This consists of the HTTP method, the requested resource and the HTTP protocol
-> version.
-> 
-> `GET /home.html HTTP/1.1`
-> 
-> In this example, `GET` is the HTTP method, `/home.html` is the resource
-> requested and HTTP 1.1 is the protocol used.
+1.  **Request Line**
 
+    > Every HTTP request begins with the request line.
+    >
+    > This consists of the HTTP method, the requested resource and the HTTP protocol
+    > version.
+    >
+    > `GET /home.html HTTP/1.1`
+    >
+    > In this example, `GET` is the HTTP method, `/home.html` is the resource
+    > requested and HTTP 1.1 is the protocol used.
 
-<a id="org011a85e"></a>
+2.  HTTP Method
 
-### HTTP Method
+<a id="orgb6a1fc2"></a>
 
-
-<a id="orgb6c6518"></a>
-
-## IDEs
+### IDEs
 
 `Integrated Development Environment` offers:
 
--   Syntax highlight;
--   Keyword documentation;
--   Auto-complete suggestions;
--   Navigation ease;
--   Unified Environment for development;
+- Syntax highlight;
+- Keyword documentation;
+- Auto-complete suggestions;
+- Navigation ease;
+- Unified Environment for development;
 
+<a id="org4945bb2"></a>
 
-<a id="org5fff99f"></a>
-
-## Extra resources
+### Extra resources
 
 HTTP Overview (Mozilla)
 
@@ -634,236 +524,525 @@ Chrome Developer Tools Overview (Google)
 
 <https://developer.chrome.com/docs/devtools/overview/>
 
-Firefox Developer Tools User Docs  (Mozilla)
+Firefox Developer Tools User Docs (Mozilla)
 
 <https://firefox-source-docs.mozilla.org/devtools-user/index.html>
 
-Getting Started with Visual Studio Code  (Microsoft)
+Getting Started with Visual Studio Code (Microsoft)
 
 <https://code.visualstudio.com/docs>
 
+<a id="orga258c78"></a>
 
-<a id="orgf6464f6"></a>
+## Week 2
 
-# Week 2
+<a id="org14cca89"></a>
 
+### HTML
 
-<a id="orga3b5ce3"></a>
+1.  Table
 
-## HTML
+2.  Forms
 
+3.  Input tags
 
-<a id="org153d20a"></a>
+    - Text;
+    - Password;
+    - Checkbox;
+    - Radio;
+    - Textarea;
+    - Select;
 
-### Table
+<a id="org07ccffd"></a>
 
-
-<a id="org29a31a0"></a>
-
-### Forms
-
-
-<a id="orgae92c8b"></a>
-
-### Input tags
-
--   Text;
--   Password;
--   Checkbox;
--   Radio;
--   Textarea;
--   Select;
-
-
-<a id="org9c135b5"></a>
-
-## DOM
+### DOM
 
 `Document Object Model`
 Server -> Web browser receives webpage -> Transforms in a DOM scheme.
 
+<a id="org7e615b9"></a>
 
-<a id="org61d3288"></a>
-
-## CSS
+### CSS
 
 How to display HTML elements.
 
--   Selector (which element to act upon);
--   Key-values:
-    -   Property;
-    -   Property-value;
+- Selector (which element to act upon);
+- Key-values:
+  - Property;
+  - Property-value;
 
+<a id="org0bd1139"></a>
 
-<a id="org70c3961"></a>
+### Extra Resources
 
-## Extra Resources
+1.  HTML and DOM
 
+    Learn more​
+    Here is a list of resources that may be helpful as you continue your learning journey.
 
-<a id="org4db6831"></a>
+    HTML Elements Reference (Mozilla)
 
-### HTML and DOM
+    <https://developer.mozilla.org/en-US/docs/Web/HTML/Element>
 
-Learn more​
-Here is a list of resources that may be helpful as you continue your learning journey.
+    The Form Element (Mozilla)
 
-HTML Elements Reference (Mozilla)
+    <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form>
 
-<https://developer.mozilla.org/en-US/docs/Web/HTML/Element>
+    What is the Document Object Model? (W3C)
 
-The Form Element (Mozilla)
+    <https://www.w3.org/TR/WD-DOM/introduction.html>
 
-<https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form>
+    ARIA in HTML (W3C via Github)
 
-What is the Document Object Model? (W3C)
+    <https://w3c.github.io/html-aria/>
 
-<https://www.w3.org/TR/WD-DOM/introduction.html>
+    ARIA Authoring Practices (W3C)
 
-ARIA in HTML (W3C via Github)
+    <https://www.w3.org/TR/wai-aria-practices-1.2/>
 
-<https://w3c.github.io/html-aria/>
+<a id="org701efa1"></a>
 
-ARIA Authoring Practices  (W3C)
+## Week 3
 
-<https://www.w3.org/TR/wai-aria-practices-1.2/>
+<a id="org557f674"></a>
 
-
-<a id="orgb2f300d"></a>
-
-# Week 3
-
-
-<a id="org0e639bc"></a>
-
-## Working with libraries
+### Working with libraries
 
 Libraries can depend on other libraries forming a tree of dependencies.
 
--   Bundlers unify all code in one file, or few of them.
--   Finally, add the final bundled file into your HTML.
+- Bundlers unify all code in one file, or few of them.
+- Finally, add the final bundled file into your HTML.
 
+<a id="org242c506"></a>
 
-<a id="org01885f9"></a>
-
-## Responsive Design
+### Responsive Design
 
 A `responsive grid` happens when we combine:
 
--   Flexible grids;
--   Fluid images;
--   Media queries.
+- Flexible grids;
+- Fluid images;
+- Media queries.
 
+1.  Flexible grids
 
-<a id="orge6c744c"></a>
+    - Gutter: space between contents;
+    - Margin: space between content and screen;
+    - Sizes based on percentages.
 
-### Flexible grids
+2.  Fluid images
 
--   Gutter: space between contents;
--   Margin: space between content and screen;
--   Sizes based on percentages.
+    - Max-width: 100%;
+      - Shrink based on container-element size;
+    - Fit on page;
+    - Never grow larger than original size.
 
+3.  Media queries
 
-<a id="org0f9706c"></a>
+    Controls:
 
-### Fluid images
+    - Display size;
+    - Orientation;
+    - Aspect ratio.
 
--   Max-width: 100%;
-    -   Shrink based on container-element size;
--   Fit on page;
--   Never grow larger than original size.
+<a id="org29b29f4"></a>
 
+### Types of Grids
 
-<a id="org12903f8"></a>
+- Fixed grid;
+- Fluid grid;
+- Hybrid grid;
 
-### Media queries
+1.  Fixed Grid
 
-Controls:
+    - Fixed width-columns;
+    - Flexible-margins;
 
--   Display size;
--   Orientation;
--   Aspect ratio.
+2.  Fluid grid
 
+    - Fluid width-columns;
+    - Fixed-gutters;
+    - Fixed-margins;
 
-<a id="org5bafec4"></a>
+    Columns either grow or shrink to adapt to the available space.
 
-## Types of Grids
+3.  Hybrid grid
 
--   Fixed grid;
--   Fluid grid;
--   Hybrid grid;
+    - Fluid and fixed width components;
+    - Different rules, depending on device;
+    - Optimize experience.
 
-
-<a id="orgaed5997"></a>
-
-### Fixed Grid
-
--   Fixed width-columns;
--   Flexible-margins;
-
-
-<a id="org323e8b6"></a>
-
-### Fluid grid
-
--   Fluid width-columns;
--   Fixed-gutters;
--   Fixed-margins;
-
-Columns either grow or shrink to adapt to the available space.
-
-
-<a id="orga16349c"></a>
-
-### Hybrid grid
-
--   Fluid and fixed width components;
--   Different rules, depending on device;
--   Optimize experience.
-
-
-<a id="orgece7f76"></a>
-
-## Bootstrap
-
-
-<a id="org1c546f5"></a>
-
-### Responsive design with class infix
-
-Convention for `class infix` made for `responsive design`, by **Bootstrap**.
-
-[![img](./img/bootstrap.png)](img/bootstrap.png)
-
-
-<a id="orgbac1f7b"></a>
-
-### Class modifiers
-
-It&rsquo;s like the conjugation of verbs, so you have different meaning, with the same functionality. E.i., buttons of alert that can mean &ldquo;just pay attention&rdquo;, or &ldquo;**DANGER!**&rdquo; etc.
-
-
-<a id="org0c99473"></a>
-
-## Extra resources
-
-
-<a id="org56d0e0a"></a>
+<a id="orgc124153"></a>
 
 ### Bootstrap
 
-Bootstrap Official Website
+1.  Responsive design with class infix
 
-<https://getbootstrap.com/>
+    Convention for `class infix` made for `responsive design`, by **Bootstrap**.
 
-Bootstrap 5 Foundations by Daniel Foreman
+    [![img](./img/bootstrap.png)](img/bootstrap.png)
 
-<https://www.amazon.com/Bootstrap-Foundations-Mr-Daniel-Foreman/dp/B0948GRS8W/>
+2.  Class modifiers
 
-Responsive Web Design with HTML5 and CSS  by Ben Frain
+    It&rsquo;s like the conjugation of verbs, so you have different meaning, with the same functionality. E.i., buttons of alert that can mean &ldquo;just pay attention&rdquo;, or &ldquo;**DANGER!**&rdquo; etc.
 
-<https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563/>
+<a id="orgff52fa4"></a>
 
-Bootstrap Themes
+### Static vs Dinamic websites
 
-<https://themes.getbootstrap.com/>
+1.  Static part of a website
 
+    - Images;
+    - Videos;
+    - Text.
+
+2.  Dinamic part of a website
+
+    Static content that is generated, depending on the response of an `application server`.
+
+    To speed up the process and don&rsquo;t overload the website, `cache` is used to store dynamically generated content.
+
+    [![img](./img/cache.png)](img/cache.png)
+
+<a id="org7a4b6fd"></a>
+
+### SPA and Multi-Page Application
+
+1.  Multi-page Application
+
+    - Loads all content at each update
+    - Application server return the entire webpage
+
+2.  SPA
+
+    SPA can use both `bundling` and `lazy-load` to display dynamic content.
+
+    1.  Bundling
+
+        When a new component or data is requested the hole section is returned and rendered.
+
+    2.  Lazy-loading
+
+        When a new piece of a component or data is requested, only the fraction of data and component concerned for the request is loaded.
+
+<a id="orgb9bb416"></a>
+
+### **React**
+
+<a id="orgf0ce11c"></a>
+
+### Extra resources
+
+1.  Bootstrap
+
+    Bootstrap Official Website
+
+    <https://getbootstrap.com/>
+
+    Bootstrap 5 Foundations by Daniel Foreman
+
+    <https://www.amazon.com/Bootstrap-Foundations-Mr-Daniel-Foreman/dp/B0948GRS8W/>
+
+    Responsive Web Design with HTML5 and CSS by Ben Frain
+
+    <https://www.amazon.com/Responsive-Web-Design-HTML5-CSS/dp/1839211563/>
+
+    Bootstrap Themes
+
+    <https://themes.getbootstrap.com/>
+
+2.  React
+
+    Learn more​
+    Here is a list of resources that may be helpful as you continue your learning journey.
+
+    React Official Website
+    <https://reactjs.org/>
+
+    Choosing between Traditional Web Apps and Single Page Apps (Microsoft)
+
+    <https://docs.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/choose-between-traditional-web-and-single-page-apps>
+
+    React Source Code (Github)
+
+    <https://github.com/facebook/react>
+
+    Introduction to React.js
+
+    The original video recorded at Facebook in 2013.
+
+    <https://youtu.be/XxVg_s8xAms>
+
+<a id="org4d85277"></a>
+
+# Programming in Phyton
+
+<a id="org1dee631"></a>
+
+## Objectives
+
+Get started with the Python programming language and associated foundational concepts.
+
+**Learning Objectives:**
+
+- Recognize common applications of the Python programming language.
+- Explain foundational software engineering concepts.
+- Use operators to program a simple output in Python.
+- Use control flow and loops to solve a problem
+
+<a id="org80760c5"></a>
+
+## Week1-Notes - Introduction to Python
+
+<a id="orgc240aca"></a>
+
+### Course content
+
+> Course content  
+> During this course, you’ll cover everything you need to begin with Python development. The content of the four modules is listed below.
+>
+> **Module 1 - Getting started with Python**
+> In this module, you will get an introduction to the course and you’ll cover a brief summary of the history of programming. You will also learn the basics of how programming works and discover typical uses for Python in real-life. There are also some tips on how to take this course successfully.
+>
+> Before embarking on any coding you’ll first establish if your current computer system is set up correctly and identify any required operating system dependencies. Then you’ll explore different ways that you can run programs through Python.
+>
+> Next, you’ll study Python syntax using comments, variables, data types and user input and output. You’ll proceed to expand your Python skills by using math and logical operators so you can control the flow of your code and perform operations such as addition, subtraction, division, and multiplication.
+>
+> Python has multiple ways to do code loops or looping. You will examine looping constructs to iterate your code over multiple sequences.
+>
+> **Module 2 - Basic programming with Python**
+> In module 2, you&rsquo;ll receive an introduction to Python functions, including how to declare a function, and how to pass data to a function or return data from a function. You will also explore data structures, scope, and the concepts of lists and how they can be used in Python. You will also discover tuples, sets, dictionaries and kwargs, gaining an understanding of how their main uses.
+>
+> Errors and exceptions are two very important aspects of learning Python as a new developer. In module 2, you will start with errors and exceptions, and explore what happens when something goes wrong with your code. Exception handling and Python file handling are covered, as are how to create files in Python and various methods of inserting content into a new file.
+>
+> **Module 3 - Programming paradigms**
+> In the third module, you will cover programming paradigms, and look at the features and concepts behind procedural programming, functional programming and object oriented programming.
+>
+> A key feature of procedural programming is algorithms, you will explore how they can be used to solve problems, how algorithmic complexity is calculated and learn about Big-O notation.
+>
+> Next you will learn about pure functions and recursion in functional programming, as well as the difference between maps and filters.
+>
+> Finally, you will explore object-oriented programming and its four main concepts. ​ You will explore the relationship between classes and instances in Python by creating classes, instantiating them, and accessing their variables and methods. You’ll learn about abstract classes and methods and how to implement them. The rules of method resolution and inheritance with child and parent classes are also explained. Being able to read files is essential when working with stored data in Python and you’ll discover several built-in functions to make this easier.
+>
+> **Module 4 - Modules, packages, libraries and tools**
+> In module 4, you learned that Python is a powerful language that allows you to build amazing things. But it can gain even more functionality with the use of modules, libraries and tools. You will learn about Modules and that they are the building blocks for adding functionality to your code, so you don’t need to continually redo everything.
+>
+> You will also explore some of the commonly used Python libraries in data analysis and data science, and how they can apply to the areas of machine learning and artificial intelligence.
+>
+> Finally, you’ll find out why testing is an essential component of Quality Assurance and explore the type of testing you should use. You will learn about test automation packages and the importance of automated testing and you’ll write some tests using PyTest. Finally, you will explore the evolution of Test-driven development (or TDD), and focus on how to apply a test-driven development methodology.
+>
+> **Module 5 - Graded assessment**
+> Here you&rsquo;ll learn about the graded assessment. After you complete the individual items in this module, you&rsquo;ll test your knowledge and skills by completing an end of course graded assessment.
+
+<a id="orgffac01c"></a>
+
+### Input
+
+    ipt = input("Please input something")
+    print(inp)
+
+<a id="org5c72f09"></a>
+
+### Format
+
+    a=1
+    b="abb"
+    print("{0} is different from {1}" .format(a, b))
+
+<a id="org43ed2aa"></a>
+
+### Match
+
+    http = 200
+    match http:
+        case 200:
+            print("ok!")
+        _:
+            print("anything else!")
+
+    a = isinstance(str, "aa")
+
+    print(a)
+
+<a id="orge41dd98"></a>
+
+## Week2-Notes - Python Data structures
+
+<a id="org5317099"></a>
+
+### \*args, \*\*kwargs
+
+1.  Args
+
+        def s(*args):
+            return sum(args)
+
+        print(s(3,4,5,6))
+
+        def s(*args):
+            return sum(*args)
+
+        print(s([3,4,5,6]))
+
+2.  Kwargs
+
+        def s(**kwargs):
+            return sum()
+
+        print(s(3,4,5,6))
+
+<a id="org5369b91"></a>
+
+### Additional Resources
+
+1.  First
+
+    Python allows you to do quite a lot with very little code. Compared to other languages such as Java or C#, Python has a much easier learning curve. It lends itself well to the &ldquo;write less, do more philosophy&rdquo;. Python developers are also in high demand and learning how to program in Python makes for a good career choice.
+
+    You can access the links below to learn more about programming in Python.
+
+    Check out the Python website to find out more about built-in functions:
+    Python
+
+    Check out W3 Schools to learn more about coding and web development:
+    W3Schools
+
+    Check out HackerRank to practice your new acquired Python skills:
+    HackerRank
+
+2.  Data Structures
+
+    Here is a list of resources that may be helpful as you continue your learning journey.
+
+    Learn more about Python data structures (Python documentation) on the Python website:
+    Python.org - Data structures
+
+    Explore common Python data structures at the Real Python website:
+    Real Python - Data structures
+
+<a id="orgc337ef5"></a>
+
+### Open, close files
+
+1.  Open files
+
+    1.  options
+
+        - `r`: read (text)
+        - `rb`: read (binary)
+        - `r+`: read and write
+        - `w`: write (overwrite file)
+        - `a`: append data
+
+    2.  `with open`
+
+        No need to use the `close` function.
+
+            with open('testing.txt', 'r') as file:
+
+2.  Close files
+
+    - No arguments.
+
+3.  Examples
+
+    1.  Open and read
+
+            file = open('test.txt', mode='r')
+
+            data = file.readline()
+
+            print(data)
+
+            file.close()
+
+            # alternative
+            with open('test.txt', mode='r') as file:
+                data = file.readline()
+                print(data)
+
+            Hello there!
+
+    2.  Create file and populate it
+
+            try:
+                with open('sample/newfile.txt', 'w') as file:
+                    file.writelines(["Hello", "\nThere", "\nThird line!"])
+
+                with open('sample/newfile.txt', 'a') as file:
+                    file.writelines(["\nHello", "\nThere", "\nThird line!"])
+            except FileNotFoundError as e:
+                print("Error: ", e)
+
+<a id="orgf60533c"></a>
+
+### Read files
+
+1.  Complete file
+
+        with open('samplefile.txt', 'r') as file:
+            print(file.read())
+
+2.  Only selected characters
+
+        with open('samplefile.txt', 'r') as file:
+            print(file.read(40))
+
+3.  Read a line
+
+    Reads the entire line:
+
+        with open('samplefile.txt', 'r') as file:
+            print(file.readline())
+
+    Reads the line until the _nth_ character:
+
+        n=10
+        with open('samplefile.txt', 'r') as file:
+            print(file.readline(n))
+
+4.  Read multiple lines
+
+    `readlines()` read the entire contents of the file and returns it in an ordered list,
+
+        with open('samplefile.txt', 'r') as file:
+            lines=file.readlines()
+            print(len(lines))
+
+            for line in lines:
+                print(line)
+
+5.  Looping through lines
+
+    `with open() as file` already returns a list of lines stored in `file`.
+
+        with open('samplefile.txt', 'r') as file:
+            for line in file:
+                print(line)
+
+<a id="org91a80ad"></a>
+
+### Extra Resources
+
+The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this module.
+
+Learn more about exceptions and errors in Python on the Python website:
+Exceptions and Errors in Python - Python docs
+
+Check out the PyNative website to learn more about file handling in Python:
+File handling in Python
+
+<a id="orgcc6894a"></a>
+
+## Week3-Notes - Procedural Programming
+
+Principle `DRY`:
+
+- Don&rsquo;t;
+- Repeat;
+- Yourself.
+
+<a id="orgd859845"></a>
+
+### What is procedural programming?
+
+Creating reusable code that is used multiple times, so to DRY.

@@ -439,7 +439,7 @@ Get started with the Python programming language and associated foundational con
  - Explain foundational software engineering concepts.
  - Use operators to program a simple output in Python.
  - Use control flow and loops to solve a problem
-** Week1-Notes
+** Week1-Notes - Introduction to Python
 *** Course content
 #+begin_quote
 Course content  
@@ -511,7 +511,7 @@ a = isinstance(str, "aa")
 
 print(a)  
 #+end_src
-** Week2-Notes
+** Week2-Notes - Python Data structures
 *** *args, **kwargs
 **** Args
 #+begin_src python :session localhost :results output
@@ -619,3 +619,61 @@ except FileNotFoundError as e:
 
 #+RESULTS:
 : Error:  [Errno 2] No such file or directory: 'sample/newfile.txt'
+*** Read files
+**** Complete file
+#+begin_src python :session localhost :results both
+with open('samplefile.txt', 'r') as file:
+    print(file.read())
+#+end_src
+
+**** Only selected characters
+#+begin_src python :session localhost :results both
+with open('samplefile.txt', 'r') as file:
+    print(file.read(40))
+#+end_src
+**** Read a line
+Reads the entire line:
+#+begin_src python :session localhost :results both
+with open('samplefile.txt', 'r') as file:
+    print(file.readline())
+#+end_src
+
+Reads the line until the /nth/ character:
+
+#+begin_src python :session localhost :results both
+n=10
+with open('samplefile.txt', 'r') as file:
+    print(file.readline(n))
+#+end_src
+**** Read multiple lines
+=readlines()= read the entire contents of the file and returns it in an ordered list,
+#+begin_src python :session localhost :results both
+with open('samplefile.txt', 'r') as file:
+    lines=file.readlines()
+    print(len(lines))
+
+    for line in lines:
+        print(line)
+#+end_src
+**** Looping through lines
+=with open() as file= already returns a list of lines stored in =file=.
+#+begin_src python :session localhost :results both
+with open('samplefile.txt', 'r') as file:
+    for line in file:
+        print(line)
+#+end_src
+*** Extra Resources
+The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this module.
+
+Learn more about exceptions and errors in Python on the Python website:
+Exceptions and Errors in Python - Python docs
+
+Check out the PyNative website to learn more about file handling in Python:
+File handling in Python
+** Week3-Notes - Procedural Programming
+Principle =DRY=:
+- Don't;
+- Repeat;
+- Yourself.
+*** What is procedural programming?
+Creating reusable code that is used multiple times, so to DRY.
