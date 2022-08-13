@@ -1080,4 +1080,77 @@ https://www.thetechplatform.com/post/different-types-of-algorithms-in-data-struc
 
 Introduction to Big-O notation
 https://dev.to/sarah_chima/the-big-o-notation-an-introduction-34f7
-** Week4-notes
+
+------------
+The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this lesson.
+
+OOP Principles
+https://www.geeksforgeeks.org/python-oops-concepts/
+
+In-depth understanding of MRO
+https://www.python.org/download/releases/2.3/mro/
+
+OOP Principles/ Classes and objects
+https://realpython.com/python3-object-oriented-programming/
+
+** Week4-notes - Modules
+*** Imports
+- Only loaded once;
+- Can be loaded, only inside a scope;
+
+#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod3/imports.py
+import sys
+
+loc = sys.path
+for i in loc:
+    print(i)
+
+import calendar
+
+leapdays = calendar.leapdays(2000, 2050)
+print(leapdays)
+#+end_src
+
+#+RESULTS:
+:
+: /opt/miniconda3/lib/python39.zip
+: /opt/miniconda3/lib/python3.9
+: /opt/miniconda3/lib/python3.9/lib-dynload
+: /home/buddhilw/.local/lib/python3.9/site-packages
+: /opt/miniconda3/lib/python3.9/site-packages
+: 13
+*** Scopes
+**** Intro and types of scopes in python
+The scopes in python are classified as:
+- =local=;
+- =enclosed=;
+- =global=;
+- =built-in=;
+**** Scope resolution
+- LEGB rule
+- *Local*: inside funtion;
+- Enclosed: inside enclosed or nested function;
+- *Global*: upmost level, outside functions;
+- Built-in: in the built-in modules;
+
+#+begin_src python :session localhost :results both
+globals() # built-in function
+locals() # built-in function
+#+end_src
+
+#+RESULTS:
+| __name__ | : | __main__ | __doc__ | : | hline | __package__ | : | hline | __loader__ | : | <class | _frozen_importlib.BuiltinImporter | > | __spec__ | : | hline | __annotations__ | : | nil | __builtins__ | : | <module | builtins | (built-in) | > | __PYTHON_EL_eval | : | <function | __PYTHON_EL_eval | at | 0x7f5bc81e5940> | __PYTHON_EL_eval_file | : | <function | __PYTHON_EL_eval_file | at | 0x7f5bc81e59d0> | __PYTHON_EL_native_completion_setup | : | <function | __PYTHON_EL_native_completion_setup | at | 0x7f5bc81e5a60> | ast | : | <module | ast | from | /opt/miniconda3/lib/python3.9/ast.py | > | __org_babel_python_tmpfile | : | <_io.TextIOWrapper | name= | /tmp/babel-QftOX3/python-HQCpev | mode= | w | encoding= | UTF-8 | > | __org_babel_python_ast | : | <ast.Module | object | at | 0x7f5bc8070fd0> | __org_babel_python_final | : | (...) | sys | : | <module | sys | (built-in) | > | loc | : | ( /opt/miniconda3/lib/python39.zip /opt/miniconda3/lib/python3.9 /opt/miniconda3/lib/python3.9/lib-dynload /home/buddhilw/.local/lib/python3.9/site-packages /opt/miniconda3/lib/python3.9/site-packages) | i | : | /opt/miniconda3/lib/python3.9/site-packages | calendar | : | <module | calendar | from | /opt/miniconda3/lib/python3.9/calendar.py | > | leapdays | : | 13 |
+*** Additional Resource
+Learn more
+Here is a list of resources that may be helpful as you continue your learning journey.
+
+How To Import Modules in Python 3 (Digital Ocean)
+
+Import modules in Python
+https://www.digitalocean.com/community/tutorials/how-to-import-modules-in-python-3
+
+Python Modules (Programiz)
+https://www.programiz.com/python-programming/modules
+
+Python Packages (Real Python)
+https://realpython.com/python-modules-packages/#python-packages

@@ -1,9 +1,9 @@
-class MyFirstClass:
+class MyFirstClass():
     print("Who wrote this?")
     index = "Author-Book"
 
-    def __init__(self, index) -> None:
-        self.index = index
+    # def __init__(self, index) -> None:
+    #     self.index = index
 
     def hand_list(self, philosopher, book):
         print(MyFirstClass.index)
