@@ -670,10 +670,414 @@ Exceptions and Errors in Python - Python docs
 
 Check out the PyNative website to learn more about file handling in Python:
 File handling in Python
-** Week3-Notes - Procedural Programming
+** Week3-Notes - Programming Paradigms
 Principle =DRY=:
 - Don't;
 - Repeat;
 - Yourself.
 *** What is procedural programming?
 Creating reusable code that is used multiple times, so to DRY.
+*** Functional programming
+#+begin_src python :session localhost :results output
+# Recursive function for Tower of Hanoi
+def hanoi(disks, source, helper, destination):
+    print('P1 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+    # Base Condition
+    if (disks == 1):
+        print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
+        return
+
+    # Recursive calls in which function calls itself
+    hanoi(disks - 1, source, destination, helper)
+    print('P2 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+    print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
+    hanoi(disks - 1, helper, source, destination)
+    print('P3 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+
+# Driver code
+# disks = int(input('Number of disks to be displaced: '))
+disks = 3
+'''
+Tower names passed as arguments:
+Source: A
+Helper: B
+Destination: C
+'''
+# Actual function call
+hanoi(disks, 'A', 'B', 'C')
+#+end_src
+
+#+RESULTS:
+#+begin_example
+P1 - disk: 3, source: A, helper: B, destination: C
+P1 - disk: 2, source: A, helper: C, destination: B
+P1 - disk: 1, source: A, helper: B, destination: C
+Disk 1 moves from tower A to tower C.
+P2 - disk: 2, source: A, helper: C, destination: B
+Disk 2 moves from tower A to tower B.
+P1 - disk: 1, source: C, helper: A, destination: B
+Disk 1 moves from tower C to tower B.
+P3 - disk: 2, source: A, helper: C, destination: B
+P2 - disk: 3, source: A, helper: B, destination: C
+Disk 3 moves from tower A to tower C.
+P1 - disk: 2, source: B, helper: A, destination: C
+P1 - disk: 1, source: B, helper: C, destination: A
+Disk 1 moves from tower B to tower A.
+P2 - disk: 2, source: B, helper: A, destination: C
+Disk 2 moves from tower B to tower C.
+P1 - disk: 1, source: A, helper: B, destination: C
+Disk 1 moves from tower A to tower C.
+P3 - disk: 2, source: B, helper: A, destination: C
+P3 - disk: 3, source: A, helper: B, destination: C
+#+end_example
+*** Slice functions
+#+begin_src python :session localhost :results output
+# str[start:stop:step]
+trial = "rbvcrsal"
+new_trial = trial[::-1]
+print(new_trial)
+print("---", range(len(trial)), "---")
+print(trial[len(trial):-(len(trial)+1):-1])
+print(new_trial == trial[len(trial):-(len(trial)+1):-1])
+for i in range(len(trial)):
+    print(trial[i::-1])
+    # print(trial[i:-(len(trial)+1):-1])
+#+end_src
+
+#+RESULTS:
+#+begin_example
+lasrcvbr
+--- range(0, 8) ---
+lasrcvbr
+True
+r
+br
+vbr
+cvbr
+rcvbr
+srcvbr
+asrcvbr
+lasrcvbr
+#+end_example
+*** Recursive reversal
+#+begin_src python :session localhost :results output
+trial="abcdefg"
+
+# Idea: concatenate string in the opposite order
+print(trial)
+print("trial[1:]: ", trial[1:], ", trial[0]: ", trial[0], sep='')
+print("trial[2:]: ", trial[2:], ", trial[1]: ", trial[1], ", trial[0]: ", trial[0], sep='')
+# trial[0] -> get first character in string
+def first_character(str):
+    return str[0]
+
+def string_opposite(str):
+    if len(str) == 0:
+        return "" # empty string -> always will concatenate the empty string in last call
+    else:
+        # get first character and concatenate (at the end),
+        # with the reversed string of the orginial string, less the first character.
+        return string_opposite(str[1:]) + first_character(str)
+
+print(string_opposite(trial))
+#+end_src
+
+#+RESULTS:
+: abcdefg
+: trial[1:]: bcdefg, trial[0]: a
+: trial[2:]: cdefg, trial[1]: b, trial[0]: a
+: gfedcba
+*** =map= and =filter=
+#+begin_src python :session localhost :results output
+l = ["abc", "cde", "efg", "fgh", "aaa"]
+def has_a(str):
+    if any([c == "a" for c in str]):
+        return str
+# map(has_a, l)
+print("Map:")
+print(list(map(has_a,l)))
+# for x in map(has_a, l):
+#     print(x)
+
+print("Filter:")
+print(list(filter(has_a,l)))
+# for x in filter(has_a, l):
+#     print(x)
+
+print([x for x in l if has_a(x)])
+#+end_src
+
+#+RESULTS:
+: Map:
+: ['abc', None, None, None, 'aaa']
+: Filter:
+: ['abc', 'aaa']
+: ['abc', 'aaa']
+
+#+begin_src python :session localhost :results output
+a = [[96], [69]]
+
+print(''.join(list(map(str, a))))
+print(type(''.join(list(map(str, a)))))
+#+end_src
+*** Assignment - list comprehension
+#+begin_src python :session localhost :results output
+# Input data: List of dictionaries
+employee_list = [
+   {"id": 12345, "name": "John", "department": "Kitchen"},
+   {"id": 12456, "name": "Paul", "department": "House Floor"},
+   {"id": 12478, "name": "Sarah", "department": "Management"},
+   {"id": 12434, "name": "Lisa", "department": "Cold Storage"},
+   {"id": 12483, "name": "Ryan", "department": "Inventory Mgmt"},
+   {"id": 12419, "name": "Gill", "department": "Cashier"}
+]
+
+# Function to be passed to the map() function. Do not change this.
+def mod(employee_list):
+   temp = employee_list['name'] + "_" + employee_list["department"]
+   return temp
+
+def to_mod_list(employee_list):
+   """ Modifies the employee list of dictionaries into list of employee-department strings
+
+   [IMPLEMENT ME]
+      1. Use the map() method to apply mod() to all elements in employee_list
+
+   Args:
+      employee_list: list of employee objects
+
+   Returns:
+      list - A list of strings consisting of name + department.
+   """
+   ### WRITE SOLUTION CODE HERE
+   return list(map(mod, employee_list))
+   #raise NotImplementedError()
+
+def generate_usernames(mod_list):
+   """ Generates a list of usernames
+
+   [IMPLEMENT ME]
+      1. Use list comprehension and the replace() function to replace space
+         characters with underscores
+
+      List comprehension looks like:
+      list = [ function() for <item> in <list> ]
+
+      The format for the replace() function is:
+
+      test_str.replace(“a”, “z”) # replaces every “a” in test_str with “z”
+
+   Args:
+      mod_list: list of employee-department strings
+
+   Returns:
+      list - A list of usernames consisting of name + department delimited by underscores.
+   """
+   return [str.replace(" ", "_") for str in mod_list]
+   ### WRITE SOLUTION CODE HERE
+
+   #raise NotImplementedError()
+
+def map_id_to_initial(employee_list):
+   """ Maps employee id to first initial
+
+   [IMPLEMENT ME]
+      1. Use dictionary comprehension to map each employee's id (value) to the first letter in their name (key)
+
+      Dictionary comprehension looks like:
+      dict = { key : value for <item> in <list> }
+
+   Args:
+      employee_list: list of employee objects
+
+   Returns:
+      dict - A dictionary mapping an employee's id (value) to their first initial (key).
+   """
+   #return {value:key for (key,value) in employ.items() for employ in employee_list}
+   ids=[]
+   names=[]
+   for d in employee_list:
+       ids.append(d["id"])
+       names.append(str(d["name"])[0])
+   return {value:key for (key, value) in zip(ids, names)}
+
+   ### WRITE SOLUTION CODE HERE
+
+   #raise NotImplementedError()
+
+def main():
+   mod_emp_list = to_mod_list(employee_list)
+   print("Modified employee list: " + str(mod_emp_list) + "\n")
+
+   print(f"List of usernames: {generate_usernames(mod_emp_list)}\n")
+
+   print(f"Initials and ids: {map_id_to_initial(employee_list)}")
+
+if __name__ == "__main__":
+   main()
+#+end_src
+
+#+RESULTS:
+: Modified employee list: ['John_Kitchen', 'Paul_House Floor', 'Sarah_Management', 'Lisa_Cold Storage', 'Ryan_Inventory Mgmt', 'Gill_Cashier']
+:
+: List of usernames: ['John_Kitchen', 'Paul_House_Floor', 'Sarah_Management', 'Lisa_Cold_Storage', 'Ryan_Inventory_Mgmt', 'Gill_Cashier']
+:
+: Initials and ids: {'J': 12345, 'P': 12456, 'S': 12478, 'L': 12434, 'R': 12483, 'G': 12419}
+*** Object Oriented Programing (OOP)
+Structure:
+- Classes;
+- Objects;
+- Methods.
+**** Classes
+Logical code-block with =attributes= and =behavior=.
+
+- =Classes= are defined using the key-word =class=;
+- =Attributes= can be =variables=;
+- =Behavior= can be =functions=.
+
+**** Objects
+=Objects= are instances of =Classes=.
+#+begin_example
+Bundle, to the *class* =employee=, the attributes =position= and =employment_status=
+#+end_example
+
+**** OOP in Python
+#+begin_quote
+You previously encountered the four main pillars of object oriented programming. These are: *encapsulation, polymorphism, inheritance and abstraction*
+#+end_quote
+**** Istantiation process
+- Class definition;
+- New Instance;
+- Initializing new instance.
+**** Attribute References
+To access data defined inside the class scope.
+
+**** Examples
+#+begin_src python :session localhost :results output
+class MyClass():
+    a = 5
+    print("Hello")
+
+myc = MyClass()
+print(MyClass.a)
+print(myc.a)
+#+end_src
+
+#+RESULTS:
+: Hello
+: 5
+: 5
+
+
+#+begin_src python :session localhost :results output
+class MyClass():
+    a = 5
+    def hello(self):
+        print("Hello, world!")
+
+myc = MyClass()
+print(MyClass.a)
+print(myc.hello())
+myc.hello()
+#+end_src
+
+#+RESULTS:
+: 5
+: Hello, world!
+: None
+: Hello, world!
+
+#+begin_src python :session localhost :results output
+class House:
+    '''
+    This is a stub for a class representing a house that can be used to create objects and evaluate different metrics that we may require in constructing it.
+    '''
+    num_rooms = 5
+    bathrooms = 2
+    def cost_evaluation(self):
+        print(self.num_rooms)
+        pass
+        # Functionality to calculate the costs from the area of the house
+
+house = House()
+print(house.num_rooms)
+print(House.num_rooms)
+
+house.num_rooms = 7
+print(house.num_rooms)
+print(House.num_rooms)
+
+House.num_rooms = 10
+house2 = House()
+print(house2.num_rooms)
+print(House.num_rooms)
+#+end_src
+
+#+RESULTS:
+: 5
+: 5
+: 7
+: 5
+: 10
+: 10
+**** Exercise
+#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod2/Exercises/myfirstclass.py
+class MyFirstClass():
+    print("Who wrote this?")
+    index = "Author-Book"
+
+    # def __init__(self, index) -> None:
+    #     self.index = index
+
+    def hand_list(self, philosopher, book):
+        print(MyFirstClass.index)
+        print("{} wrote the book: {}".format(philosopher, book))
+
+whodunnit = MyFirstClass()
+whodunnit.hand_list("Sun Tzu", "The Art of War")
+#+end_src
+
+#+begin_src python :session localhost :results both
+class A:
+    print("Print inside A.")
+
+    def __init__(self, c):
+        print("---------Inside class A----------")
+        self.c = c
+
+    def alpha(self):
+        c = self.c + 1
+        return c
+
+
+print(dir(A))
+print("Instantiating A..")
+# a = A(1)
+# print(a.alpha())
+
+
+class B:
+    def __init__(self, a):
+        print("---------Inside class B----------")
+        self.a = a
+    # print(a.alpha())
+    d = 5
+    print(d)
+    # print(a)
+
+print("Instantiating B..")
+# b = B(a)
+# print(a)
+#+end_src
+*** Extra resources
+The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this module.
+
+Programming styles in Python
+https://newrelic.com/blog/nerd-life/python-programming-styles
+
+Different types of algorithms used in Python
+https://www.thetechplatform.com/post/different-types-of-algorithms-in-data-structure
+
+Introduction to Big-O notation
+https://dev.to/sarah_chima/the-big-o-notation-an-introduction-34f7
+** Week4-notes

@@ -11,5 +11,11 @@ with open('test.txt', mode='r') as file:
     data = file.readline()
     print(data)
 
-with open('newfile.txt', 'w') as file:
-    file.writelines(["Hello", "There", "Third line!"])
+try:
+    with open('sample/newfile.txt', 'w') as file:
+        file.writelines(["Hello", "\nThere", "\nThird line!"])
+
+    with open('sample/newfile.txt', 'a') as file:
+        file.writelines(["\nHello", "\nThere", "\nThird line!"])
+except FileNotFoundError as e:
+    print("Error: ", e)
