@@ -1,87 +1,98 @@
 # Table of Contents
 
-1.  [Schedule](#orgb4d2b9f)
-2.  [Introduction to Back-end Development](#org571438d)
-    1.  [Week 1](#orgd780178)
-        1.  [Capstone project overview](#orgeb0b08c)
-        2.  [How the web works](#org0fd7855)
-        3.  [Grace Egbo - a day in the life of a backend dev.](#orgd5b1b72)
-        4.  [How the internet works](#orgd82cefd)
-        5.  [Servers](#org66588ad)
-        6.  [What are websites and webpages?](#org060ee53)
-        7.  [TCP - Transmission Control Protocol](#orgaf0b74c)
-        8.  [UDP - User Datagram Protocol](#orgbb60324)
-        9.  [HTTP - HyperText Transfer Protocol](#orgb46ae85)
-        10. [Makeup of a HTTP request](#org296f63a)
-        11. [Makeup of a HTTP response](#org8948915)
-        12. [Examples about HTTP](#orgd436045)
-        13. [IDEs](#org5371e53)
-        14. [Extra resources](#org3a0a114)
-    2.  [Week 2](#org12fbac4)
-        1.  [HTML](#orgbdcdbe2)
-        2.  [DOM](#orgb5403d2)
-        3.  [CSS](#orga5377ef)
-        4.  [Extra Resources](#orgb0f7260)
-    3.  [Week 3](#orge32d840)
-        1.  [Working with libraries](#org5cb2689)
-        2.  [Responsive Design](#orgcfecfc3)
-        3.  [Types of Grids](#org81830b8)
-        4.  [Bootstrap](#org2deef47)
-        5.  [Static vs Dinamic websites](#org10beb66)
-        6.  [SPA and Multi-Page Application](#orgae27ef9)
-        7.  [**React**](#org0e63d09)
-        8.  [Extra resources](#orgb9b4226)
-3.  [Programming in Phyton](#org0bc9e81)
-    1.  [Objectives](#org104696a)
-    2.  [Week1-Notes - Introduction to Python](#org2a89d92)
-        1.  [Course content](#orgb264ef4)
-        2.  [Input](#orgc3a9256)
-        3.  [Format](#orgc3ecd66)
-        4.  [Match](#orgb89cb22)
-    3.  [Week2-Notes - Python Data structures](#orgaa205a9)
-        1.  [\*args, \*\*kwargs](#org7a4ef4a)
-        2.  [Additional Resources](#org8ae71eb)
-        3.  [Open, close files](#org473b519)
-        4.  [Read files](#orgf4bcb29)
-        5.  [Extra Resources](#org3366ad0)
-    4.  [Week3-Notes - Programming Paradigms](#org2871dea)
-        1.  [What is procedural programming?](#org4820afb)
-        2.  [Functional programming](#org00e3d20)
-        3.  [Slice functions](#org412c053)
-        4.  [Recursive reversal](#org1b8933b)
-        5.  [`map` and `filter`](#org855daf1)
-        6.  [Assignment - list comprehension](#orge2fe286)
-        7.  [Object Oriented Programing (OOP)](#org238d64a)
-        8.  [Extra resources](#orgde094ec)
-    5.  [Week4-notes - Modules, Packages, Libraries and Testing](#org507c361)
-        1.  [Imports](#orgbc4b7ec)
-        2.  [Scopes](#orga4c038b)
-        3.  [Additional Resource](#org77ac697)
-        4.  [Most common libraries](#orgc8364eb)
-        5.  [Examples of libraries-use](#orgeddca00)
-        6.  [More on Big Data and Analysis in Python](#org2282ad8)
-        7.  [Web Frameworks](#orgc81e020)
-        8.  [Additional Resources](#orgf2720d8)
-        9.  [Features of using libraries for testing](#org2ba6af2)
-        10. [What `testing` must have](#org2313c48)
-        11. [Testing Life Cycle](#org6334af5)
-        12. [Good testing leads to](#org64488c1)
-        13. [Types of testing](#org97d4e25)
-        14. [How to know there was sufficient testing](#orgb7930c8)
-        15. [Deep-in types of testing](#org0b82843)
-        16. [Levels of testing](#orgea0499b)
-        17. [Testing in Python](#orgd5b24c1)
-        18. [Pytest testing](#orgec18445)
-        19. [TDD (Test-Driven Development)](#org1f68493)
-        20. [Other types of development cycles](#orgf7fb4ac)
-        21. [Examples TDD](#org610139f)
-        22. [Additional Resources](#org130ad09)
-        23. [Final Test](#orge9d965d)
-4.  [Version Control](#org9cc9700)
+1.  [Schedule](#orge3c2bd4)
+2.  [Introduction to Back-end Development](#orgacacf8f)
+    1.  [Week 1](#org7d35f0a)
+        1.  [Capstone project overview](#org1823121)
+        2.  [How the web works](#org452affe)
+        3.  [Grace Egbo - a day in the life of a backend dev.](#orgf1db41e)
+        4.  [How the internet works](#org3036e5a)
+        5.  [Servers](#orgfdd8471)
+        6.  [What are websites and webpages?](#org93ec29b)
+        7.  [TCP - Transmission Control Protocol](#orgcfdff87)
+        8.  [UDP - User Datagram Protocol](#orgd2f6fec)
+        9.  [HTTP - HyperText Transfer Protocol](#org5e144a7)
+        10. [Makeup of a HTTP request](#org0ea46cc)
+        11. [Makeup of a HTTP response](#orgabf3981)
+        12. [Examples about HTTP](#orgbbc2969)
+        13. [IDEs](#org2f2bd02)
+        14. [Extra resources](#org485e3a8)
+    2.  [Week 2](#orgd4ab78f)
+        1.  [HTML](#org9047112)
+        2.  [DOM](#org1d84d5c)
+        3.  [CSS](#org90a4c89)
+        4.  [Extra Resources](#orgb84b3f8)
+    3.  [Week 3](#org2c41dec)
+        1.  [Working with libraries](#orge71a57d)
+        2.  [Responsive Design](#org91e8a2a)
+        3.  [Types of Grids](#orgd3dc6a5)
+        4.  [Bootstrap](#org26d0d38)
+        5.  [Static vs Dinamic websites](#org6da3863)
+        6.  [SPA and Multi-Page Application](#orgf6dd245)
+        7.  [**React**](#orge36289a)
+        8.  [Extra resources](#org8ede37d)
+3.  [Programming in Phyton](#org7cf2792)
+    1.  [Objectives](#orgeb233d7)
+    2.  [Week1-Notes - Introduction to Python](#org02c9ede)
+        1.  [Course content](#org0691362)
+        2.  [Input](#org0bef360)
+        3.  [Format](#org9a977d8)
+        4.  [Match](#orgbd083e1)
+    3.  [Week2-Notes - Python Data structures](#org520b30e)
+        1.  [\*args, \*\*kwargs](#orga44b3af)
+        2.  [Additional Resources](#orgddee707)
+        3.  [Open, close files](#orgc963770)
+        4.  [Read files](#org47ef6dd)
+        5.  [Extra Resources](#org17a0621)
+    4.  [Week3-Notes - Programming Paradigms](#org131ce04)
+        1.  [What is procedural programming?](#orgcebf3e9)
+        2.  [Functional programming](#org5dde8a5)
+        3.  [Slice functions](#orgd2b1fdf)
+        4.  [Recursive reversal](#org85e2967)
+        5.  [`map` and `filter`](#org10fcfe9)
+        6.  [Assignment - list comprehension](#org51ab64c)
+        7.  [Object Oriented Programing (OOP)](#orgcda89ac)
+        8.  [Extra resources](#orgcfc2123)
+    5.  [Week4-notes - Modules, Packages, Libraries and Testing](#orgded4d9f)
+        1.  [Imports](#org90ab3f3)
+        2.  [Scopes](#orgb3b6337)
+        3.  [Additional Resource](#orgdc7feca)
+        4.  [Most common libraries](#org2927e66)
+        5.  [Examples of libraries-use](#org9968837)
+        6.  [More on Big Data and Analysis in Python](#org38c7277)
+        7.  [Web Frameworks](#org6daf581)
+        8.  [Additional Resources](#org1ea0ac7)
+        9.  [Features of using libraries for testing](#orgd861858)
+        10. [What `testing` must have](#org8b60722)
+        11. [Testing Life Cycle](#org07cc6aa)
+        12. [Good testing leads to](#orgf21ee3f)
+        13. [Types of testing](#orgc5e0ce8)
+        14. [How to know there was sufficient testing](#org2aba932)
+        15. [Deep-in types of testing](#org29fb9c8)
+        16. [Levels of testing](#orgd769fe1)
+        17. [Testing in Python](#org7a4e49d)
+        18. [Pytest testing](#org135d30c)
+        19. [TDD (Test-Driven Development)](#orgc0dc234)
+        20. [Other types of development cycles](#orgd68bb9b)
+        21. [Examples TDD](#org7e049ef)
+        22. [Additional Resources](#org8f00ece)
+        23. [Final Test](#orgc5ef7b4)
+4.  [Version Control](#org9718470)
+    1.  [Week 1 - Version Control and Project Managment](#org633031d)
+        1.  [Version control](#org658592a)
+        2.  [Continuous Integration](#org6d65722)
+        3.  [Continuous Delivery](#orgb2d50ee)
+        4.  [Continuous Deployment](#org7287aae)
+        5.  [Git/GitHub](#org02662b3)
+        6.  [About Agile](#org3d73a8c)
+        7.  [Additional Resources](#orgcb9cc5b)
+    2.  [Week 2 - Unix commands](#org2fa2d83)
+        1.  [Piping and Redirection](#orge755ee0)
+        2.  [Additonal Resources](#orga386faa)
 
 Back-end development by [Meta, on Coursera](https://www.coursera.org/professional-certificates/meta-back-end-developer).
 
-<a id="orgb4d2b9f"></a>
+<a id="orge3c2bd4"></a>
 
 # Schedule
 
@@ -211,15 +222,15 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 </tbody>
 </table>
 
-<a id="org571438d"></a>
+<a id="orgacacf8f"></a>
 
 # Introduction to Back-end Development
 
-<a id="orgd780178"></a>
+<a id="org7d35f0a"></a>
 
 ## Week 1
 
-<a id="orgeb0b08c"></a>
+<a id="org1823121"></a>
 
 ### Capstone project overview
 
@@ -229,7 +240,7 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
 
 3.  TODO Create a template system driven by Django views.
 
-<a id="org0fd7855"></a>
+<a id="org452affe"></a>
 
 ### How the web works
 
@@ -255,7 +266,7 @@ Back-end development by [Meta, on Coursera](https://www.coursera.org/professiona
     - APIs.
     - Web servers
 
-<a id="orgd5b1b72"></a>
+<a id="orgf1db41e"></a>
 
 ### Grace Egbo - a day in the life of a backend dev.
 
@@ -275,7 +286,7 @@ The day breaks out in sections.
     - Listen to perspectives.
     - Remote world makes that even more necessary.
 
-<a id="orgd82cefd"></a>
+<a id="org3036e5a"></a>
 
 ### How the internet works
 
@@ -294,7 +305,7 @@ The day breaks out in sections.
 
     [![img](./img/internet-scheme.png "Client-server connection through the Intertnet")](img/internet-scheme.png)
 
-<a id="org66588ad"></a>
+<a id="orgfdd8471"></a>
 
 ### Servers
 
@@ -319,7 +330,7 @@ The day breaks out in sections.
 
         Designed to respond to thousands of requests of clients per second.
 
-<a id="org060ee53"></a>
+<a id="org93ec29b"></a>
 
 ### What are websites and webpages?
 
@@ -372,7 +383,7 @@ The day breaks out in sections.
             - HyperText Transfer Protocol.
             - Request-response cycle.
 
-<a id="orgaf0b74c"></a>
+<a id="orgcfdff87"></a>
 
 ### TCP - Transmission Control Protocol
 
@@ -381,7 +392,7 @@ The day breaks out in sections.
 - Almost always on the right addresses.
 - Slower than UDP.
 
-<a id="orgbb60324"></a>
+<a id="orgd2f6fec"></a>
 
 ### UDP - User Datagram Protocol
 
@@ -389,7 +400,7 @@ The day breaks out in sections.
 - Easily out of order data-packages.
 - Possibly a lot of loss of information.
 
-<a id="orgb46ae85"></a>
+<a id="org5e144a7"></a>
 
 ### HTTP - HyperText Transfer Protocol
 
@@ -400,7 +411,7 @@ The day breaks out in sections.
   - Files.
 - Request-response based communication between client and server.
 
-<a id="org296f63a"></a>
+<a id="org0ea46cc"></a>
 
 ### Makeup of a HTTP request
 
@@ -450,7 +461,7 @@ It must contain a
 
     > Headers contains additional information about the request and the client that is making the request.
 
-<a id="org8948915"></a>
+<a id="orgabf3981"></a>
 
 ### Makeup of a HTTP response
 
@@ -510,7 +521,7 @@ After the `header`, the `message body` contains data that is the response:
 
         - 500 INTERNAL SERVER ERROR (server failed to process request);
 
-<a id="orgd436045"></a>
+<a id="orgbbc2969"></a>
 
 ### Examples about HTTP
 
@@ -528,7 +539,7 @@ After the `header`, the `message body` contains data that is the response:
 
 2.  HTTP Method
 
-<a id="org5371e53"></a>
+<a id="org2f2bd02"></a>
 
 ### IDEs
 
@@ -540,7 +551,7 @@ After the `header`, the `message body` contains data that is the response:
 - Navigation ease;
 - Unified Environment for development;
 
-<a id="org3a0a114"></a>
+<a id="org485e3a8"></a>
 
 ### Extra resources
 
@@ -564,11 +575,11 @@ Getting Started with Visual Studio Code (Microsoft)
 
 <https://code.visualstudio.com/docs>
 
-<a id="org12fbac4"></a>
+<a id="orgd4ab78f"></a>
 
 ## Week 2
 
-<a id="orgbdcdbe2"></a>
+<a id="org9047112"></a>
 
 ### HTML
 
@@ -585,14 +596,14 @@ Getting Started with Visual Studio Code (Microsoft)
     - Textarea;
     - Select;
 
-<a id="orgb5403d2"></a>
+<a id="org1d84d5c"></a>
 
 ### DOM
 
 `Document Object Model`
 Server -> Web browser receives webpage -> Transforms in a DOM scheme.
 
-<a id="orga5377ef"></a>
+<a id="org90a4c89"></a>
 
 ### CSS
 
@@ -603,7 +614,7 @@ How to display HTML elements.
   - Property;
   - Property-value;
 
-<a id="orgb0f7260"></a>
+<a id="orgb84b3f8"></a>
 
 ### Extra Resources
 
@@ -632,11 +643,11 @@ How to display HTML elements.
 
     <https://www.w3.org/TR/wai-aria-practices-1.2/>
 
-<a id="orge32d840"></a>
+<a id="org2c41dec"></a>
 
 ## Week 3
 
-<a id="org5cb2689"></a>
+<a id="orge71a57d"></a>
 
 ### Working with libraries
 
@@ -645,7 +656,7 @@ Libraries can depend on other libraries forming a tree of dependencies.
 - Bundlers unify all code in one file, or few of them.
 - Finally, add the final bundled file into your HTML.
 
-<a id="orgcfecfc3"></a>
+<a id="org91e8a2a"></a>
 
 ### Responsive Design
 
@@ -676,7 +687,7 @@ A `responsive grid` happens when we combine:
     - Orientation;
     - Aspect ratio.
 
-<a id="org81830b8"></a>
+<a id="orgd3dc6a5"></a>
 
 ### Types of Grids
 
@@ -703,7 +714,7 @@ A `responsive grid` happens when we combine:
     - Different rules, depending on device;
     - Optimize experience.
 
-<a id="org2deef47"></a>
+<a id="org26d0d38"></a>
 
 ### Bootstrap
 
@@ -717,7 +728,7 @@ A `responsive grid` happens when we combine:
 
     It&rsquo;s like the conjugation of verbs, so you have different meaning, with the same functionality. E.i., buttons of alert that can mean &ldquo;just pay attention&rdquo;, or &ldquo;**DANGER!**&rdquo; etc.
 
-<a id="org10beb66"></a>
+<a id="org6da3863"></a>
 
 ### Static vs Dinamic websites
 
@@ -735,7 +746,7 @@ A `responsive grid` happens when we combine:
 
     [![img](./img/cache.png)](img/cache.png)
 
-<a id="orgae27ef9"></a>
+<a id="orgf6dd245"></a>
 
 ### SPA and Multi-Page Application
 
@@ -756,11 +767,11 @@ A `responsive grid` happens when we combine:
 
         When a new piece of a component or data is requested, only the fraction of data and component concerned for the request is loaded.
 
-<a id="org0e63d09"></a>
+<a id="orge36289a"></a>
 
 ### **React**
 
-<a id="orgb9b4226"></a>
+<a id="org8ede37d"></a>
 
 ### Extra resources
 
@@ -804,11 +815,11 @@ A `responsive grid` happens when we combine:
 
     <https://youtu.be/XxVg_s8xAms>
 
-<a id="org0bc9e81"></a>
+<a id="org7cf2792"></a>
 
 # Programming in Phyton
 
-<a id="org104696a"></a>
+<a id="orgeb233d7"></a>
 
 ## Objectives
 
@@ -821,11 +832,11 @@ Get started with the Python programming language and associated foundational con
 - Use operators to program a simple output in Python.
 - Use control flow and loops to solve a problem
 
-<a id="org2a89d92"></a>
+<a id="org02c9ede"></a>
 
 ## Week1-Notes - Introduction to Python
 
-<a id="orgb264ef4"></a>
+<a id="org0691362"></a>
 
 ### Course content
 
@@ -865,14 +876,14 @@ Get started with the Python programming language and associated foundational con
 > **Module 5 - Graded assessment**
 > Here you&rsquo;ll learn about the graded assessment. After you complete the individual items in this module, you&rsquo;ll test your knowledge and skills by completing an end of course graded assessment.
 
-<a id="orgc3a9256"></a>
+<a id="org0bef360"></a>
 
 ### Input
 
     ipt = input("Please input something")
     print(inp)
 
-<a id="orgc3ecd66"></a>
+<a id="org9a977d8"></a>
 
 ### Format
 
@@ -880,7 +891,7 @@ Get started with the Python programming language and associated foundational con
     b="abb"
     print("{0} is different from {1}" .format(a, b))
 
-<a id="orgb89cb22"></a>
+<a id="orgbd083e1"></a>
 
 ### Match
 
@@ -895,11 +906,11 @@ Get started with the Python programming language and associated foundational con
 
     print(a)
 
-<a id="orgaa205a9"></a>
+<a id="org520b30e"></a>
 
 ## Week2-Notes - Python Data structures
 
-<a id="org7a4ef4a"></a>
+<a id="orga44b3af"></a>
 
 ### \*args, \*\*kwargs
 
@@ -922,7 +933,7 @@ Get started with the Python programming language and associated foundational con
 
         print(s(3,4,5,6))
 
-<a id="org8ae71eb"></a>
+<a id="orgddee707"></a>
 
 ### Additional Resources
 
@@ -951,7 +962,7 @@ Get started with the Python programming language and associated foundational con
     Explore common Python data structures at the Real Python website:
     Real Python - Data structures
 
-<a id="org473b519"></a>
+<a id="orgc963770"></a>
 
 ### Open, close files
 
@@ -1005,7 +1016,7 @@ Get started with the Python programming language and associated foundational con
             except FileNotFoundError as e:
                 print("Error: ", e)
 
-<a id="orgf4bcb29"></a>
+<a id="org47ef6dd"></a>
 
 ### Read files
 
@@ -1051,7 +1062,7 @@ Get started with the Python programming language and associated foundational con
             for line in file:
                 print(line)
 
-<a id="org3366ad0"></a>
+<a id="org17a0621"></a>
 
 ### Extra Resources
 
@@ -1063,7 +1074,7 @@ Exceptions and Errors in Python - Python docs
 Check out the PyNative website to learn more about file handling in Python:
 File handling in Python
 
-<a id="org2871dea"></a>
+<a id="org131ce04"></a>
 
 ## Week3-Notes - Programming Paradigms
 
@@ -1073,13 +1084,13 @@ Principle `DRY`:
 - Repeat;
 - Yourself.
 
-<a id="org4820afb"></a>
+<a id="orgcebf3e9"></a>
 
 ### What is procedural programming?
 
 Creating reusable code that is used multiple times, so to DRY.
 
-<a id="org00e3d20"></a>
+<a id="org5dde8a5"></a>
 
 ### Functional programming
 
@@ -1110,7 +1121,7 @@ Creating reusable code that is used multiple times, so to DRY.
     # Actual function call
     hanoi(disks, 'A', 'B', 'C')
 
-<a id="org412c053"></a>
+<a id="orgd2b1fdf"></a>
 
 ### Slice functions
 
@@ -1125,7 +1136,7 @@ Creating reusable code that is used multiple times, so to DRY.
         print(trial[i::-1])
         # print(trial[i:-(len(trial)+1):-1])
 
-<a id="org1b8933b"></a>
+<a id="org85e2967"></a>
 
 ### Recursive reversal
 
@@ -1149,7 +1160,7 @@ Creating reusable code that is used multiple times, so to DRY.
 
     print(string_opposite(trial))
 
-<a id="org855daf1"></a>
+<a id="org10fcfe9"></a>
 
 ### `map` and `filter`
 
@@ -1175,7 +1186,7 @@ Creating reusable code that is used multiple times, so to DRY.
     print(''.join(list(map(str, a))))
     print(type(''.join(list(map(str, a)))))
 
-<a id="orge2fe286"></a>
+<a id="org51ab64c"></a>
 
 ### Assignment - list comprehension
 
@@ -1273,7 +1284,7 @@ Creating reusable code that is used multiple times, so to DRY.
     if __name__ == "__main__":
        main()
 
-<a id="org238d64a"></a>
+<a id="orgcda89ac"></a>
 
 ### Object Oriented Programing (OOP)
 
@@ -1402,7 +1413,7 @@ Structure:
         # b = B(a)
         # print(a)
 
-<a id="orgde094ec"></a>
+<a id="orgcfc2123"></a>
 
 ### Extra resources
 
@@ -1430,11 +1441,11 @@ In-depth understanding of MRO
 OOP Principles/ Classes and objects
 <https://realpython.com/python3-object-oriented-programming/>
 
-<a id="org507c361"></a>
+<a id="orgded4d9f"></a>
 
 ## Week4-notes - Modules, Packages, Libraries and Testing
 
-<a id="orgbc4b7ec"></a>
+<a id="org90ab3f3"></a>
 
 ### Imports
 
@@ -1452,7 +1463,7 @@ OOP Principles/ Classes and objects
   leapdays = calendar.leapdays(2000, 2050)
   print(leapdays)
 
-<a id="orga4c038b"></a>
+<a id="orgb3b6337"></a>
 
 ### Scopes
 
@@ -1476,7 +1487,7 @@ OOP Principles/ Classes and objects
       globals() # built-in function
       locals() # built-in function
 
-<a id="org77ac697"></a>
+<a id="orgdc7feca"></a>
 
 ### Additional Resource
 
@@ -1494,7 +1505,7 @@ Python Modules (Programiz)
 Python Packages (Real Python)
 <https://realpython.com/python-modules-packages/#python-packages>
 
-<a id="orgc8364eb"></a>
+<a id="org2927e66"></a>
 
 ### Most common libraries
 
@@ -1543,7 +1554,7 @@ Python Packages (Real Python)
     - beatiful soup
     - selenium
 
-<a id="orgeddca00"></a>
+<a id="org9968837"></a>
 
 ### Examples of libraries-use
 
@@ -1593,7 +1604,7 @@ Python Packages (Real Python)
         # Print statement 3
         print(new_text)
 
-<a id="org2282ad8"></a>
+<a id="org38c7277"></a>
 
 ### More on Big Data and Analysis in Python
 
@@ -1643,7 +1654,7 @@ Python Packages (Real Python)
 >
 > Pydoop: Pydoop provides an interface between Hadoop and Python and support for handling its Hadoop distributed file systems.
 
-<a id="orgc81e020"></a>
+<a id="org6daf581"></a>
 
 ### Web Frameworks
 
@@ -1692,7 +1703,7 @@ Python Packages (Real Python)
     - Flexibility
     - Integration
 
-<a id="orgf2720d8"></a>
+<a id="org1ea0ac7"></a>
 
 ### Additional Resources
 
@@ -1707,7 +1718,7 @@ ML and AI libraries in Python
 Data Science libraries in Python
 <https://www.dataquest.io/blog/15-python-libraries-for-data-science/>
 
-<a id="org2ba6af2"></a>
+<a id="orgd861858"></a>
 
 ### Features of using libraries for testing
 
@@ -1729,7 +1740,7 @@ Helps with:
 - Assurance
 - Experience
 
-<a id="org2313c48"></a>
+<a id="org8b60722"></a>
 
 ### What `testing` must have
 
@@ -1737,7 +1748,7 @@ Helps with:
 - Traceability
 - Efficiency
 
-<a id="org6334af5"></a>
+<a id="org07cc6aa"></a>
 
 ### Testing Life Cycle
 
@@ -1753,7 +1764,7 @@ The steps to achieve this can include:
 - Correct defects based on them
 - Generating reports from tests
 
-<a id="org64488c1"></a>
+<a id="orgf21ee3f"></a>
 
 ### Good testing leads to
 
@@ -1763,7 +1774,7 @@ The steps to achieve this can include:
 - Reduce costs
 - Increase satisfaction
 
-<a id="org97d4e25"></a>
+<a id="orgc5e0ce8"></a>
 
 ### Types of testing
 
@@ -1779,7 +1790,7 @@ Types:
 - Usability
 - Regression testing
 
-<a id="orgb7930c8"></a>
+<a id="org2aba932"></a>
 
 ### How to know there was sufficient testing
 
@@ -1788,7 +1799,7 @@ Types:
 - Deadlines
 - Time intervals
 
-<a id="org0b82843"></a>
+<a id="org29fb9c8"></a>
 
 ### Deep-in types of testing
 
@@ -1818,7 +1829,7 @@ Other ways to categorize testing:
 
     When the underlining system and it&rsquo;s operations and environments are corrected, changed or extended.
 
-<a id="orgea0499b"></a>
+<a id="orgd769fe1"></a>
 
 ### Levels of testing
 
@@ -1886,7 +1897,7 @@ The levels of testing are sequential and build on each other.
 
     As code gets larger, they become harder to fix.
 
-<a id="orgd5b24c1"></a>
+<a id="org7a4e49d"></a>
 
 ### Testing in Python
 
@@ -1957,7 +1968,7 @@ Generally involved in:
     - Buttons
     - Form-filling
 
-<a id="orgec18445"></a>
+<a id="org135d30c"></a>
 
 ### Pytest testing
 
@@ -1984,7 +1995,7 @@ Or, to test only one function,
 
     pytest test_addition.py::test_add
 
-<a id="org1f68493"></a>
+<a id="orgc0dc234"></a>
 
 ### TDD (Test-Driven Development)
 
@@ -2006,7 +2017,7 @@ This **process** is also called the `red-green refactor cycle`.
     - Easier to integrate components, later.
     - Ease to refactor, in need of changes.
 
-<a id="orgf7fb4ac"></a>
+<a id="orgd68bb9b"></a>
 
 ### Other types of development cycles
 
@@ -2015,7 +2026,7 @@ This **process** is also called the `red-green refactor cycle`.
 - Scaling-driven
 - Developer-test-driven
 
-<a id="org610139f"></a>
+<a id="org7e049ef"></a>
 
 ### Examples TDD
 
@@ -2042,7 +2053,7 @@ This **process** is also called the `red-green refactor cycle`.
         else:
             return False
 
-<a id="org130ad09"></a>
+<a id="org8f00ece"></a>
 
 ### Additional Resources
 
@@ -2057,7 +2068,7 @@ PyTest Official website
 Test automation packages in Python
 <https://www.geeksforgeeks.org/best-python-modules-for-automation/>
 
-<a id="orge9d965d"></a>
+<a id="orgc5ef7b4"></a>
 
 ### Final Test
 
@@ -2128,6 +2139,141 @@ Test automation packages in Python
     d = D()
     print(d.a())
 
-<a id="org9cc9700"></a>
+<a id="org9718470"></a>
 
 # Version Control
+
+<a id="org633031d"></a>
+
+## Week 1 - Version Control and Project Managment
+
+<a id="org658592a"></a>
+
+### Version control
+
+> One of the first significant Version Control Systems was the Concurrent Versions System (CVS). It was first developed in 1986 by Walter F. Tichy at Purdue University and released publicly in 1990.
+
+<a id="org6d65722"></a>
+
+### Continuous Integration
+
+> Continuous Integration, or CI, is used to automate the integration of code changes from multiple developers into a single main stream. Using a workflow whereby small changes are merged frequently, often many times per day, will reduce the number of merge conflicts.
+>
+> This process is widespread in test-driven software development strategies. CI is often used to automatically compile the project and run tests on every code change to ensure that the build remains stable and prevent regressions in functionality.
+
+<a id="orgb2d50ee"></a>
+
+### Continuous Delivery
+
+> Continuous Delivery is an extension of Continuous Integration. Once the changes have been merged into the main stream, a Continuous Delivery system automatically packages the application and prepares it for deployment. This helps avoid human error when packaging the application.
+
+<a id="org7287aae"></a>
+
+### Continuous Deployment
+
+> Continuous Deployment is an extension of Continuous Delivery. The goal of Continuous Deployment is to deploy and release software to customers frequently and safely. The strategy commonly involves automatically deploying to a test (also known as staging) environment first to validate the deployment package and software changes. Once validated, it can automatically deploy to the live (also known as production) environment for customers.
+
+<a id="org02662b3"></a>
+
+### Git/GitHub
+
+Version control:
+
+- Easily backroll
+- Easily integrate code
+- Keep track of collaboration (`Git blame`)
+- Keep track, in Agile setup
+
+<a id="org3d73a8c"></a>
+
+### About Agile
+
+<a id="orgcb9cc5b"></a>
+
+### Additional Resources
+
+About Version Control
+
+<https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control>
+
+List of Version Control Software
+
+<https://en.wikipedia.org/wiki/List_of_version-control_software>
+
+The benefits of a distributed version control system
+
+<https://about.gitlab.com/topics/version-control/benefits-distributed-version-control-system/>
+
+What is Cloning?
+
+<https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>
+
+<a id="org2fa2d83"></a>
+
+## Week 2 - Unix commands
+
+<a id="orge755ee0"></a>
+
+### Piping and Redirection
+
+There are three types of redirection, in Unix systems:
+
+- Input (0);
+- Output (1);
+- Error (2);
+
+  ls -l /bin/usr > text_or_texterror.txt 2>&1
+
+We are redirecting the output, from the standard path-file (the terminal), to `text_or_texterror.txt`, by using `'>'` (redirection). Also, we want that, in case of error, the output also be sent to this file. So, we use the syntax `2>&1`, which means, in case of error, redirect also to the conveined output-file.
+
+<a id="orga386faa"></a>
+
+### Additonal Resources
+
+Agile methodologies
+
+<https://www.planview.com/resources/guide/agile-methodologies-a-beginners-guide/>
+
+Installing git on mac and windows, detailed instructions.
+
+<https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
+
+Bash Reference Manual
+
+<https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents>
+
+Bash Redirections
+
+<https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirections>
+
+Bash Cheatsheet
+
+<https://devhints.io/bash>
+
+Grep Cheatsheet
+
+<https://devhints.io/grep>
+
+Grep Manual
+
+<https://man7.org/linux/man-pages/man1/grep.1.html>
+
+History and Timeline of Unix
+
+<https://unix.org/what_is_unix/history_timeline.html>
+
+History of Vim
+
+<https://en.wikipedia.org/wiki/Vim_(text_editor)>
+
+How to work with relative and absolute paths
+
+<https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/>
+
+Unix Commands Cheatsheet
+
+<https://cheatography.com/jluis/cheat-sheets/bash-and-unix-commands/>
+
+Vim Cheatsheet
+
+<https://vim.rtorr.com/>

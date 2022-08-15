@@ -486,7 +486,7 @@ print(inp)
 #+end_src
 
 *** Format
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 a=1
 b="abb"
 print("{0} is different from {1}" .format(a, b))
@@ -495,7 +495,7 @@ print("{0} is different from {1}" .format(a, b))
 #+RESULTS:
 : 1 is different from abb
 *** Match
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 http = 200
 match http:
     case 200:
@@ -506,7 +506,7 @@ match http:
 
 #+RESULTS:
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 a = isinstance(str, "aa")
 
 print(a)  
@@ -514,7 +514,7 @@ print(a)
 ** Week2-Notes - Python Data structures
 *** *args, **kwargs
 **** Args
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 def s(*args):
     return sum(args)
 
@@ -524,7 +524,7 @@ print(s(3,4,5,6))
 #+RESULTS:
 : 18
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 def s(*args):
     return sum(*args)
 
@@ -606,7 +606,7 @@ Hello there!
 #+end_src
 ***** Create file and populate it
 
-#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod2/files.py
+#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/files.py
 try:
     with open('sample/newfile.txt', 'w') as file:
         file.writelines(["Hello", "\nThere", "\nThird line!"])
@@ -678,7 +678,7 @@ Principle =DRY=:
 *** What is procedural programming?
 Creating reusable code that is used multiple times, so to DRY.
 *** Functional programming
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 # Recursive function for Tower of Hanoi
 def hanoi(disks, source, helper, destination):
     print('P1 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
@@ -731,7 +731,7 @@ P3 - disk: 2, source: B, helper: A, destination: C
 P3 - disk: 3, source: A, helper: B, destination: C
 #+end_example
 *** Slice functions
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 # str[start:stop:step]
 trial = "rbvcrsal"
 new_trial = trial[::-1]
@@ -760,7 +760,7 @@ asrcvbr
 lasrcvbr
 #+end_example
 *** Recursive reversal
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 trial="abcdefg"
 
 # Idea: concatenate string in the opposite order
@@ -788,7 +788,7 @@ print(string_opposite(trial))
 : trial[2:]: cdefg, trial[1]: b, trial[0]: a
 : gfedcba
 *** =map= and =filter=
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 l = ["abc", "cde", "efg", "fgh", "aaa"]
 def has_a(str):
     if any([c == "a" for c in str]):
@@ -814,14 +814,14 @@ print([x for x in l if has_a(x)])
 : ['abc', 'aaa']
 : ['abc', 'aaa']
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 a = [[96], [69]]
 
 print(''.join(list(map(str, a))))
 print(type(''.join(list(map(str, a)))))
 #+end_src
 *** Assignment - list comprehension
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 # Input data: List of dictionaries
 employee_list = [
    {"id": 12345, "name": "John", "department": "Kitchen"},
@@ -953,7 +953,7 @@ You previously encountered the four main pillars of object oriented programming.
 To access data defined inside the class scope.
 
 **** Examples
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 class MyClass():
     a = 5
     print("Hello")
@@ -963,13 +963,8 @@ print(MyClass.a)
 print(myc.a)
 #+end_src
 
-#+RESULTS:
-: Hello
-: 5
-: 5
 
-
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 class MyClass():
     a = 5
     def hello(self):
@@ -987,7 +982,7 @@ myc.hello()
 : None
 : Hello, world!
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 class House:
     '''
     This is a stub for a class representing a house that can be used to create objects and evaluate different metrics that we may require in constructing it.
@@ -1021,7 +1016,7 @@ print(House.num_rooms)
 : 10
 : 10
 **** Exercise
-#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod2/Exercises/myfirstclass.py
+#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/Exercises/myfirstclass.py
 class MyFirstClass():
     print("Who wrote this?")
     index = "Author-Book"
@@ -1098,7 +1093,7 @@ https://realpython.com/python3-object-oriented-programming/
 - Only loaded once;
 - Can be loaded, only inside a scope;
 
-#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod3/imports.py
+#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod3/imports.py
 import sys
 
 loc = sys.path
@@ -1191,7 +1186,7 @@ Others common:
 - selenium
 *** Examples of libraries-use
 **** Pandas
-#+begin_src python :session localhost :results output :tangle ./Exercises/Python-mod3/Execises/libraries-pandas.py
+#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod3/Execises/libraries-pandas.py
 import pandas as pd
 
 a = pd.DataFrame(
@@ -1216,7 +1211,7 @@ print(b)
 
 #+RESULTS:
 **** NLTK
-#+begin_src python :session localhost :results output :tangle  ./Exercises/Python-mod3/Execises/libraries-nltk.py
+#+begin_src python :session localhost :results output :eval no :tangle  ./Exercises/Python-mod3/Execises/libraries-nltk.py
 import nltk
 
 text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -1609,14 +1604,14 @@ Test automation packages in Python
 https://www.geeksforgeeks.org/best-python-modules-for-automation/
 
 *** Final Test
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 for x in range(1, 4):
     print(int((str((float(x))))))
 #+end_src
 
 #+RESULTS:
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 str = 'Pomodoro'
 for l in str:
 if l == 'o':
@@ -1627,7 +1622,7 @@ if l == 'o':
 #+RESULTS:
 
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 def d():
     color = "green"
     def e():
@@ -1644,7 +1639,7 @@ d()
 : Color: yellow
 
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 num = 9
 class Car:
     num = 5
@@ -1668,7 +1663,7 @@ print(num)
 #+RESULTS:
 : 9
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 Class P():
     pass
 Class C(P):
@@ -1683,7 +1678,7 @@ print(issubclass(C,P))
 
 #+RESULTS:
 
-#+begin_src python :session localhost :results output
+#+begin_src python :session localhost :results output :eval no
 class A:
    def a(self):
        return "Function inside A"
@@ -1702,3 +1697,215 @@ d = D()
 print(d.a())
 #+end_src
 * Version Control
+** Week 1 - Version Control and Project Managment
+*** Version control
+#+begin_quote
+One of the first significant Version Control Systems was the Concurrent Versions System (CVS). It was first developed in 1986 by Walter F. Tichy at Purdue University and released publicly in 1990.
+#+end_quote
+*** Continuous Integration
+#+begin_quote
+Continuous Integration, or CI, is used to automate the integration of code changes from multiple developers into a single main stream. Using a workflow whereby small changes are merged frequently, often many times per day, will reduce the number of merge conflicts.
+
+This process is widespread in test-driven software development strategies. CI is often used to automatically compile the project and run tests on every code change to ensure that the build remains stable and prevent regressions in functionality.
+#+end_quote
+
+*** Continuous Delivery
+#+begin_quote
+Continuous Delivery is an extension of Continuous Integration. Once the changes have been merged into the main stream, a Continuous Delivery system automatically packages the application and prepares it for deployment. This helps avoid human error when packaging the application.
+#+end_quote
+*** Continuous Deployment
+#+begin_quote
+Continuous Deployment is an extension of Continuous Delivery. The goal of Continuous Deployment is to deploy and release software to customers frequently and safely. The strategy commonly involves automatically deploying to a test (also known as staging) environment first to validate the deployment package and software changes. Once validated, it can automatically deploy to the live (also known as production) environment for customers.
+#+end_quote
+
+*** Git/GitHub
+Version control:
+- Easily backroll
+- Easily integrate code
+- Keep track of collaboration (=Git blame=)
+- Keep track, in Agile setup
+*** About Agile
+*** Additional Resources
+About Version Control
+
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+
+List of Version Control Software
+
+https://en.wikipedia.org/wiki/List_of_version-control_software
+
+The benefits of a distributed version control system
+
+https://about.gitlab.com/topics/version-control/benefits-distributed-version-control-system/
+
+What is Cloning?
+
+https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+** Week 2 - Unix commands
+*** Piping and Redirection
+There are three types of redirection, in Unix systems:
+- Input (0);
+- Output (1);
+- Error (2);
+
+#+begin_src shell
+ls -l /bin/usr > text_or_texterror.txt 2>&1
+#+end_src
+
+We are redirecting the output, from the standard path-file (the terminal), to =text_or_texterror.txt=, by using ='>'= (redirection). Also, we want that, in case of error, the output also be sent to this file. So, we use the syntax =2>&1=, which means, in case of error, redirect also to the conveined output-file.
+*** Additonal Resources
+Agile methodologies
+
+https://www.planview.com/resources/guide/agile-methodologies-a-beginners-guide/
+
+Installing git on mac and windows, detailed instructions.
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Bash Reference Manual
+
+https://www.gnu.org/software/bash/manual/html_node/index.html#SEC_Contents
+
+Bash Redirections
+
+https://www.gnu.org/software/bash/manual/html_node/Redirections.html#Redirections
+
+Bash Cheatsheet
+
+https://devhints.io/bash
+
+Grep Cheatsheet
+
+https://devhints.io/grep
+
+Grep Manual
+
+https://man7.org/linux/man-pages/man1/grep.1.html
+
+History and Timeline of Unix
+
+https://unix.org/what_is_unix/history_timeline.html
+
+History of Vim
+
+https://en.wikipedia.org/wiki/Vim_(text_editor)
+
+How to work with relative and absolute paths
+
+https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/
+
+Unix Commands Cheatsheet
+
+https://cheatography.com/jluis/cheat-sheets/bash-and-unix-commands/
+
+Vim Cheatsheet
+
+https://vim.rtorr.com/
+** Week 3 - Git/GitHub
+*** Git Workflow
+**** Modified
+**** Staged
+**** Committed
+*** Local vs Remote
+**** Example, setting repo
+Make fine =git101=,
+#+begin_src shell :results both :noeval :exports both
+mkdir git101
+#+end_src
+
+#+RESULTS:
+
+=cd= into =git101=, and initiate a new git repository,
+#+begin_src shell :results both :noeval :exports both
+cd git101
+git init
+#+end_src
+
+#+RESULTS:
+: Initialized empty Git repository in /home/buddhilw/gdrive/PP/Meta/git101/.git/
+
+If we check for a remote, the output will be blank. We need to setup the remote repository.
+#+begin_src shell
+cd git101
+git remote
+#+end_src
+
+#+RESULTS:
+
+We can see the current directory this file is in has a remote,
+#+begin_src shell
+git remote -v
+#+end_src
+
+#+RESULTS:
+| origin | https://github.com/BuddhiLW/Meta-backend-course.git (fetch) |
+| origin | https://github.com/BuddhiLW/Meta-backend-course.git (push)  |
+
+We can set the new =git101= to the same repository,
+#+begin_src shell
+cd git101
+git remote add origin https://github.com/BuddhiLW/Meta-backend-course.git
+#+end_src
+
+#+RESULTS:
+
+Then, we check and see that =git101= is now attached to the remote.
+#+begin_src shell
+cd git101
+git remote -v
+#+end_src
+
+#+RESULTS:
+| origin | https://github.com/BuddhiLW/Meta-backend-course.git (fetch) |
+| origin | https://github.com/BuddhiLW/Meta-backend-course.git (push)  |
+
+#+begin_src shell :results output :exports both :noeval
+cd git101
+git pull
+#+end_src
+
+#+RESULTS:
+
+#+begin_example
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+#+end_example
+
+#+begin_src shell
+cd git101
+ls
+#+end_src
+
+#+RESULTS:
+
+#+begin_src shell
+cd git101
+git checkout main
+#+end_src
+
+#+RESULTS:
+: branch 'main' set up to track 'origin/main'.
+
+#+begin_src shell
+cd git101
+ls
+#+end_src
+
+#+RESULTS:
+| Exercises      |
+| README-org.org |
+| README.md      |
+| img            |
+**** Pushing changes
+#+begin_src shell :results both
+git status
+#+end_src
+
+#+RESULTS:
