@@ -2,6 +2,23 @@
 
 Back-end development by [[https://www.coursera.org/professional-certificates/meta-back-end-developer][Meta, on Coursera]].
 
+* Table of Contents :toc:
+- [[#schedule][Schedule]]
+- [[#introduction-to-back-end-development][Introduction to Back-end Development]]
+  - [[#week-1][Week 1]]
+  - [[#week-2][Week 2]]
+  - [[#week-3][Week 3]]
+- [[#programming-in-phyton][Programming in Phyton]]
+  - [[#objectives][Objectives]]
+  - [[#week1-notes---introduction-to-python][Week1-Notes - Introduction to Python]]
+  - [[#week2-notes---python-data-structures][Week2-Notes - Python Data structures]]
+  - [[#week3-notes---programming-paradigms][Week3-Notes - Programming Paradigms]]
+  - [[#week4-notes---modules-packages-libraries-and-testing][Week4-notes - Modules, Packages, Libraries and Testing]]
+- [[#version-control][Version Control]]
+  - [[#week-1---version-control-and-project-managment][Week 1 - Version Control and Project Managment]]
+  - [[#week-2---unix-commands][Week 2 - Unix commands]]
+  - [[#week-3---gitgithub][Week 3 - Git/GitHub]]
+
 * Schedule
 |---------------+---------+-----------+----------+--------+----------+--------|
 | Monday        | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
@@ -18,7 +35,6 @@ Back-end development by [[https://www.coursera.org/professional-certificates/met
 | 18h30m-19h15m | x       | x         | x        | x      |          |        |
 | 19h30m-20h15m | x       | x         | x        | x      |          |        |
 |---------------+---------+-----------+----------+--------+----------+--------|
-
 * Introduction to Back-end Development
 ** Week 1
 *** Capstone project overview
@@ -533,7 +549,6 @@ print(s([3,4,5,6]))
 
 #+RESULTS:
 : 18
-
 
 **** Kwargs
 #+begin_src python :session localhost :results both
@@ -1702,6 +1717,7 @@ print(d.a())
 #+begin_quote
 One of the first significant Version Control Systems was the Concurrent Versions System (CVS). It was first developed in 1986 by Walter F. Tichy at Purdue University and released publicly in 1990.
 #+end_quote
+
 *** Continuous Integration
 #+begin_quote
 Continuous Integration, or CI, is used to automate the integration of code changes from multiple developers into a single main stream. Using a workflow whereby small changes are merged frequently, often many times per day, will reduce the number of merge conflicts.
