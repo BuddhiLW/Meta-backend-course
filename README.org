@@ -20,6 +20,7 @@ Back-end development by [[https://www.coursera.org/professional-certificates/met
   - [[#week-3---gitgithub][Week 3 - Git/GitHub]]
 - [[#databases][Databases]]
   - [[#week-1-1][Week 1]]
+  - [[#week-2---data-types][Week 2 - Data Types]]
 
 * Schedule
 |---------------+---------+-----------+----------+--------+----------+--------|
@@ -517,9 +518,9 @@ print("{0} is different from {1}" .format(a, b))
 http = 200
 match http:
 case 200:
-    print("ok!")
+print("ok!")
 _:
-    print("anything else!")
+print("anything else!")
 #+end_src
 
 #+RESULTS:
@@ -626,10 +627,10 @@ Hello there!
 #+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/files.py
 try:
 with open('sample/newfile.txt', 'w') as file:
-    file.writelines(["Hello", "\nThere", "\nThird line!"])
+file.writelines(["Hello", "\nThere", "\nThird line!"])
 
 with open('sample/newfile.txt', 'a') as file:
-    file.writelines(["\nHello", "\nThere", "\nThird line!"])
+file.writelines(["\nHello", "\nThere", "\nThird line!"])
 except FileNotFoundError as e:
 print("Error: ", e)
 #+end_src
@@ -670,14 +671,14 @@ lines=file.readlines()
 print(len(lines))
 
 for line in lines:
-    print(line)
+print(line)
 #+end_src
 **** Looping through lines
 =with open() as file= already returns a list of lines stored in =file=.
 #+begin_src python :session localhost :results both
 with open('samplefile.txt', 'r') as file:
 for line in file:
-    print(line)
+print(line)
 #+end_src
 *** Extra Resources
 The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this module.
@@ -701,8 +702,8 @@ def hanoi(disks, source, helper, destination):
 print('P1 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
 # Base Condition
 if (disks == 1):
-    print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
-    return
+print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
+return
 
 # Recursive calls in which function calls itself
 hanoi(disks - 1, source, destination, helper)
@@ -790,11 +791,11 @@ return str[0]
 
 def string_opposite(str):
 if len(str) == 0:
-    return "" # empty string -> always will concatenate the empty string in last call
+return "" # empty string -> always will concatenate the empty string in last call
 else:
-    # get first character and concatenate (at the end),
-    # with the reversed string of the orginial string, less the first character.
-    return string_opposite(str[1:]) + first_character(str)
+# get first character and concatenate (at the end),
+# with the reversed string of the orginial string, less the first character.
+return string_opposite(str[1:]) + first_character(str)
 
 print(string_opposite(trial))
 #+end_src
@@ -809,7 +810,7 @@ print(string_opposite(trial))
 l = ["abc", "cde", "efg", "fgh", "aaa"]
 def has_a(str):
 if any([c == "a" for c in str]):
-    return str
+return str
 # map(has_a, l)
 print("Map:")
 print(list(map(has_a,l)))
@@ -858,13 +859,13 @@ def to_mod_list(employee_list):
 """ Modifies the employee list of dictionaries into list of employee-department strings
 
 [IMPLEMENT ME]
-    1. Use the map() method to apply mod() to all elements in employee_list
+1. Use the map() method to apply mod() to all elements in employee_list
 
 Args:
-    employee_list: list of employee objects
+employee_list: list of employee objects
 
 Returns:
-    list - A list of strings consisting of name + department.
+list - A list of strings consisting of name + department.
 """
 ### WRITE SOLUTION CODE HERE
 return list(map(mod, employee_list))
@@ -874,21 +875,21 @@ def generate_usernames(mod_list):
 """ Generates a list of usernames
 
 [IMPLEMENT ME]
-    1. Use list comprehension and the replace() function to replace space
-        characters with underscores
+1. Use list comprehension and the replace() function to replace space
+    characters with underscores
 
-    List comprehension looks like:
-    list = [ function() for <item> in <list> ]
+List comprehension looks like:
+list = [ function() for <item> in <list> ]
 
-    The format for the replace() function is:
+The format for the replace() function is:
 
-    test_str.replace(“a”, “z”) # replaces every “a” in test_str with “z”
+test_str.replace(“a”, “z”) # replaces every “a” in test_str with “z”
 
 Args:
-    mod_list: list of employee-department strings
+mod_list: list of employee-department strings
 
 Returns:
-    list - A list of usernames consisting of name + department delimited by underscores.
+list - A list of usernames consisting of name + department delimited by underscores.
 """
 return [str.replace(" ", "_") for str in mod_list]
 ### WRITE SOLUTION CODE HERE
@@ -899,23 +900,23 @@ def map_id_to_initial(employee_list):
 """ Maps employee id to first initial
 
 [IMPLEMENT ME]
-    1. Use dictionary comprehension to map each employee's id (value) to the first letter in their name (key)
+1. Use dictionary comprehension to map each employee's id (value) to the first letter in their name (key)
 
-    Dictionary comprehension looks like:
-    dict = { key : value for <item> in <list> }
+Dictionary comprehension looks like:
+dict = { key : value for <item> in <list> }
 
 Args:
-    employee_list: list of employee objects
+employee_list: list of employee objects
 
 Returns:
-    dict - A dictionary mapping an employee's id (value) to their first initial (key).
+dict - A dictionary mapping an employee's id (value) to their first initial (key).
 """
 #return {value:key for (key,value) in employ.items() for employ in employee_list}
 ids=[]
 names=[]
 for d in employee_list:
-    ids.append(d["id"])
-    names.append(str(d["name"])[0])
+ids.append(d["id"])
+names.append(str(d["name"])[0])
 return {value:key for (key, value) in zip(ids, names)}
 
 ### WRITE SOLUTION CODE HERE
@@ -985,7 +986,7 @@ print(myc.a)
 class MyClass():
 a = 5
 def hello(self):
-    print("Hello, world!")
+print("Hello, world!")
 
 myc = MyClass()
 print(MyClass.a)
@@ -1007,9 +1008,9 @@ This is a stub for a class representing a house that can be used to create objec
 num_rooms = 5
 bathrooms = 2
 def cost_evaluation(self):
-    print(self.num_rooms)
-    pass
-    # Functionality to calculate the costs from the area of the house
+print(self.num_rooms)
+pass
+# Functionality to calculate the costs from the area of the house
 
 house = House()
 print(house.num_rooms)
@@ -1042,8 +1043,8 @@ index = "Author-Book"
 #     self.index = index
 
 def hand_list(self, philosopher, book):
-    print(MyFirstClass.index)
-    print("{} wrote the book: {}".format(philosopher, book))
+print(MyFirstClass.index)
+print("{} wrote the book: {}".format(philosopher, book))
 
 whodunnit = MyFirstClass()
 whodunnit.hand_list("Sun Tzu", "The Art of War")
@@ -1054,12 +1055,12 @@ class A:
 print("Print inside A.")
 
 def __init__(self, c):
-    print("---------Inside class A----------")
-    self.c = c
+print("---------Inside class A----------")
+self.c = c
 
 def alpha(self):
-    c = self.c + 1
-    return c
+c = self.c + 1
+return c
 
 
 print(dir(A))
@@ -1070,8 +1071,8 @@ print("Instantiating A..")
 
 class B:
 def __init__(self, a):
-    print("---------Inside class B----------")
-    self.a = a
+print("---------Inside class B----------")
+self.a = a
 # print(a.alpha())
 d = 5
 print(d)
@@ -1208,8 +1209,8 @@ import pandas as pd
 
 a = pd.DataFrame(
 {
-    "Animals": ["Dog", "Cat", "Lion", "Cow", "Elephant"],
-    "Sounds": ["Barks", "Meow", "Roars", "Moo", "Trumpet"],
+"Animals": ["Dog", "Cat", "Lion", "Cow", "Elephant"],
+"Sounds": ["Barks", "Meow", "Roars", "Moo", "Trumpet"],
 }
 )
 
@@ -1245,7 +1246,7 @@ stopwords = stopwords.words("english")
 new_text = []
 for i in text.split():
 if i not in stopwords:
-    new_text.append(i)
+new_text.append(i)
 
 # Print statement 3
 print(new_text)
@@ -1598,15 +1599,15 @@ assert map(lambda p: findstring.nodigit(p), findstring.names)
 names = ["Al", "Bo", "Chi", "Ma"]
 def ispresent(person):
 if person in names:
-    return True
+return True
 else:
-    return False
+return False
 
 def nodigit(person):
 if person.isaplha():
-    return True
+return True
 else:
-    return False
+return False
 #+end_src
 *** Additional Resources
 The following resources will be helpful as additional references in dealing with different concepts related to the topics we have covered in this module.
@@ -1643,8 +1644,8 @@ print(str, end=", ")
 def d():
 color = "green"
 def e():
-    nonlocal color
-    color = "yellow"
+nonlocal color
+color = "yellow"
 e()
 print("Color: " + color)
 color = "red"
@@ -1698,11 +1699,11 @@ print(issubclass(C,P))
 #+begin_src python :session localhost :results output :eval no
 class A:
 def a(self):
-    return "Function inside A"
+return "Function inside A"
 
 class B:
 def a(self):
-    return "Function inside B"
+return "Function inside B"
 
 class C:
 pass
@@ -1964,44 +1965,44 @@ git blame -L 5,15 setup.py
 
 From, =man git-blame=
 #+begin_example
-       -L <start>,<end>, -L :<funcname>
-           Annotate only the line range given by <start>,<end>, or by the
-           function name regex <funcname>. May be specified multiple times.
-           Overlapping ranges are allowed.
+    -L <start>,<end>, -L :<funcname>
+        Annotate only the line range given by <start>,<end>, or by the
+        function name regex <funcname>. May be specified multiple times.
+        Overlapping ranges are allowed.
 
-           <start> and <end> are optional.  -L <start> or -L <start>, spans
-           from <start> to end of file.  -L ,<end> spans from start of file to
-           <end>.
+        <start> and <end> are optional.  -L <start> or -L <start>, spans
+        from <start> to end of file.  -L ,<end> spans from start of file to
+        <end>.
 
-           <start> and <end> can take one of these forms:
+        <start> and <end> can take one of these forms:
 
-           •   number
+        •   number
 
-               If <start> or <end> is a number, it specifies an absolute line
-               number (lines count from 1).
+            If <start> or <end> is a number, it specifies an absolute line
+            number (lines count from 1).
 
-           •   /regex/
+        •   /regex/
 
-               This form will use the first line matching the given POSIX
-               regex. If <start> is a regex, it will search from the end of
-               the previous -L range, if any, otherwise from the start of
-               file. If <start> is ^/regex/, it will search from the start of
-               file. If <end> is a regex, it will search starting at the line
-               given by <start>.
+            This form will use the first line matching the given POSIX
+            regex. If <start> is a regex, it will search from the end of
+            the previous -L range, if any, otherwise from the start of
+            file. If <start> is ^/regex/, it will search from the start of
+            file. If <end> is a regex, it will search starting at the line
+            given by <start>.
 
-           •   +offset or -offset
+        •   +offset or -offset
 
-               This is only valid for <end> and will specify a number of lines
-               before or after the line given by <start>.
+            This is only valid for <end> and will specify a number of lines
+            before or after the line given by <start>.
 
-           If :<funcname> is given in place of <start> and <end>, it is a
-           regular expression that denotes the range from the first funcname
-           line that matches <funcname>, up to the next funcname line.
-           :<funcname> searches from the end of the previous -L range, if any,
-           otherwise from the start of file.  ^:<funcname> searches from the
-           start of file. The function names are determined in the same way as
-           git diff works out patch hunk headers (see Defining a custom
-           hunk-header in gitattributes(5)).
+        If :<funcname> is given in place of <start> and <end>, it is a
+        regular expression that denotes the range from the first funcname
+        line that matches <funcname>, up to the next funcname line.
+        :<funcname> searches from the end of the previous -L range, if any,
+        otherwise from the start of file.  ^:<funcname> searches from the
+        start of file. The function names are determined in the same way as
+        git diff works out patch hunk headers (see Defining a custom
+        hunk-header in gitattributes(5)).
 #+end_example
 *** Tip: mix =git blame= and =git log=
 Using =git blame= we have the records of changes with their /hash-ids/. If we want to know what exactly was going one with a specific change, we can take the /id/ and pass to =git log= and have a more verbose version of changes that took place in that commit.
@@ -2029,7 +2030,6 @@ Tech Talk: Linus Torvalds on git
 https://www.youtube.com/watch?v=4XpnKHJAok8
 
 Vim Cheatsheet
-
 https://devhints.io/vim
 * Databases
 ** Week 1
@@ -2050,10 +2050,10 @@ https://devhints.io/vim
 - Filter data;
 - Search data;
 - Perform CRUD operations.
-  - Create;
-  - Read;
-  - Update;
-  - Delete.
+- Create;
+- Read;
+- Update;
+- Delete.
 
 **** SQL
 - SQL operator techniques;
@@ -2284,14 +2284,14 @@ INSERT INTO Students (column_ID,   first_name, last_name, data_of_birth);
 VALUES (2, Cassandra, Yorker, 1990-03-22);
 
 UPDATE Students
-       SET date_of_birth = '1997-10-07'
-       WHERE ID = 02;
+    SET date_of_birth = '1997-10-07'
+    WHERE ID = 02;
 DELETE FROM Students
-            WHERE ID=02;
+        WHERE ID=02;
 
 SELECT first_name, last_name,
-  FROM Students
- WHERE ID = '01';
+FROM Students
+WHERE ID = '01';
 #+end_src
 *** Tables types and constrains
 #+begin_quote
@@ -2316,7 +2316,7 @@ Binary Large Object (BLOB) for storing a collection of binary data such as image
 All fields should have some kind of constrain. e.g., an email must have the symbol /@/. Whereas, personal names can't.
 *** Entity Relationship Diagram (ERD)
 #+begin_quote
- It is a visual representation of how the database will be implemented into tables during physical database design, using a Database Management System (DBMS) like MySQL or Oracle, for example.
+It is a visual representation of how the database will be implemented into tables during physical database design, using a Database Management System (DBMS) like MySQL or Oracle, for example.
 #+end_quote
 
 
@@ -2352,3 +2352,175 @@ Microsoft
 https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5
 IBM
 https://www.ibm.com/docs/en/control-desk/7.6.0?topic=design-relational-database-structure
+** Week 2 - Data Types
+*** Types
+**** How to start sql client on terminal
+Given that you installed MariaDB and configured it for =buddhilw= with a password. Also, you have permission to =buddhilw= to access the =mydb= database (Follow https://wiki.archlinux.org/title/MariaDB#Add_user). Then, you can:
+
+#+begin_src shell
+mysql -u buddhilw -p
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 50
+Server version: 10.8.4-MariaDB Arch Linux
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
+#+end_example
+
+
+OBS.: if you enconter the error, after MariaDB install: =error 2002 (hy000): can't connect to local server through socket '/run/mysqld/mysqld.sock' (2) archlinux=. Then, follow the instructions in:
+https://archlinux.org/news/mariadb-replaces-mysql-in-repositories/
+
+**** Example1
+#+begin_src sql
+CREATE DATABASE mydb;
+USE mydb;
+
+CREATE TABLE w2ex1 (Device_ID int, Qnt int, Tot_Price decimal);
+#+end_src
+
+#+begin_src sql
+show tables;
+#+end_src
+
+#+RESULTS:
+: +----------------+
+
+: +----------------+
+: | w2ex1          |
+: +----------------+
+: 1 row in set (0,001 sec)
+
+#+begin_src sql
+show columns from w2ex1;
+#+end_src
+
+#+RESULTS:
+: +-----------+---------------+------+-----+---------+-------+
+: | Field     | Type          | Null | Key | Default | Extra |
+: +-----------+---------------+------+-----+---------+-------+
+: | Device_ID | int(11)       | YES  |     | NULL    |       |
+: | Qnt       | int(11)       | YES  |     | NULL    |       |
+: | Tot_Price | decimal(10,0) | YES  |     | NULL    |       |
+: +-----------+---------------+------+-----+---------+-------+
+: 3 rows in set (0,002 sec)
+
+**** Example2
+Using =CHAR= and =VARCHAR=.
+
+We start by lauching =mysql=,
+#+begin_src shell
+mysql -u buddhilw -p
+#+end_src
+
+Then, we create a new table in the =mydb= database.
+#+begin_src sql
+USE mydb;
+CREATE TABLE w2e2 (Username CHAR(9), Full_Name VARCHAR(50), Email VARCHAR(30));
+#+end_src
+
+This way, we can hold the following example data:
+|-----------+--------------+------------------------|
+| Username  | Full_Name    | Email                  |
+|-----------+--------------+------------------------|
+| Custom001 | John Johnson | J.Johnson@email.com    |
+| Custom002 | Carl Schmidt | Carl.Schmidt@email.com |
+| Custom003 | Yara Suliman | Yara.Suliman@email.com |
+|-----------+--------------+------------------------|
+
+#+begin_src sql
+show columns from w2e2;
+#+end_src
+
+#+RESULTS:
+#+begin_example
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| Username  | char(9)     | YES  |     | NULL    |       |
+| Full_Name | varchar(50) | YES  |     | NULL    |       |
+| Email     | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0,002 sec)
+#+end_example
+*** =NOT NULL= and =DEFAULT=
+**** =NOT NULL=
+#+begin_src sql
+CREATE TABLE Customer (
+customer_id int NOT NULL,
+customer_name varchar(255) NOT NULL
+);
+#+end_src
+
+**** =DEFAULT=
+#+begin_src sql
+CREATE TABLE Player (
+name_player varchar(50) NOT NULL,
+city varchar(30) DEFAULT "Barcelona"
+);
+#+end_src
+
+**** Exercises
+#+begin_src shell
+mysql -u buddhilw -p
+#+end_src
+
+#+begin_src sql
+CREATE TABLE w2e3 (Customer_ID INT NOT NULL, Street VARCHAR(50), Postcode VARCHAR(50) DEFAULT "HA3 0AE", Town VARCHAR(30) DEFAULT "Harrow");
+#+end_src
+
+#+begin_src sql
+SHOW COLUMNS FROM w2e3;
+#+end_src
+
+#+RESULTS:
+#+begin_example
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| Customer_ID | int(11)     | NO   |     | NULL    |       |
+| Street      | varchar(50) | YES  |     | NULL    |       |
+| Postcode    | varchar(50) | YES  |     | HA97DE  |       |
+| Town        | varchar(30) | YES  |     | Harrow  |       |
++-------------+-------------+------+-----+---------+-------+
+#+end_example
+*** =ALTER= - =add=, =drop= and =modify=
+**** Let's say we want to add a field, =Goods=
+#+begin_src sql
+ALTER TABLE w2e3 ADD (Goods VARCHAR(30), Price DECIMAL, Sender VARCHAR(50));
+#+end_src
+**** We can =drop= fields
+If any data-field is redundant or not needed, we can drop that field.
+
+#+begin_src sql
+ALTER TABLE w2e3 DROP COLUMN Price;
+#+end_src
+**** Finally, =modify=
+In case some field happens to hold data previously not supported, you can include it by,
+#+begin_src sql
+ALTER TABLE w2e3 ALTER Sender VARCHAR(20);
+#+end_src
+*** Additional Resources
+
+#+begin_quote
+The following list of resources explore the meaning and role of different data types in databases. They also provide good examples for how to declare and use the data types in SQL.
+#+end_quote
+
+W3schools
+https://www.w3schools.com/sql/sql_datatypes.asp
+W3resource
+https://www.w3resource.com/mysql/mysql-data-types.php
+LearnSQL
+https://learnsql.com/blog/understanding-numerical-data-types-sql/
+Microsoft
+https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql?view=sql-server-ver16s
+MySQL
+https://dev.mysql.com/doc/refman/8.0/en/numeric-types.html
