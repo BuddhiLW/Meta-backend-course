@@ -3,7 +3,7 @@ import findstring
 import pytest
 
 def test_ispresent():
-    assert findstring.ispresent("Al")
+assert findstring.ispresent("Al")
 
 def test_nodigit():
-    assert map(lambda p: findstring.nodigit(p), findstring.names)
+assert map(lambda p: findstring.nodigit(p), findstring.names)

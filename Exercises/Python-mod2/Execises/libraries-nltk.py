@@ -13,8 +13,8 @@ print(nltk.tokenize.sent_tokenize(text))
 stopwords = stopwords.words("english")
 new_text = []
 for i in text.split():
-    if i not in stopwords:
-        new_text.append(i)
+if i not in stopwords:
+    new_text.append(i)
 
 # Print statement 3
 print(new_text)

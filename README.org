@@ -18,6 +18,8 @@ Back-end development by [[https://www.coursera.org/professional-certificates/met
   - [[#week-1---version-control-and-project-managment][Week 1 - Version Control and Project Managment]]
   - [[#week-2---unix-commands][Week 2 - Unix commands]]
   - [[#week-3---gitgithub][Week 3 - Git/GitHub]]
+- [[#databases][Databases]]
+  - [[#week-1-1][Week 1]]
 
 * Schedule
 |---------------+---------+-----------+----------+--------+----------+--------|
@@ -152,9 +154,9 @@ and the file-path.
 *** HTTP - HyperText Transfer Protocol
 - Standard for the web communication.
 - Transfers data:
-  - Web pages,
-  - Images,
-  - Files.
+- Web pages,
+- Images,
+- Files.
 - Request-response based communication between client and server.
 *** Makeup of a HTTP request
 It must contain a
@@ -298,8 +300,8 @@ How to display HTML elements.
 
 - Selector (which element to act upon);
 - Key-values:
-  - Property;
-  - Property-value;
+- Property;
+- Property-value;
 *** Extra Resources
 **** HTML and DOM
 Learn more​
@@ -345,7 +347,7 @@ A =responsive grid= happens when we combine:
 
 **** Fluid images
 - Max-width: 100%;
-  - Shrink based on container-element size;
+- Shrink based on container-element size;
 - Fit on page;
 - Never grow larger than original size.
 
@@ -400,7 +402,7 @@ To speed up the process and don't overload the website, =cache= is used to store
 **** Multi-page Application
 - Loads all content at each update
 - Application server return the entire webpage
- 
+
 **** SPA
 SPA can use both =bundling= and =lazy-load= to display dynamic content.
 ***** Bundling
@@ -451,10 +453,10 @@ https://youtu.be/XxVg_s8xAms
 Get started with the Python programming language and associated foundational concepts.
 
 *Learning Objectives:*
- - Recognize common applications of the Python programming language.
- - Explain foundational software engineering concepts.
- - Use operators to program a simple output in Python.
- - Use control flow and loops to solve a problem
+- Recognize common applications of the Python programming language.
+- Explain foundational software engineering concepts.
+- Use operators to program a simple output in Python.
+- Use control flow and loops to solve a problem
 ** Week1-Notes - Introduction to Python
 *** Course content
 #+begin_quote
@@ -514,10 +516,10 @@ print("{0} is different from {1}" .format(a, b))
 #+begin_src python :session localhost :results output :eval no
 http = 200
 match http:
-    case 200:
-        print("ok!")
-    _:
-        print("anything else!")
+case 200:
+    print("ok!")
+_:
+    print("anything else!")
 #+end_src
 
 #+RESULTS:
@@ -532,7 +534,7 @@ print(a)
 **** Args
 #+begin_src python :session localhost :results output :eval no
 def s(*args):
-    return sum(args)
+return sum(args)
 
 print(s(3,4,5,6))
 #+end_src
@@ -542,7 +544,7 @@ print(s(3,4,5,6))
 
 #+begin_src python :session localhost :results output :eval no
 def s(*args):
-    return sum(*args)
+return sum(*args)
 
 print(s([3,4,5,6]))
 #+end_src
@@ -553,7 +555,7 @@ print(s([3,4,5,6]))
 **** Kwargs
 #+begin_src python :session localhost :results both
 def s(**kwargs):
-    return sum()
+return sum()
 
 print(s(3,4,5,6))
 #+end_src
@@ -610,8 +612,8 @@ file.close()
 
 # alternative
 with open('test.txt', mode='r') as file:
-    data = file.readline()
-    print(data)
+data = file.readline()
+print(data)
 #+end_src
 
 #+RESULTS:
@@ -623,13 +625,13 @@ Hello there!
 
 #+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/files.py
 try:
-    with open('sample/newfile.txt', 'w') as file:
-        file.writelines(["Hello", "\nThere", "\nThird line!"])
+with open('sample/newfile.txt', 'w') as file:
+    file.writelines(["Hello", "\nThere", "\nThird line!"])
 
-    with open('sample/newfile.txt', 'a') as file:
-        file.writelines(["\nHello", "\nThere", "\nThird line!"])
+with open('sample/newfile.txt', 'a') as file:
+    file.writelines(["\nHello", "\nThere", "\nThird line!"])
 except FileNotFoundError as e:
-    print("Error: ", e)
+print("Error: ", e)
 #+end_src
 
 #+RESULTS:
@@ -638,19 +640,19 @@ except FileNotFoundError as e:
 **** Complete file
 #+begin_src python :session localhost :results both
 with open('samplefile.txt', 'r') as file:
-    print(file.read())
+print(file.read())
 #+end_src
 
 **** Only selected characters
 #+begin_src python :session localhost :results both
 with open('samplefile.txt', 'r') as file:
-    print(file.read(40))
+print(file.read(40))
 #+end_src
 **** Read a line
 Reads the entire line:
 #+begin_src python :session localhost :results both
 with open('samplefile.txt', 'r') as file:
-    print(file.readline())
+print(file.readline())
 #+end_src
 
 Reads the line until the /nth/ character:
@@ -658,24 +660,24 @@ Reads the line until the /nth/ character:
 #+begin_src python :session localhost :results both
 n=10
 with open('samplefile.txt', 'r') as file:
-    print(file.readline(n))
+print(file.readline(n))
 #+end_src
 **** Read multiple lines
 =readlines()= read the entire contents of the file and returns it in an ordered list,
 #+begin_src python :session localhost :results both
 with open('samplefile.txt', 'r') as file:
-    lines=file.readlines()
-    print(len(lines))
+lines=file.readlines()
+print(len(lines))
 
-    for line in lines:
-        print(line)
+for line in lines:
+    print(line)
 #+end_src
 **** Looping through lines
 =with open() as file= already returns a list of lines stored in =file=.
 #+begin_src python :session localhost :results both
 with open('samplefile.txt', 'r') as file:
-    for line in file:
-        print(line)
+for line in file:
+    print(line)
 #+end_src
 *** Extra Resources
 The following resources will be helpful as additional references in dealing with different concepts related to the topics you have covered in this module.
@@ -696,18 +698,18 @@ Creating reusable code that is used multiple times, so to DRY.
 #+begin_src python :session localhost :results output :eval no
 # Recursive function for Tower of Hanoi
 def hanoi(disks, source, helper, destination):
-    print('P1 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
-    # Base Condition
-    if (disks == 1):
-        print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
-        return
-
-    # Recursive calls in which function calls itself
-    hanoi(disks - 1, source, destination, helper)
-    print('P2 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+print('P1 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+# Base Condition
+if (disks == 1):
     print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
-    hanoi(disks - 1, helper, source, destination)
-    print('P3 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+    return
+
+# Recursive calls in which function calls itself
+hanoi(disks - 1, source, destination, helper)
+print('P2 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
+print('Disk {} moves from tower {} to tower {}.'.format(disks, source, destination))
+hanoi(disks - 1, helper, source, destination)
+print('P3 - disk: {}, source: {}, helper: {}, destination: {}'.format(disks, source, helper, destination))
 
 # Driver code
 # disks = int(input('Number of disks to be displaced: '))
@@ -755,8 +757,8 @@ print("---", range(len(trial)), "---")
 print(trial[len(trial):-(len(trial)+1):-1])
 print(new_trial == trial[len(trial):-(len(trial)+1):-1])
 for i in range(len(trial)):
-    print(trial[i::-1])
-    # print(trial[i:-(len(trial)+1):-1])
+print(trial[i::-1])
+# print(trial[i:-(len(trial)+1):-1])
 #+end_src
 
 #+RESULTS:
@@ -784,15 +786,15 @@ print("trial[1:]: ", trial[1:], ", trial[0]: ", trial[0], sep='')
 print("trial[2:]: ", trial[2:], ", trial[1]: ", trial[1], ", trial[0]: ", trial[0], sep='')
 # trial[0] -> get first character in string
 def first_character(str):
-    return str[0]
+return str[0]
 
 def string_opposite(str):
-    if len(str) == 0:
-        return "" # empty string -> always will concatenate the empty string in last call
-    else:
-        # get first character and concatenate (at the end),
-        # with the reversed string of the orginial string, less the first character.
-        return string_opposite(str[1:]) + first_character(str)
+if len(str) == 0:
+    return "" # empty string -> always will concatenate the empty string in last call
+else:
+    # get first character and concatenate (at the end),
+    # with the reversed string of the orginial string, less the first character.
+    return string_opposite(str[1:]) + first_character(str)
 
 print(string_opposite(trial))
 #+end_src
@@ -806,8 +808,8 @@ print(string_opposite(trial))
 #+begin_src python :session localhost :results output :eval no
 l = ["abc", "cde", "efg", "fgh", "aaa"]
 def has_a(str):
-    if any([c == "a" for c in str]):
-        return str
+if any([c == "a" for c in str]):
+    return str
 # map(has_a, l)
 print("Map:")
 print(list(map(has_a,l)))
@@ -839,97 +841,97 @@ print(type(''.join(list(map(str, a)))))
 #+begin_src python :session localhost :results output :eval no
 # Input data: List of dictionaries
 employee_list = [
-   {"id": 12345, "name": "John", "department": "Kitchen"},
-   {"id": 12456, "name": "Paul", "department": "House Floor"},
-   {"id": 12478, "name": "Sarah", "department": "Management"},
-   {"id": 12434, "name": "Lisa", "department": "Cold Storage"},
-   {"id": 12483, "name": "Ryan", "department": "Inventory Mgmt"},
-   {"id": 12419, "name": "Gill", "department": "Cashier"}
+{"id": 12345, "name": "John", "department": "Kitchen"},
+{"id": 12456, "name": "Paul", "department": "House Floor"},
+{"id": 12478, "name": "Sarah", "department": "Management"},
+{"id": 12434, "name": "Lisa", "department": "Cold Storage"},
+{"id": 12483, "name": "Ryan", "department": "Inventory Mgmt"},
+{"id": 12419, "name": "Gill", "department": "Cashier"}
 ]
 
 # Function to be passed to the map() function. Do not change this.
 def mod(employee_list):
-   temp = employee_list['name'] + "_" + employee_list["department"]
-   return temp
+temp = employee_list['name'] + "_" + employee_list["department"]
+return temp
 
 def to_mod_list(employee_list):
-   """ Modifies the employee list of dictionaries into list of employee-department strings
+""" Modifies the employee list of dictionaries into list of employee-department strings
 
-   [IMPLEMENT ME]
-      1. Use the map() method to apply mod() to all elements in employee_list
+[IMPLEMENT ME]
+    1. Use the map() method to apply mod() to all elements in employee_list
 
-   Args:
-      employee_list: list of employee objects
+Args:
+    employee_list: list of employee objects
 
-   Returns:
-      list - A list of strings consisting of name + department.
-   """
-   ### WRITE SOLUTION CODE HERE
-   return list(map(mod, employee_list))
-   #raise NotImplementedError()
+Returns:
+    list - A list of strings consisting of name + department.
+"""
+### WRITE SOLUTION CODE HERE
+return list(map(mod, employee_list))
+#raise NotImplementedError()
 
 def generate_usernames(mod_list):
-   """ Generates a list of usernames
+""" Generates a list of usernames
 
-   [IMPLEMENT ME]
-      1. Use list comprehension and the replace() function to replace space
-         characters with underscores
+[IMPLEMENT ME]
+    1. Use list comprehension and the replace() function to replace space
+        characters with underscores
 
-      List comprehension looks like:
-      list = [ function() for <item> in <list> ]
+    List comprehension looks like:
+    list = [ function() for <item> in <list> ]
 
-      The format for the replace() function is:
+    The format for the replace() function is:
 
-      test_str.replace(“a”, “z”) # replaces every “a” in test_str with “z”
+    test_str.replace(“a”, “z”) # replaces every “a” in test_str with “z”
 
-   Args:
-      mod_list: list of employee-department strings
+Args:
+    mod_list: list of employee-department strings
 
-   Returns:
-      list - A list of usernames consisting of name + department delimited by underscores.
-   """
-   return [str.replace(" ", "_") for str in mod_list]
-   ### WRITE SOLUTION CODE HERE
+Returns:
+    list - A list of usernames consisting of name + department delimited by underscores.
+"""
+return [str.replace(" ", "_") for str in mod_list]
+### WRITE SOLUTION CODE HERE
 
-   #raise NotImplementedError()
+#raise NotImplementedError()
 
 def map_id_to_initial(employee_list):
-   """ Maps employee id to first initial
+""" Maps employee id to first initial
 
-   [IMPLEMENT ME]
-      1. Use dictionary comprehension to map each employee's id (value) to the first letter in their name (key)
+[IMPLEMENT ME]
+    1. Use dictionary comprehension to map each employee's id (value) to the first letter in their name (key)
 
-      Dictionary comprehension looks like:
-      dict = { key : value for <item> in <list> }
+    Dictionary comprehension looks like:
+    dict = { key : value for <item> in <list> }
 
-   Args:
-      employee_list: list of employee objects
+Args:
+    employee_list: list of employee objects
 
-   Returns:
-      dict - A dictionary mapping an employee's id (value) to their first initial (key).
-   """
-   #return {value:key for (key,value) in employ.items() for employ in employee_list}
-   ids=[]
-   names=[]
-   for d in employee_list:
-       ids.append(d["id"])
-       names.append(str(d["name"])[0])
-   return {value:key for (key, value) in zip(ids, names)}
+Returns:
+    dict - A dictionary mapping an employee's id (value) to their first initial (key).
+"""
+#return {value:key for (key,value) in employ.items() for employ in employee_list}
+ids=[]
+names=[]
+for d in employee_list:
+    ids.append(d["id"])
+    names.append(str(d["name"])[0])
+return {value:key for (key, value) in zip(ids, names)}
 
-   ### WRITE SOLUTION CODE HERE
+### WRITE SOLUTION CODE HERE
 
-   #raise NotImplementedError()
+#raise NotImplementedError()
 
 def main():
-   mod_emp_list = to_mod_list(employee_list)
-   print("Modified employee list: " + str(mod_emp_list) + "\n")
+mod_emp_list = to_mod_list(employee_list)
+print("Modified employee list: " + str(mod_emp_list) + "\n")
 
-   print(f"List of usernames: {generate_usernames(mod_emp_list)}\n")
+print(f"List of usernames: {generate_usernames(mod_emp_list)}\n")
 
-   print(f"Initials and ids: {map_id_to_initial(employee_list)}")
+print(f"Initials and ids: {map_id_to_initial(employee_list)}")
 
 if __name__ == "__main__":
-   main()
+main()
 #+end_src
 
 #+RESULTS:
@@ -970,8 +972,8 @@ To access data defined inside the class scope.
 **** Examples
 #+begin_src python :session localhost :results output :eval no
 class MyClass():
-    a = 5
-    print("Hello")
+a = 5
+print("Hello")
 
 myc = MyClass()
 print(MyClass.a)
@@ -981,9 +983,9 @@ print(myc.a)
 
 #+begin_src python :session localhost :results output :eval no
 class MyClass():
-    a = 5
-    def hello(self):
-        print("Hello, world!")
+a = 5
+def hello(self):
+    print("Hello, world!")
 
 myc = MyClass()
 print(MyClass.a)
@@ -999,15 +1001,15 @@ myc.hello()
 
 #+begin_src python :session localhost :results output :eval no
 class House:
-    '''
-    This is a stub for a class representing a house that can be used to create objects and evaluate different metrics that we may require in constructing it.
-    '''
-    num_rooms = 5
-    bathrooms = 2
-    def cost_evaluation(self):
-        print(self.num_rooms)
-        pass
-        # Functionality to calculate the costs from the area of the house
+'''
+This is a stub for a class representing a house that can be used to create objects and evaluate different metrics that we may require in constructing it.
+'''
+num_rooms = 5
+bathrooms = 2
+def cost_evaluation(self):
+    print(self.num_rooms)
+    pass
+    # Functionality to calculate the costs from the area of the house
 
 house = House()
 print(house.num_rooms)
@@ -1033,15 +1035,15 @@ print(House.num_rooms)
 **** Exercise
 #+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/Exercises/myfirstclass.py
 class MyFirstClass():
-    print("Who wrote this?")
-    index = "Author-Book"
+print("Who wrote this?")
+index = "Author-Book"
 
-    # def __init__(self, index) -> None:
-    #     self.index = index
+# def __init__(self, index) -> None:
+#     self.index = index
 
-    def hand_list(self, philosopher, book):
-        print(MyFirstClass.index)
-        print("{} wrote the book: {}".format(philosopher, book))
+def hand_list(self, philosopher, book):
+    print(MyFirstClass.index)
+    print("{} wrote the book: {}".format(philosopher, book))
 
 whodunnit = MyFirstClass()
 whodunnit.hand_list("Sun Tzu", "The Art of War")
@@ -1049,15 +1051,15 @@ whodunnit.hand_list("Sun Tzu", "The Art of War")
 
 #+begin_src python :session localhost :results both
 class A:
-    print("Print inside A.")
+print("Print inside A.")
 
-    def __init__(self, c):
-        print("---------Inside class A----------")
-        self.c = c
+def __init__(self, c):
+    print("---------Inside class A----------")
+    self.c = c
 
-    def alpha(self):
-        c = self.c + 1
-        return c
+def alpha(self):
+    c = self.c + 1
+    return c
 
 
 print(dir(A))
@@ -1067,13 +1069,13 @@ print("Instantiating A..")
 
 
 class B:
-    def __init__(self, a):
-        print("---------Inside class B----------")
-        self.a = a
-    # print(a.alpha())
-    d = 5
-    print(d)
-    # print(a)
+def __init__(self, a):
+    print("---------Inside class B----------")
+    self.a = a
+# print(a.alpha())
+d = 5
+print(d)
+# print(a)
 
 print("Instantiating B..")
 # b = B(a)
@@ -1108,12 +1110,12 @@ https://realpython.com/python3-object-oriented-programming/
 - Only loaded once;
 - Can be loaded, only inside a scope;
 
-#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod3/imports.py
+#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/imports.py
 import sys
 
 loc = sys.path
 for i in loc:
-    print(i)
+print(i)
 
 import calendar
 
@@ -1201,21 +1203,21 @@ Others common:
 - selenium
 *** Examples of libraries-use
 **** Pandas
-#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod3/Execises/libraries-pandas.py
+#+begin_src python :session localhost :results output :eval no :tangle ./Exercises/Python-mod2/Execises/libraries-pandas.py
 import pandas as pd
 
 a = pd.DataFrame(
-    {
-        "Animals": ["Dog", "Cat", "Lion", "Cow", "Elephant"],
-        "Sounds": ["Barks", "Meow", "Roars", "Moo", "Trumpet"],
-    }
+{
+    "Animals": ["Dog", "Cat", "Lion", "Cow", "Elephant"],
+    "Sounds": ["Barks", "Meow", "Roars", "Moo", "Trumpet"],
+}
 )
 
 print(a)
 print(a.describe())
 
 b = pd.DataFrame(
-    {"Letters": ["a", "b", "c", "d", "e", "f"], "Numbers": [12, 7, 9, 3, 5, 1]}
+{"Letters": ["a", "b", "c", "d", "e", "f"], "Numbers": [12, 7, 9, 3, 5, 1]}
 )
 
 print(b.sort_values(by="Numbers"))
@@ -1226,7 +1228,7 @@ print(b)
 
 #+RESULTS:
 **** NLTK
-#+begin_src python :session localhost :results output :eval no :tangle  ./Exercises/Python-mod3/Execises/libraries-nltk.py
+#+begin_src python :session localhost :results output :eval no :tangle  ./Exercises/Python-mod2/Execises/libraries-nltk.py
 import nltk
 
 text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -1242,8 +1244,8 @@ print(nltk.tokenize.sent_tokenize(text))
 stopwords = stopwords.words("english")
 new_text = []
 for i in text.split():
-    if i not in stopwords:
-        new_text.append(i)
+if i not in stopwords:
+    new_text.append(i)
 
 # Print statement 3
 print(new_text)
@@ -1484,18 +1486,18 @@ Supports:
 **** =Pytest=
 Supports:
 - Functional test-types:
-  - Unit
-  - Integration
-  - End-to-end
+- Unit
+- Integration
+- End-to-end
 - Parameterized test-types:
-  - Enables execution tests multiple times, with different parameters passed.
+- Enables execution tests multiple times, with different parameters passed.
 - Parallel test-types:
-  - Generate HTML, XML or plain text reports
+- Generate HTML, XML or plain text reports
 - Integration with different =test frameworks=
-  - Pyunit
-  - Nose
-  - Flask
-  - Django
+- Pyunit
+- Nose
+- Flask
+- Django
 
 Can test:
 - APIs
@@ -1530,10 +1532,10 @@ Browser-specific web drivers:
 *** Pytest testing
 #+begin_src python :session localhost :results both :tangle ./Exercises/Python-mod2/Exercises/addition.py
 def add(a,b):
-    return a+b
+return a+b
 
 def sub(a,b):
-    return a-b
+return a-b
 #+end_src
 
 #+begin_src python :session localhost :results both :tangle ./Exercises/Python-mod2/Exercises/test_addition.py
@@ -1541,10 +1543,10 @@ import addition
 import pytest
 
 def test_add():
-    assert addition.add(4,5) == 9
+assert addition.add(4,5) == 9
 
 def test_sub():
-    assert addition.sub(4,5) == -1
+assert addition.sub(4,5) == -1
 #+end_src
 
 
@@ -1586,25 +1588,25 @@ import findstring
 import pytest
 
 def test_ispresent():
-    assert findstring.ispresent("Al")
+assert findstring.ispresent("Al")
 
 def test_nodigit():
-    assert map(lambda p: findstring.nodigit(p), findstring.names)
+assert map(lambda p: findstring.nodigit(p), findstring.names)
 #+end_src
 
 #+begin_src python :session localhost :results both :tangle ./Exercises/Python-mod2/Exercises/findstring.py
 names = ["Al", "Bo", "Chi", "Ma"]
 def ispresent(person):
-    if person in names:
-        return True
-    else:
-        return False
+if person in names:
+    return True
+else:
+    return False
 
 def nodigit(person):
-    if person.isaplha():
-        return True
-    else:
-        return False
+if person.isaplha():
+    return True
+else:
+    return False
 #+end_src
 *** Additional Resources
 The following resources will be helpful as additional references in dealing with different concepts related to the topics we have covered in this module.
@@ -1621,7 +1623,7 @@ https://www.geeksforgeeks.org/best-python-modules-for-automation/
 *** Final Test
 #+begin_src python :session localhost :results output :eval no
 for x in range(1, 4):
-    print(int((str((float(x))))))
+print(int((str((float(x))))))
 #+end_src
 
 #+RESULTS:
@@ -1630,8 +1632,8 @@ for x in range(1, 4):
 str = 'Pomodoro'
 for l in str:
 if l == 'o':
-    str = str.split()
-    print(str, end=", ")
+str = str.split()
+print(str, end=", ")
 #+end_src
 
 #+RESULTS:
@@ -1639,13 +1641,13 @@ if l == 'o':
 
 #+begin_src python :session localhost :results output :eval no
 def d():
-    color = "green"
-    def e():
-        nonlocal color
-        color = "yellow"
-    e()
-    print("Color: " + color)
-    color = "red"
+color = "green"
+def e():
+    nonlocal color
+    color = "yellow"
+e()
+print("Color: " + color)
+color = "red"
 color = "blue"
 d()
 #+end_src
@@ -1657,15 +1659,15 @@ d()
 #+begin_src python :session localhost :results output :eval no
 num = 9
 class Car:
-    num = 5
-    bathrooms = 2
+num = 5
+bathrooms = 2
 
 def cost_evaluation(num):
-    num = 10
-    return num
+num = 10
+return num
 
 class Bike():
-    num = 11
+num = 11
 
 cost_evaluation(num)
 car = Car()
@@ -1680,9 +1682,9 @@ print(num)
 
 #+begin_src python :session localhost :results output :eval no
 Class P():
-    pass
+pass
 Class C(P):
-    pass
+pass
 p=P()
 c=C()
 # print(issubclass(p,P))
@@ -1695,18 +1697,18 @@ print(issubclass(C,P))
 
 #+begin_src python :session localhost :results output :eval no
 class A:
-   def a(self):
-       return "Function inside A"
+def a(self):
+    return "Function inside A"
 
 class B:
-   def a(self):
-       return "Function inside B"
+def a(self):
+    return "Function inside B"
 
 class C:
-   pass
+pass
 
 class D(C, A, B):
-   pass
+pass
 
 d = D()
 print(d.a())
@@ -1887,11 +1889,11 @@ There is no tracking information for the current branch.
 Please specify which branch you want to merge with.
 See git-pull(1) for details.
 
-    git pull <remote> <branch>
+git pull <remote> <branch>
 
 If you wish to set tracking information for this branch you can do so with:
 
-    git branch --set-upstream-to=origin/<branch> master
+git branch --set-upstream-to=origin/<branch> master
 #+end_example
 
 #+begin_src shell
@@ -1925,3 +1927,428 @@ git status
 #+end_src
 
 #+RESULTS:
+*** =.git= file
+Where =git= keeps track of every change in the /repository/.
+#+begin_src shell :output both
+cd .git
+cat HEAD
+#+end_src
+
+#+RESULTS:
+:ref: refs/heads/main
+
+#+begin_src shell :output both
+cd .git
+cat refs/heads/main
+#+end_src
+
+#+RESULTS:
+: 4474b383b7d9870b8a50c155eaedd262c18e0182
+
+The hash =4474b383b7d9870b8a50c155eaedd262c18e0182=, in our case, points to the current commit. If we were to switch branches, this =id= would be different.
+
+*** =git blame=
+**** Format of output message
+#+ATTR_HTML: :width 800px
+[[file:img/git-blame-format.png][file:./img/git-blame-format.png]]
+**** Selecting range of lines I want to keep track of changes
+General syntax,
+#+begin_src shell
+git blame -L <start>,<finish> <file>
+#+end_src
+
+For example,
+#+begin_src shell
+git blame -L 5,15 setup.py
+#+end_src
+
+From, =man git-blame=
+#+begin_example
+       -L <start>,<end>, -L :<funcname>
+           Annotate only the line range given by <start>,<end>, or by the
+           function name regex <funcname>. May be specified multiple times.
+           Overlapping ranges are allowed.
+
+           <start> and <end> are optional.  -L <start> or -L <start>, spans
+           from <start> to end of file.  -L ,<end> spans from start of file to
+           <end>.
+
+           <start> and <end> can take one of these forms:
+
+           •   number
+
+               If <start> or <end> is a number, it specifies an absolute line
+               number (lines count from 1).
+
+           •   /regex/
+
+               This form will use the first line matching the given POSIX
+               regex. If <start> is a regex, it will search from the end of
+               the previous -L range, if any, otherwise from the start of
+               file. If <start> is ^/regex/, it will search from the start of
+               file. If <end> is a regex, it will search starting at the line
+               given by <start>.
+
+           •   +offset or -offset
+
+               This is only valid for <end> and will specify a number of lines
+               before or after the line given by <start>.
+
+           If :<funcname> is given in place of <start> and <end>, it is a
+           regular expression that denotes the range from the first funcname
+           line that matches <funcname>, up to the next funcname line.
+           :<funcname> searches from the end of the previous -L range, if any,
+           otherwise from the start of file.  ^:<funcname> searches from the
+           start of file. The function names are determined in the same way as
+           git diff works out patch hunk headers (see Defining a custom
+           hunk-header in gitattributes(5)).
+#+end_example
+*** Tip: mix =git blame= and =git log=
+Using =git blame= we have the records of changes with their /hash-ids/. If we want to know what exactly was going one with a specific change, we can take the /id/ and pass to =git log= and have a more verbose version of changes that took place in that commit.
+*** Additional Resources
+GitHub: Pricing
+
+GitHub is free to use,  but it also offers different pricing models to suit the needs of different-sized teams and organizations.  Check out the link below:
+
+https://github.com/pricing
+
+Git: An Origin Story
+
+https://www.linuxjournal.com/content/git-origin-story
+
+Git Cheatsheet
+
+https://education.github.com/git-cheat-sheet-education.pdf
+
+Git patterns and anti-patterns for successful developers
+
+https://youtu.be/t_4lLR6F_yk
+
+Tech Talk: Linus Torvalds on git
+
+https://www.youtube.com/watch?v=4XpnKHJAok8
+
+Vim Cheatsheet
+
+https://devhints.io/vim
+* Databases
+** Week 1
+=Database=: a form of electronic storage that holds data.
+*** Introduction
+**** Use-cases
+- Banking;
+- Healthcare;
+- Shopping.
+
+***** Examples of data-stored:
+- Location data;
+- Duration on the platform;
+- Connection with other users.
+**** Universal Database Tasks
+- Store data;
+- Form relationships;
+- Filter data;
+- Search data;
+- Perform CRUD operations.
+  - Create;
+  - Read;
+  - Update;
+  - Delete.
+
+**** SQL
+- SQL operator techniques;
+- Data normalization concepts;
+- Data normalization techniques.
+*** Daniel Bloomfield Ramagem
+Software Engineer at Meta (Database Engineer).
+*** TODO Types of structured-databases
+TODO: put images associeted with slides
+**** Relational Databases
+**** Object Oriented Databases
+**** Graph Databases
+**** Document databases
+*** Relational Databases
+=Fields=: columns, data-types associated.
+=Records=: rows, each data instance.
+=Primary key=: unique values that identify data uniquely.
+=Foreign key=: stores data related to the =primary key= from another relational-database table.
+*** Business Intelligence
+=Business Intelligence=: Analyzing data and other information to make informed decisions.
+*** SQL
+#+begin_quote
+Standard language that can interact with structured data on databases.
+#+end_quote
+
+Examples:
+- MySQL;
+- PostgreSQL;
+- Oracle;
+- Microsoft SQL Server.
+
+*** Database Management System (DBMS)
+Changes SQL instructions into a form understood by the database.
+*** Common SQL Tasks
+CRUD: Create, Read, Update, Delete.
+*** SQL subsets
+Terms used and their meaning:
+|-----------+-------------------------------------------------------|
+| Term      | Meaning                                               |
+|-----------+-------------------------------------------------------|
+| =Object=  | datastructure holding data (file, tables, JSON, etc). |
+| =Records= | see [[*Relational Databases][Relational Databases]].                             |
+| DDL       | Data Definition Language.                             |
+| DML       | Data Definition Language.                             |
+| DQL       | Data Query Language.                                  |
+| DCL       | Data Control Language.                                |
+|-----------+-------------------------------------------------------|
+
+*** DDL
+DDL: =Data Definition Language=
+**** =Create=
+#+begin_quote
+Used to create storage objects in a database, like tables.
+#+end_quote
+Example: create a table with certain initial *fields*.
+
+#+begin_quote
+Purpose: To create the database or tables inside the database
+
+Syntax to create a table with three columns:
+#+end_quote
+
+#+begin_src sql
+CREATE TABLE table_name (column_name1 datatype(size), column_name2 datatype(size), column_name3 datatype(size));
+#+end_src
+
+**** =Alter=
+#+begin_quote
+Modify the structure of a table object in a database.
+#+end_quote
+Example: add a *field*.
+
+#+begin_quote
+Purpose: To change the structure of the tables in the database such as changing the name of a table, adding a primary key to a table, or adding or deleting a column in a table.
+#+end_quote
+
+#+begin_quote
+Syntax to add a *field* into a table:
+#+end_quote
+
+#+begin_src sql
+ALTER TABLE table_name ADD (column_name datatype(size));
+#+end_src
+
+#+begin_quote
+Syntax to add a primary key to a table:
+#+end_quote
+
+#+begin_src sql
+ALTER TABLE table_name ADD primary key (column_name);
+#+end_src
+
+**** =Drop=
+#+begin_quote
+Remove an existing object from a database.
+#+end_quote
+Example: delete a table.
+
+#+begin_quote
+Purpose: To delete a database or a table inside the database.
+
+Syntax to drop a table:
+#+end_quote
+
+#+begin_src sql
+DROP TABLE table_name;
+#+end_src
+**** =TRUNCATE=
+
+#+begin_quote
+Purpose: To remove all records from a table, which will empty the table but not delete the table itself.
+#+end_quote
+
+#+begin_quote
+Syntax to truncate a table:
+#+end_quote
+
+#+begin_src sql
+TRUNCATE TABLE table_name;
+#+end_src
+**** =COMMENT=
+
+#+begin_quote
+Purpose: To add comments to explain or document SQL statements by using double dash (--) at the start of the line. Any text after the double dash will not be executed as part of the SQL statement. These comments are not there to build the database. They are only for your own use.
+#+end_quote
+
+#+begin_quote
+Syntax to COMMENT a line in SQL:
+#+end_quote
+
+#+begin_src sql
+-- -> Retrieve all data from a table
+SELECT * FROM table_name;
+#+end_src
+
+*** DML
+=Data Manipulation Language=
+#+begin_quote
+Most =CRUD= operations fall under =DML=.
+#+end_quote
+
+**** =SELECT=
+#+begin_quote
+Purpose: To retrieve data from tables in the database.
+#+end_quote
+#+begin_quote
+Syntax to select data from a table:
+#+end_quote
+
+#+begin_src sql
+SELECT * FROM table_name;
+#+end_src
+
+**** =INSERT=
+#+begin_quote
+Insert *records* of data into a database-table.
+#+end_quote
+Example: initialize data in the database-table, by connecting it to a file.
+
+#+begin_quote
+Purpose: To add records of data into an existing table.
+Syntax to insert data into three columns in a table:
+#+end_quote
+
+#+begin_src sql
+INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+#+end_src
+
+**** =UPDATE=
+#+BEGIN_quote
+Edit data that already exists in a database-table.
+#+end_quote
+Change some data-fields in the *records*.
+
+#+begin_quote
+Purpose: To modify or update data contained within a table in the database.
+#+end_quote
+
+#+begin_quote
+Syntax to update data in two columns:
+#+end_quote
+
+#+begin_src sql
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+#+end_src
+
+**** =DELETE=
+#+begin_quote
+Delete one or more rows of data from a database-table.
+#+end_quote
+
+#+begin_quote
+Purpose: To delete data from a table in the database.
+#+end_quote
+
+#+begin_quote
+Syntax to delete data:
+#+end_quote
+
+#+begin_src sql
+DELETE FROM table_name WHERE condition;
+#+end_src
+
+*** DQL
+**** =SELECT=
+Filter records, based on given criteria that can be, for example, a subset of fields, for a range of records.
+*** DCL
+Changes and controls permissions to access records and fields in the database.
+**** =GRANT=
+**** =REVOKE=
+*** TCL
+=Transaction Control Language (TCL)=
+#+begin_quote
+The TCL commands are used to manage transactions in the database. These are used to manage the changes made to the data in a table by utilizing the DML commands. It also allows SQL statements to be grouped together into logical transactions. This category deals with advanced functions or operations in a database. Note that this category can have a generic description of the two main commands. Use the following commands in this category:
+#+end_quote
+
+=COMMIT= Command to save all the work you have already done in the database.
+
+=ROLLBACK= Command to restore a database to the last committed state.
+*** Example of SQL commands
+#+begin_src sql
+CREATE DATABASE College;
+CREATE TABLE Students;
+
+INSERT INTO Students (column_ID,   first_name, last_name, data_of_birth);
+VALUES (1, Pedro, Branquinho, 1997-10-08);
+INSERT INTO Students (column_ID,   first_name, last_name, data_of_birth);
+VALUES (2, Cassandra, Yorker, 1990-03-22);
+
+UPDATE Students
+       SET date_of_birth = '1997-10-07'
+       WHERE ID = 02;
+DELETE FROM Students
+            WHERE ID=02;
+
+SELECT first_name, last_name,
+  FROM Students
+ WHERE ID = '01';
+#+end_src
+*** Tables types and constrains
+#+begin_quote
+For example, here are some of the data types that are available:
+
+Numeric data types such as INT, TINYINT, BIGINT, FLOAT, REAL.
+
+Date and time data types such as DATE, TIME, DATETIME.
+
+Character and string data types such as CHAR, VARCHAR.
+
+Binary data types such as BINARY, VARBINARY.
+
+Miscellaneous data types such as:
+
+Character Large Object (CLOB) for storing a large block of text in some form of text encoding.
+
+Binary Large Object (BLOB) for storing a collection of binary data such as images.
+#+end_quote
+
+
+All fields should have some kind of constrain. e.g., an email must have the symbol /@/. Whereas, personal names can't.
+*** Entity Relationship Diagram (ERD)
+#+begin_quote
+ It is a visual representation of how the database will be implemented into tables during physical database design, using a Database Management System (DBMS) like MySQL or Oracle, for example.
+#+end_quote
+
+
+*** Additional Resources
+#+begin_quote
+The following resources are some additional reading material that introduces you to the concept of a database, different types of databases, about relational databases in specific and also about the history of databases. These will add to the knowledge that you've got on these areas throughout this lesson.
+#+end_quote
+Oracle
+https://www.oracle.com/uk/database/what-is-database/
+Javapoint
+https://www.javatpoint.com/types-of-databases
+IBM
+https://www.ibm.com/cloud/learn/relational-databases
+Tutorialspoint
+https://www.tutorialspoint.com/Types-of-databases
+Graphdatamodeling
+http://graphdatamodeling.com/GraphDataModeling/History.html
+
+#+begin_quote
+The following resources are some additional reading material that introduces you to SQL. These will enable you to enhance your knowledge on SQL syntaxes and common SQL commands (DQL, DML and DDL) that you've learned throughout this lesson.
+#+end_quote
+
+Javapoint
+https://www.javatpoint.com/dbms-sql-introduction
+
+Beginnersbook
+https://beginnersbook.com/2018/11/introduction-to-sql/
+
+#+begin_quote
+The following resources are reading material that provide additional knowledge on database design and Relational Database structure.
+#+end_quote
+Microsoft
+https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5
+IBM
+https://www.ibm.com/docs/en/control-desk/7.6.0?topic=design-relational-database-structure

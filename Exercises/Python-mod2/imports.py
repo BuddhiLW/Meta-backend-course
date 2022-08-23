@@ -2,7 +2,7 @@ import sys
 
 loc = sys.path
 for i in loc:
-    print(i)
+print(i)
 
 import calendar
 
