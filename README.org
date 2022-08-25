@@ -2508,6 +2508,92 @@ In case some field happens to hold data previously not supported, you can includ
 #+begin_src sql
 ALTER TABLE w2e3 ALTER Sender VARCHAR(20);
 #+end_src
+*** =INSERT=-ing data into a table
+#+begin_src sql
+INSERT INTO w2e4 (c1, c2, c3)
+            VALUES (v11, v21, v31),
+                   (v12, v22, v23),
+                   (v13, v23, v33);
+#+end_src
+**** Example
+#+begin_src shell
+mysql -u buddhilw -p
+#+end_src
+
+#+RESULTS:
+
+#+begin_src sql
+USE mydb;
+#+end_src
+
+#+begin_src sql
+CREATE TABLE w2e4 (funcID TINYINT, age TINYINT, work_time TINYINT, whentook DATE, status VARCHAR(30));
+#+end_src
+
+#+begin_src sql
+show columns from w2e4;
+#+end_src
+
+#+RESULTS:
+#+begin_example
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| funcID    | tinyint(4)  | YES  |     | NULL    |       |
+| age       | tinyint(4)  | YES  |     | NULL    |       |
+| work_time | tinyint(4)  | YES  |     | NULL    |       |
+| whentook  | date        | YES  |     | NULL    |       |
+| status    | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+#+end_example
+
+#+begin_src sql
+ALTER TABLE w2e4 MODIFY whentook DATE DEFAULT CURRENT_DATE();
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Query OK, 0 rows affected (0,571 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [mydb]> show columns from w2e4;
++-----------+-------------+------+-----+-----------+-------+
+| Field     | Type        | Null | Key | Default   | Extra |
++-----------+-------------+------+-----+-----------+-------+
+| funcID    | tinyint(4)  | YES  |     | NULL      |       |
+| age       | tinyint(4)  | YES  |     | NULL      |       |
+| work_time | tinyint(4)  | YES  |     | NULL      |       |
+| whentook  | date        | YES  |     | curdate() |       |
+| status    | varchar(30) | YES  |     | NULL      |       |
++-----------+-------------+------+-----+-----------+-------+
+#+end_example
+
+
+Finally, we add the =records=,
+#+begin_src sql
+INSERT INTO w2e4(funcID, age, work_time, whentook, status)
+            VALUES (1, 27, 3, DEFAULT, "Recepcionist"),
+                   (2, 30, 2, DEFAULT, "Collector");
+#+end_src
+
+#+RESULTS:
+: INSERT INTO w2e4(funcID, age, work_time, whentook, status)
+:             VALUES (1, 27, 3, DEFAULT, "Recepcionist"),
+:                    (2, 30, 2, DEFAULT, "Collector");
+
+#+begin_src sql
+SELECT * FROM w2e4;
+#+end_src
+
+#+RESULTS:
+: +--------+------+-----------+------------+--------------+
+: | funcID | age  | work_time | whentook   | status       |
+: +--------+------+-----------+------------+--------------+
+: |      1 |   27 |         3 | 2022-08-24 | Recepcionist |
+: |      2 |   30 |         2 | 2022-08-24 | Collector    |
+: +--------+------+-----------+------------+--------------+
+: 2 rows in set (0,000 sec)
+
 *** Additional Resources
 
 #+begin_quote
