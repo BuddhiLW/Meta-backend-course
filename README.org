@@ -2593,6 +2593,123 @@ SELECT * FROM w2e4;
 : |      2 |   30 |         2 | 2022-08-24 | Collector    |
 : +--------+------+-----------+------------+--------------+
 : 2 rows in set (0,000 sec)
+*** Select and insert, between tables
+
+In this example, we take a database called =players=, and select it's =country= field. Then, we insert into the =country= database, with the new field-name as =countryName=.
+#+begin_src sql
+INSERT INTO country(countryName) SELECT country FROM players
+#+end_src
+*** Exercise
+#+begin_src sql
+USE mydb;
+CREATE TABLE soccer (playerId int, name varchar(60), height decimal, weight decimal, avgSpeed decimal);
+INSERT INTO soccer (playerId, name, height, weight, avgSpeed)
+            VALUES (1, "João", 1.72, 80, 10),
+                   (2, "Mario", 1.85, 86, 8);
+#+end_src
+
+#+begin_src sql
+SELECT * FROM soccer;
+#+end_src
+
+#+RESULTS:
+#+begin_example
++----------+-------+--------+--------+----------+
+| playerId | name  | height | weight | avgSpeed |
++----------+-------+--------+--------+----------+
+|        1 | João  |   2    |     80 |       10 |
+|        2 | Mario |   2    |     86 |        8 |
++----------+-------+--------+--------+----------+
+#+end_example
+
+
+#+begin_src sql
+ALTER TABLE soccer MODIFY height decimal(1,2), weight decimal(5,2), avgSpeed decimal(5,2);
+#+end_src
+
+#+begin_src sql
+SELECT * FROM soccer;
+#+end_src
+
+#+RESULTS:
+#+begin_example
++----------+-------+--------+--------+----------+
+| playerId | name  | height | weight | avgSpeed |
++----------+-------+--------+--------+----------+
+|        1 | João  |   2.00 |     80 |       10 |
+|        2 | Mario |   2.00 |     86 |        8 |
++----------+-------+--------+--------+----------+
+2 rows in set (0,317 sec)
+#+end_example
+
+TODO: We still have to modify the height to: 1.72, 1.85.
+DONE: See =Update and Delete= (next section).
+*** Update and Delete
+:LOGBOOK:
+CLOCK: [2022-08-25 qui 17:18]
+:END:
+#+begin_src sql
+UPDATE soccer
+SET height = '1.72'
+WHERE playerId = 1;
+#+end_src
+
+#+begin_src sql
+UPDATE soccer
+SET height = '1.85'
+WHERE playerId = 2;
+#+end_src
+
+#+begin_src sql
+ALTER TABLE soccer ADD position VARCHAR(30);
+-- ALTER TABLE w2e3 ADD (Goods VARCHAR(30), Price DECIMAL, Sender VARCHAR(50));
+#+end_src
+
+#+begin_src sql
+UPDATE soccer
+SET position = 'runner'
+WHERE weight >= 80;
+#+end_src
+
+#+begin_src sql
+SELECT * FROM soccer;
+#+end_src
+
+#+RESULTS:
+#+begin_example
++----------+-------+--------+--------+----------+----------+
+| playerId | name  | height | weight | avgSpeed | position |
++----------+-------+--------+--------+----------+----------+
+|        1 | João  |   1.72 |     80 |       10 | runner   |
+|        2 | Mario |   1.85 |     86 |        8 | runner   |
++----------+-------+--------+--------+----------+----------+
+2 rows in set (0,000 sec)
+#+end_example
+
+#+begin_src sql
+DELETE FROM soccer
+WHERE name = 'João';
+#+end_src
+
+**** Exercise
+#+begin_src sql
+CREATE TABLE customers(customerID int, customerName varchar(40), customerAddress varchar(40))
+#+end_src
+
+#+begin_src sql
+INSERT INTO customers (customerID, customerName, customerAddress) VALUES
+(1, 'Jack', '115 Old street Belfast'),
+(2, 'James', '24 Carlson Rd London'),
+(4, 'Maria', '5 Fredrik Rd, Bedford'),
+(5, 'Jade', '10 Copland Ave Portsmouth '),
+(6, 'Yasmine', '15 Fredrik Rd, Bedford'),
+(3, 'Jimmy', '110 Copland Ave Portsmouth');
+#+end_src
+
+#+begin_src sql
+DELETE FROM customers
+WHERE customerID = 3;
+#+end_src
 
 *** Additional Resources
 
@@ -2610,3 +2727,21 @@ Microsoft
 https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql?view=sql-server-ver16s
 MySQL
 https://dev.mysql.com/doc/refman/8.0/en/numeric-types.html
+
+The following resources are some additional reading material that provide extra knowledge on SQL DDL and DML commands:
+
+Tutorialspoint
+https://www.tutorialspoint.com/sql/index.htm
+Javatpoint
+https://www.javatpoint.com/sql-tutorial
+Tutorialrepublic
+https://www.tutorialrepublic.com/sql-tutorial/sql-create-database-statement.php
+
+
+Here is a list of resources that may be helpful as you continue to explore database engineering:
+Tutorialspoint
+https://www.tutorialspoint.com/sql/index.htm
+Javatpoint
+https://www.javatpoint.com/sql-tutorial
+W3Schools
+https://www.w3schools.com/sql
