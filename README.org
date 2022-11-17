@@ -21,6 +21,7 @@ Back-end development by [[https://www.coursera.org/professional-certificates/met
 - [[#databases][Databases]]
   - [[#week-1-1][Week 1]]
   - [[#week-2---data-types][Week 2 - Data Types]]
+  - [[#week-3---sql-arithmetic-operators][Week 3 - SQL Arithmetic Operators]]
 
 * Schedule
 |---------------+---------+-----------+----------+--------+----------+--------|
@@ -2271,7 +2272,6 @@ The TCL commands are used to manage transactions in the database. These are used
 #+end_quote
 
 =COMMIT= Command to save all the work you have already done in the database.
-
 =ROLLBACK= Command to restore a database to the last committed state.
 *** Example of SQL commands
 #+begin_src sql
@@ -2318,7 +2318,6 @@ All fields should have some kind of constrain. e.g., an email must have the symb
 #+begin_quote
 It is a visual representation of how the database will be implemented into tables during physical database design, using a Database Management System (DBMS) like MySQL or Oracle, for example.
 #+end_quote
-
 
 *** Additional Resources
 #+begin_quote
@@ -2631,22 +2630,11 @@ ALTER TABLE soccer MODIFY height decimal(1,2), weight decimal(5,2), avgSpeed dec
 SELECT * FROM soccer;
 #+end_src
 
-#+RESULTS:
-#+begin_example
-+----------+-------+--------+--------+----------+
-| playerId | name  | height | weight | avgSpeed |
-+----------+-------+--------+--------+----------+
-|        1 | João  |   2.00 |     80 |       10 |
-|        2 | Mario |   2.00 |     86 |        8 |
-+----------+-------+--------+--------+----------+
-2 rows in set (0,317 sec)
-#+end_example
-
 TODO: We still have to modify the height to: 1.72, 1.85.
 DONE: See =Update and Delete= (next section).
 *** Update and Delete
 :LOGBOOK:
-CLOCK: [2022-08-25 qui 17:18]
+CLOCK: [2022-08-25 qui 17:18]--[2022-08-27 sáb 10:20] => 41:02
 :END:
 #+begin_src sql
 UPDATE soccer
@@ -2745,3 +2733,67 @@ Javatpoint
 https://www.javatpoint.com/sql-tutorial
 W3Schools
 https://www.w3schools.com/sql
+** Week 3 - SQL Arithmetic Operators
+*** What are operators and why do I care? (221117114432-03)
+With =operators= you can apply data a transformation to subsections of data.
+
+This can be used to =filter-and-select= data, =create a new field= (column), or to =select-and-apply= processes.
+
+*** Syntax for operators (221117115014-03)
+- Use the =SELECT= key-word to effectuate a operation. Further use =FROM=, in order to map operations to table-columns.
+#+begin_src sql
+SELECT column_name1 + column_name2 FROM table_name;
+#+end_src
+
+- Use as a =filter-and-select= tool
+#+begin_src sql
+SELECT *
+
+FROM employee
+
+WHERE salary - tax = 50000;
+#+end_src
+
+- Use as a =select-and-apply=
+#+begin_src sql
+SELECT salary - tax  -- Apply functionality
+
+FROM employee
+
+WHERE hours % 2 = 1; -- Select functionality
+#+end_src
+*** =ORDER BY= clause - sorting (221117124242-03)
+- Either arrange data from a field, or group of fields, in =ascending= or =descending= order.
+- Types of data will have different ascending and descending sorting types
+  (alphabetical, numerical etc.)
+- =ASC= *by default*.
+*** Syntax for ordering (221117125022-03)
+
+#+begin_src sql
+SELECT column_1, column_2, column_3, ... -- or "*"
+FROM table_name
+ORDER BY column_1 ASC, column_2 DESC;
+#+end_src
+
+*** =WHERE= Clause with =BETWEEN=, =LIKE=, =IN= (221117130430-03)
+
+**** =BETWEEN=
+#+begin_src sql
+SELECT *
+FROM table_name
+WHERE faculty_age BETWEEN '18' AND '33'
+#+end_src
+
+**** =LIKE=
+#+begin_src sql
+SELECT *
+FROM table_name
+WHERE degree LIKE 'Sc%' -- regex matches
+#+end_src
+
+****  =IN=
+#+begin_src sql
+SELECT *
+FROM table_name
+WHERE first_name IN('String1', 'String2', ...) -- regex matches
+#+end_src
